@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		008587762248DC6B00B338E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587752248DC6B00B338E4 /* AppDelegate.swift */; };
+		008587782248DC6B00B338E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587772248DC6B00B338E4 /* ViewController.swift */; };
+		0085877B2248DC6B00B338E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 008587792248DC6B00B338E4 /* Main.storyboard */; };
+		0085877D2248DC6C00B338E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0085877C2248DC6C00B338E4 /* Assets.xcassets */; };
+		008587802248DC6C00B338E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0085877E2248DC6C00B338E4 /* LaunchScreen.storyboard */; };
+		0085878B2248DC6C00B338E4 /* CT_Rafael_NobreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0085878A2248DC6C00B338E4 /* CT_Rafael_NobreTests.swift */; };
+		008587962248DC6C00B338E4 /* CT_Rafael_NobreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587952248DC6C00B338E4 /* CT_Rafael_NobreUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		008587872248DC6C00B338E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0085876A2248DC6B00B338E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 008587712248DC6B00B338E4;
+			remoteInfo = "CT Rafael Nobre";
+		};
+		008587922248DC6C00B338E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0085876A2248DC6B00B338E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 008587712248DC6B00B338E4;
+			remoteInfo = "CT Rafael Nobre";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		008587722248DC6B00B338E4 /* CT Rafael Nobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CT Rafael Nobre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		008587752248DC6B00B338E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		008587772248DC6B00B338E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0085877A2248DC6B00B338E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0085877C2248DC6C00B338E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0085877F2248DC6C00B338E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		008587812248DC6C00B338E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		008587862248DC6C00B338E4 /* CT Rafael NobreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CT Rafael NobreTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0085878A2248DC6C00B338E4 /* CT_Rafael_NobreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CT_Rafael_NobreTests.swift; sourceTree = "<group>"; };
+		0085878C2248DC6C00B338E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		008587912248DC6C00B338E4 /* CT Rafael NobreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CT Rafael NobreUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		008587952248DC6C00B338E4 /* CT_Rafael_NobreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CT_Rafael_NobreUITests.swift; sourceTree = "<group>"; };
+		008587972248DC6C00B338E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0085876F2248DC6B00B338E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		008587832248DC6C00B338E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0085878E2248DC6C00B338E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		008587692248DC6B00B338E4 = {
+			isa = PBXGroup;
+			children = (
+				008587742248DC6B00B338E4 /* CT Rafael Nobre */,
+				008587892248DC6C00B338E4 /* CT Rafael NobreTests */,
+				008587942248DC6C00B338E4 /* CT Rafael NobreUITests */,
+				008587732248DC6B00B338E4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		008587732248DC6B00B338E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				008587722248DC6B00B338E4 /* CT Rafael Nobre.app */,
+				008587862248DC6C00B338E4 /* CT Rafael NobreTests.xctest */,
+				008587912248DC6C00B338E4 /* CT Rafael NobreUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		008587742248DC6B00B338E4 /* CT Rafael Nobre */ = {
+			isa = PBXGroup;
+			children = (
+				008587752248DC6B00B338E4 /* AppDelegate.swift */,
+				008587772248DC6B00B338E4 /* ViewController.swift */,
+				008587792248DC6B00B338E4 /* Main.storyboard */,
+				0085877C2248DC6C00B338E4 /* Assets.xcassets */,
+				0085877E2248DC6C00B338E4 /* LaunchScreen.storyboard */,
+				008587812248DC6C00B338E4 /* Info.plist */,
+			);
+			path = "CT Rafael Nobre";
+			sourceTree = "<group>";
+		};
+		008587892248DC6C00B338E4 /* CT Rafael NobreTests */ = {
+			isa = PBXGroup;
+			children = (
+				0085878A2248DC6C00B338E4 /* CT_Rafael_NobreTests.swift */,
+				0085878C2248DC6C00B338E4 /* Info.plist */,
+			);
+			path = "CT Rafael NobreTests";
+			sourceTree = "<group>";
+		};
+		008587942248DC6C00B338E4 /* CT Rafael NobreUITests */ = {
+			isa = PBXGroup;
+			children = (
+				008587952248DC6C00B338E4 /* CT_Rafael_NobreUITests.swift */,
+				008587972248DC6C00B338E4 /* Info.plist */,
+			);
+			path = "CT Rafael NobreUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		008587712248DC6B00B338E4 /* CT Rafael Nobre */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0085879A2248DC6C00B338E4 /* Build configuration list for PBXNativeTarget "CT Rafael Nobre" */;
+			buildPhases = (
+				0085876E2248DC6B00B338E4 /* Sources */,
+				0085876F2248DC6B00B338E4 /* Frameworks */,
+				008587702248DC6B00B338E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CT Rafael Nobre";
+			productName = "CT Rafael Nobre";
+			productReference = 008587722248DC6B00B338E4 /* CT Rafael Nobre.app */;
+			productType = "com.apple.product-type.application";
+		};
+		008587852248DC6C00B338E4 /* CT Rafael NobreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0085879D2248DC6C00B338E4 /* Build configuration list for PBXNativeTarget "CT Rafael NobreTests" */;
+			buildPhases = (
+				008587822248DC6C00B338E4 /* Sources */,
+				008587832248DC6C00B338E4 /* Frameworks */,
+				008587842248DC6C00B338E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				008587882248DC6C00B338E4 /* PBXTargetDependency */,
+			);
+			name = "CT Rafael NobreTests";
+			productName = "CT Rafael NobreTests";
+			productReference = 008587862248DC6C00B338E4 /* CT Rafael NobreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		008587902248DC6C00B338E4 /* CT Rafael NobreUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 008587A02248DC6C00B338E4 /* Build configuration list for PBXNativeTarget "CT Rafael NobreUITests" */;
+			buildPhases = (
+				0085878D2248DC6C00B338E4 /* Sources */,
+				0085878E2248DC6C00B338E4 /* Frameworks */,
+				0085878F2248DC6C00B338E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				008587932248DC6C00B338E4 /* PBXTargetDependency */,
+			);
+			name = "CT Rafael NobreUITests";
+			productName = "CT Rafael NobreUITests";
+			productReference = 008587912248DC6C00B338E4 /* CT Rafael NobreUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0085876A2248DC6B00B338E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Rafael Nobre";
+				TargetAttributes = {
+					008587712248DC6B00B338E4 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					008587852248DC6C00B338E4 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 008587712248DC6B00B338E4;
+					};
+					008587902248DC6C00B338E4 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 008587712248DC6B00B338E4;
+					};
+				};
+			};
+			buildConfigurationList = 0085876D2248DC6B00B338E4 /* Build configuration list for PBXProject "CT Rafael Nobre" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 008587692248DC6B00B338E4;
+			productRefGroup = 008587732248DC6B00B338E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				008587712248DC6B00B338E4 /* CT Rafael Nobre */,
+				008587852248DC6C00B338E4 /* CT Rafael NobreTests */,
+				008587902248DC6C00B338E4 /* CT Rafael NobreUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		008587702248DC6B00B338E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				008587802248DC6C00B338E4 /* LaunchScreen.storyboard in Resources */,
+				0085877D2248DC6C00B338E4 /* Assets.xcassets in Resources */,
+				0085877B2248DC6B00B338E4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		008587842248DC6C00B338E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0085878F2248DC6C00B338E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0085876E2248DC6B00B338E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				008587782248DC6B00B338E4 /* ViewController.swift in Sources */,
+				008587762248DC6B00B338E4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		008587822248DC6C00B338E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0085878B2248DC6C00B338E4 /* CT_Rafael_NobreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0085878D2248DC6C00B338E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				008587962248DC6C00B338E4 /* CT_Rafael_NobreUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		008587882248DC6C00B338E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 008587712248DC6B00B338E4 /* CT Rafael Nobre */;
+			targetProxy = 008587872248DC6C00B338E4 /* PBXContainerItemProxy */;
+		};
+		008587932248DC6C00B338E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 008587712248DC6B00B338E4 /* CT Rafael Nobre */;
+			targetProxy = 008587922248DC6C00B338E4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		008587792248DC6B00B338E4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0085877A2248DC6B00B338E4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0085877E2248DC6C00B338E4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0085877F2248DC6C00B338E4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		008587982248DC6C00B338E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		008587992248DC6C00B338E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0085879B2248DC6C00B338E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38KB8NBTE5;
+				INFOPLIST_FILE = "CT Rafael Nobre/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nobre.CT-Rafael-Nobre";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0085879C2248DC6C00B338E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38KB8NBTE5;
+				INFOPLIST_FILE = "CT Rafael Nobre/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nobre.CT-Rafael-Nobre";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0085879E2248DC6C00B338E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38KB8NBTE5;
+				INFOPLIST_FILE = "CT Rafael NobreTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nobre.CT-Rafael-NobreTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CT Rafael Nobre.app/CT Rafael Nobre";
+			};
+			name = Debug;
+		};
+		0085879F2248DC6C00B338E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38KB8NBTE5;
+				INFOPLIST_FILE = "CT Rafael NobreTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nobre.CT-Rafael-NobreTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CT Rafael Nobre.app/CT Rafael Nobre";
+			};
+			name = Release;
+		};
+		008587A12248DC6C00B338E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38KB8NBTE5;
+				INFOPLIST_FILE = "CT Rafael NobreUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nobre.CT-Rafael-NobreUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "CT Rafael Nobre";
+			};
+			name = Debug;
+		};
+		008587A22248DC6C00B338E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38KB8NBTE5;
+				INFOPLIST_FILE = "CT Rafael NobreUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nobre.CT-Rafael-NobreUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "CT Rafael Nobre";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0085876D2248DC6B00B338E4 /* Build configuration list for PBXProject "CT Rafael Nobre" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				008587982248DC6C00B338E4 /* Debug */,
+				008587992248DC6C00B338E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0085879A2248DC6C00B338E4 /* Build configuration list for PBXNativeTarget "CT Rafael Nobre" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0085879B2248DC6C00B338E4 /* Debug */,
+				0085879C2248DC6C00B338E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0085879D2248DC6C00B338E4 /* Build configuration list for PBXNativeTarget "CT Rafael NobreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0085879E2248DC6C00B338E4 /* Debug */,
+				0085879F2248DC6C00B338E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		008587A02248DC6C00B338E4 /* Build configuration list for PBXNativeTarget "CT Rafael NobreUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				008587A12248DC6C00B338E4 /* Debug */,
+				008587A22248DC6C00B338E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0085876A2248DC6B00B338E4 /* Project object */;
+}
