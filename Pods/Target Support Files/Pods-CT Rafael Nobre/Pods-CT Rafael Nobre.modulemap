@@ -1,0 +1,6 @@
+framework module Pods_CT_Rafael_Nobre {
+  umbrella header "Pods-CT Rafael Nobre-umbrella.h"
+
+  export *
+  module * { export * }
+}

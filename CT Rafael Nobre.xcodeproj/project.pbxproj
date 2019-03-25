@@ -14,6 +14,13 @@
 		008587802248DC6C00B338E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0085877E2248DC6C00B338E4 /* LaunchScreen.storyboard */; };
 		0085878B2248DC6C00B338E4 /* CT_Rafael_NobreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0085878A2248DC6C00B338E4 /* CT_Rafael_NobreTests.swift */; };
 		008587962248DC6C00B338E4 /* CT_Rafael_NobreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587952248DC6C00B338E4 /* CT_Rafael_NobreUITests.swift */; };
+		008587AA2248DE7200B338E4 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587A92248DE7200B338E4 /* Contact.swift */; };
+		008587AC2248E19700B338E4 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587AB2248E19700B338E4 /* Address.swift */; };
+		008587AE2248E1A100B338E4 /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587AD2248E1A100B338E4 /* PhoneNumber.swift */; };
+		008587B02248E1A900B338E4 /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587AF2248E1A900B338E4 /* Email.swift */; };
+		6395FD71718C70A70A853B3C /* Pods_CT_Rafael_NobreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA5343955FE4B914731F81F /* Pods_CT_Rafael_NobreTests.framework */; };
+		77315306A4FE8B9D51DB5ED9 /* Pods_CT_Rafael_Nobre.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E713D23D0EEC7BA0170B4DF4 /* Pods_CT_Rafael_Nobre.framework */; };
+		D18EB800640F8DEEA8C5BFD3 /* Pods_CT_Rafael_NobreUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2538C6E84C4091988759B077 /* Pods_CT_Rafael_NobreUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,19 @@
 		008587912248DC6C00B338E4 /* CT Rafael NobreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CT Rafael NobreUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		008587952248DC6C00B338E4 /* CT_Rafael_NobreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CT_Rafael_NobreUITests.swift; sourceTree = "<group>"; };
 		008587972248DC6C00B338E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		008587A92248DE7200B338E4 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		008587AB2248E19700B338E4 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		008587AD2248E1A100B338E4 /* PhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
+		008587AF2248E1A900B338E4 /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
+		14F4DF0FE312DFD393B4C0F5 /* Pods-CT Rafael NobreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CT Rafael NobreTests.debug.xcconfig"; path = "Target Support Files/Pods-CT Rafael NobreTests/Pods-CT Rafael NobreTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2538C6E84C4091988759B077 /* Pods_CT_Rafael_NobreUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CT_Rafael_NobreUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61C125EF138B18361956E9E5 /* Pods-CT Rafael NobreUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CT Rafael NobreUITests.debug.xcconfig"; path = "Target Support Files/Pods-CT Rafael NobreUITests/Pods-CT Rafael NobreUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7EE912BE24B708EA29DD0679 /* Pods-CT Rafael NobreUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CT Rafael NobreUITests.release.xcconfig"; path = "Target Support Files/Pods-CT Rafael NobreUITests/Pods-CT Rafael NobreUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8CA5343955FE4B914731F81F /* Pods_CT_Rafael_NobreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CT_Rafael_NobreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5D17340DDFC17C5DBA6CA72 /* Pods-CT Rafael Nobre.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CT Rafael Nobre.release.xcconfig"; path = "Target Support Files/Pods-CT Rafael Nobre/Pods-CT Rafael Nobre.release.xcconfig"; sourceTree = "<group>"; };
+		E713D23D0EEC7BA0170B4DF4 /* Pods_CT_Rafael_Nobre.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CT_Rafael_Nobre.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFEBA09A039356D98A12195F /* Pods-CT Rafael NobreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CT Rafael NobreTests.release.xcconfig"; path = "Target Support Files/Pods-CT Rafael NobreTests/Pods-CT Rafael NobreTests.release.xcconfig"; sourceTree = "<group>"; };
+		F77D63ECC6895EF09E9A419F /* Pods-CT Rafael Nobre.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CT Rafael Nobre.debug.xcconfig"; path = "Target Support Files/Pods-CT Rafael Nobre/Pods-CT Rafael Nobre.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77315306A4FE8B9D51DB5ED9 /* Pods_CT_Rafael_Nobre.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6395FD71718C70A70A853B3C /* Pods_CT_Rafael_NobreTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D18EB800640F8DEEA8C5BFD3 /* Pods_CT_Rafael_NobreUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +104,8 @@
 				008587892248DC6C00B338E4 /* CT Rafael NobreTests */,
 				008587942248DC6C00B338E4 /* CT Rafael NobreUITests */,
 				008587732248DC6B00B338E4 /* Products */,
+				957224F4BDF8143AADA97137 /* Pods */,
+				1F173F4664F3A69BE45AC456 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +122,9 @@
 		008587742248DC6B00B338E4 /* CT Rafael Nobre */ = {
 			isa = PBXGroup;
 			children = (
-				008587752248DC6B00B338E4 /* AppDelegate.swift */,
-				008587772248DC6B00B338E4 /* ViewController.swift */,
-				008587792248DC6B00B338E4 /* Main.storyboard */,
-				0085877C2248DC6C00B338E4 /* Assets.xcassets */,
-				0085877E2248DC6C00B338E4 /* LaunchScreen.storyboard */,
-				008587812248DC6C00B338E4 /* Info.plist */,
+				008587A32248DE1100B338E4 /* Sources */,
+				008587A42248DE1700B338E4 /* Resources */,
+				008587A52248DE1C00B338E4 /* Supporting files */,
 			);
 			path = "CT Rafael Nobre";
 			sourceTree = "<group>";
@@ -125,6 +147,84 @@
 			path = "CT Rafael NobreUITests";
 			sourceTree = "<group>";
 		};
+		008587A32248DE1100B338E4 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				008587A72248DE4E00B338E4 /* Model */,
+				008587A82248DE5500B338E4 /* View */,
+				008587A62248DE4700B338E4 /* Controller */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		008587A42248DE1700B338E4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				008587792248DC6B00B338E4 /* Main.storyboard */,
+				0085877C2248DC6C00B338E4 /* Assets.xcassets */,
+				0085877E2248DC6C00B338E4 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		008587A52248DE1C00B338E4 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				008587752248DC6B00B338E4 /* AppDelegate.swift */,
+				008587812248DC6C00B338E4 /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		008587A62248DE4700B338E4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				008587772248DC6B00B338E4 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		008587A72248DE4E00B338E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				008587A92248DE7200B338E4 /* Contact.swift */,
+				008587AB2248E19700B338E4 /* Address.swift */,
+				008587AD2248E1A100B338E4 /* PhoneNumber.swift */,
+				008587AF2248E1A900B338E4 /* Email.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		008587A82248DE5500B338E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1F173F4664F3A69BE45AC456 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E713D23D0EEC7BA0170B4DF4 /* Pods_CT_Rafael_Nobre.framework */,
+				8CA5343955FE4B914731F81F /* Pods_CT_Rafael_NobreTests.framework */,
+				2538C6E84C4091988759B077 /* Pods_CT_Rafael_NobreUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		957224F4BDF8143AADA97137 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F77D63ECC6895EF09E9A419F /* Pods-CT Rafael Nobre.debug.xcconfig */,
+				B5D17340DDFC17C5DBA6CA72 /* Pods-CT Rafael Nobre.release.xcconfig */,
+				14F4DF0FE312DFD393B4C0F5 /* Pods-CT Rafael NobreTests.debug.xcconfig */,
+				EFEBA09A039356D98A12195F /* Pods-CT Rafael NobreTests.release.xcconfig */,
+				61C125EF138B18361956E9E5 /* Pods-CT Rafael NobreUITests.debug.xcconfig */,
+				7EE912BE24B708EA29DD0679 /* Pods-CT Rafael NobreUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +232,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0085879A2248DC6C00B338E4 /* Build configuration list for PBXNativeTarget "CT Rafael Nobre" */;
 			buildPhases = (
+				BFCB525C05C9D1C125C224A3 /* [CP] Check Pods Manifest.lock */,
 				0085876E2248DC6B00B338E4 /* Sources */,
 				0085876F2248DC6B00B338E4 /* Frameworks */,
 				008587702248DC6B00B338E4 /* Resources */,
+				637D801FC5C4B7689BB1B616 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,9 +251,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0085879D2248DC6C00B338E4 /* Build configuration list for PBXNativeTarget "CT Rafael NobreTests" */;
 			buildPhases = (
+				491B4361A0AB10387BDD14B8 /* [CP] Check Pods Manifest.lock */,
 				008587822248DC6C00B338E4 /* Sources */,
 				008587832248DC6C00B338E4 /* Frameworks */,
 				008587842248DC6C00B338E4 /* Resources */,
+				B215BCDEAD5081C0066D0EC9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +271,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 008587A02248DC6C00B338E4 /* Build configuration list for PBXNativeTarget "CT Rafael NobreUITests" */;
 			buildPhases = (
+				C12573FE6B562367C1C5DC0A /* [CP] Check Pods Manifest.lock */,
 				0085878D2248DC6C00B338E4 /* Sources */,
 				0085878E2248DC6C00B338E4 /* Frameworks */,
 				0085878F2248DC6C00B338E4 /* Resources */,
@@ -251,12 +356,131 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		491B4361A0AB10387BDD14B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CT Rafael NobreTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		637D801FC5C4B7689BB1B616 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CT Rafael Nobre/Pods-CT Rafael Nobre-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CT Rafael Nobre/Pods-CT Rafael Nobre-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B215BCDEAD5081C0066D0EC9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CT Rafael NobreTests/Pods-CT Rafael NobreTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CT Rafael NobreTests/Pods-CT Rafael NobreTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFCB525C05C9D1C125C224A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CT Rafael Nobre-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C12573FE6B562367C1C5DC0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CT Rafael NobreUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0085876E2248DC6B00B338E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				008587AA2248DE7200B338E4 /* Contact.swift in Sources */,
 				008587782248DC6B00B338E4 /* ViewController.swift in Sources */,
+				008587B02248E1A900B338E4 /* Email.swift in Sources */,
+				008587AC2248E19700B338E4 /* Address.swift in Sources */,
+				008587AE2248E1A100B338E4 /* PhoneNumber.swift in Sources */,
 				008587762248DC6B00B338E4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,11 +654,13 @@
 		};
 		0085879B2248DC6C00B338E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F77D63ECC6895EF09E9A419F /* Pods-CT Rafael Nobre.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38KB8NBTE5;
-				INFOPLIST_FILE = "CT Rafael Nobre/Info.plist";
+				INFOPLIST_FILE = "CT Rafael Nobre/Supporting files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,11 +674,13 @@
 		};
 		0085879C2248DC6C00B338E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5D17340DDFC17C5DBA6CA72 /* Pods-CT Rafael Nobre.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38KB8NBTE5;
-				INFOPLIST_FILE = "CT Rafael Nobre/Info.plist";
+				INFOPLIST_FILE = "CT Rafael Nobre/Supporting files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,8 +694,8 @@
 		};
 		0085879E2248DC6C00B338E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14F4DF0FE312DFD393B4C0F5 /* Pods-CT Rafael NobreTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38KB8NBTE5;
@@ -487,8 +715,8 @@
 		};
 		0085879F2248DC6C00B338E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFEBA09A039356D98A12195F /* Pods-CT Rafael NobreTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38KB8NBTE5;
@@ -508,8 +736,8 @@
 		};
 		008587A12248DC6C00B338E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61C125EF138B18361956E9E5 /* Pods-CT Rafael NobreUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38KB8NBTE5;
 				INFOPLIST_FILE = "CT Rafael NobreUITests/Info.plist";
@@ -528,8 +756,8 @@
 		};
 		008587A22248DC6C00B338E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EE912BE24B708EA29DD0679 /* Pods-CT Rafael NobreUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38KB8NBTE5;
 				INFOPLIST_FILE = "CT Rafael NobreUITests/Info.plist";
