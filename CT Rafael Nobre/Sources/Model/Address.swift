@@ -10,5 +10,11 @@ import UIKit
 import RealmSwift
 
 class Address: Object {
-
+    var label: String?
+    var street: String?
+    var number: String?
+    var city: String?
+    var state: String?
+    var country: String?
+    var zipCode: String?
 }

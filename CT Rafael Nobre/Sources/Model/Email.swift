@@ -10,5 +10,6 @@ import UIKit
 import RealmSwift
 
 class Email: Object {
-
+    var label: String?
+    var email: String?
 }

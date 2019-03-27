@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		008587762248DC6B00B338E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587752248DC6B00B338E4 /* AppDelegate.swift */; };
-		008587782248DC6B00B338E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587772248DC6B00B338E4 /* ViewController.swift */; };
 		0085877B2248DC6B00B338E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 008587792248DC6B00B338E4 /* Main.storyboard */; };
 		0085877D2248DC6C00B338E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0085877C2248DC6C00B338E4 /* Assets.xcassets */; };
 		008587802248DC6C00B338E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0085877E2248DC6C00B338E4 /* LaunchScreen.storyboard */; };
@@ -18,6 +17,12 @@
 		008587AC2248E19700B338E4 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587AB2248E19700B338E4 /* Address.swift */; };
 		008587AE2248E1A100B338E4 /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587AD2248E1A100B338E4 /* PhoneNumber.swift */; };
 		008587B02248E1A900B338E4 /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587AF2248E1A900B338E4 /* Email.swift */; };
+		00C7F0A5224B7ADA00C4DBEB /* ContactListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7F0A4224B7ADA00C4DBEB /* ContactListController.swift */; };
+		00C7F0A7224B7BC700C4DBEB /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00C7F0A6224B7BC700C4DBEB /* ContactCell.xib */; };
+		00C7F0A9224B7D9C00C4DBEB /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7F0A8224B7D9C00C4DBEB /* ContactCell.swift */; };
+		00C7F0B0224B828000C4DBEB /* ReusableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7F0AE224B828000C4DBEB /* ReusableViewExtensions.swift */; };
+		00C7F0B1224B828000C4DBEB /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7F0AF224B828000C4DBEB /* ReusableView.swift */; };
+		00C7F0B3224B82A000C4DBEB /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7F0B2224B82A000C4DBEB /* NibLoadableView.swift */; };
 		6395FD71718C70A70A853B3C /* Pods_CT_Rafael_NobreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA5343955FE4B914731F81F /* Pods_CT_Rafael_NobreTests.framework */; };
 		77315306A4FE8B9D51DB5ED9 /* Pods_CT_Rafael_Nobre.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E713D23D0EEC7BA0170B4DF4 /* Pods_CT_Rafael_Nobre.framework */; };
 		D18EB800640F8DEEA8C5BFD3 /* Pods_CT_Rafael_NobreUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2538C6E84C4091988759B077 /* Pods_CT_Rafael_NobreUITests.framework */; };
@@ -43,7 +48,6 @@
 /* Begin PBXFileReference section */
 		008587722248DC6B00B338E4 /* CT Rafael Nobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CT Rafael Nobre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		008587752248DC6B00B338E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		008587772248DC6B00B338E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0085877A2248DC6B00B338E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0085877C2248DC6C00B338E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0085877F2248DC6C00B338E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +62,12 @@
 		008587AB2248E19700B338E4 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		008587AD2248E1A100B338E4 /* PhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
 		008587AF2248E1A900B338E4 /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
+		00C7F0A4224B7ADA00C4DBEB /* ContactListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListController.swift; sourceTree = "<group>"; };
+		00C7F0A6224B7BC700C4DBEB /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
+		00C7F0A8224B7D9C00C4DBEB /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		00C7F0AE224B828000C4DBEB /* ReusableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableViewExtensions.swift; sourceTree = "<group>"; };
+		00C7F0AF224B828000C4DBEB /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		00C7F0B2224B82A000C4DBEB /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		14F4DF0FE312DFD393B4C0F5 /* Pods-CT Rafael NobreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CT Rafael NobreTests.debug.xcconfig"; path = "Target Support Files/Pods-CT Rafael NobreTests/Pods-CT Rafael NobreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2538C6E84C4091988759B077 /* Pods_CT_Rafael_NobreUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CT_Rafael_NobreUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C125EF138B18361956E9E5 /* Pods-CT Rafael NobreUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CT Rafael NobreUITests.debug.xcconfig"; path = "Target Support Files/Pods-CT Rafael NobreUITests/Pods-CT Rafael NobreUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +160,7 @@
 		008587A32248DE1100B338E4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				00C7F0AA224B818300C4DBEB /* Support */,
 				008587A72248DE4E00B338E4 /* Model */,
 				008587A82248DE5500B338E4 /* View */,
 				008587A62248DE4700B338E4 /* Controller */,
@@ -163,6 +174,7 @@
 				008587792248DC6B00B338E4 /* Main.storyboard */,
 				0085877C2248DC6C00B338E4 /* Assets.xcassets */,
 				0085877E2248DC6C00B338E4 /* LaunchScreen.storyboard */,
+				00C7F0A6224B7BC700C4DBEB /* ContactCell.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -179,7 +191,7 @@
 		008587A62248DE4700B338E4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				008587772248DC6B00B338E4 /* ViewController.swift */,
+				00C7F0A4224B7ADA00C4DBEB /* ContactListController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -198,8 +210,35 @@
 		008587A82248DE5500B338E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				00C7F0A8224B7D9C00C4DBEB /* ContactCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		00C7F0AA224B818300C4DBEB /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				00C7F0B4224B82B300C4DBEB /* Reusable */,
+				00C7F0AB224B818A00C4DBEB /* Extensions */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		00C7F0AB224B818A00C4DBEB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				00C7F0AE224B828000C4DBEB /* ReusableViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		00C7F0B4224B82B300C4DBEB /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				00C7F0AF224B828000C4DBEB /* ReusableView.swift */,
+				00C7F0B2224B82A000C4DBEB /* NibLoadableView.swift */,
+			);
+			path = Reusable;
 			sourceTree = "<group>";
 		};
 		1F173F4664F3A69BE45AC456 /* Frameworks */ = {
@@ -334,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00C7F0A7224B7BC700C4DBEB /* ContactCell.xib in Resources */,
 				008587802248DC6C00B338E4 /* LaunchScreen.storyboard in Resources */,
 				0085877D2248DC6C00B338E4 /* Assets.xcassets in Resources */,
 				0085877B2248DC6B00B338E4 /* Main.storyboard in Resources */,
@@ -476,10 +516,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00C7F0B1224B828000C4DBEB /* ReusableView.swift in Sources */,
 				008587AA2248DE7200B338E4 /* Contact.swift in Sources */,
-				008587782248DC6B00B338E4 /* ViewController.swift in Sources */,
 				008587B02248E1A900B338E4 /* Email.swift in Sources */,
 				008587AC2248E19700B338E4 /* Address.swift in Sources */,
+				00C7F0B3224B82A000C4DBEB /* NibLoadableView.swift in Sources */,
+				00C7F0A9224B7D9C00C4DBEB /* ContactCell.swift in Sources */,
+				00C7F0B0224B828000C4DBEB /* ReusableViewExtensions.swift in Sources */,
+				00C7F0A5224B7ADA00C4DBEB /* ContactListController.swift in Sources */,
 				008587AE2248E1A100B338E4 /* PhoneNumber.swift in Sources */,
 				008587762248DC6B00B338E4 /* AppDelegate.swift in Sources */,
 			);
