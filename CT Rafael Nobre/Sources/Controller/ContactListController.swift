@@ -13,23 +13,44 @@ class ContactListController: UITableViewController {
 
     private var contacts: Results<Contact>?
     
+    private lazy var searchController: UISearchController = {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        return searchController
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(ContactCell.self)
+        setupTableView()
+        setupSearch()
         
+        fetch()
+    }
+    
+    private func setupTableView() {
+        tableView.register(ContactCell.self)
+    }
+    
+    private func setupSearch() {
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        definesPresentationContext = false
+    }
+    
+    private func fetch(query: String? = nil) {
         do {
             let realm = try Realm()
             contacts = realm.objects(Contact.self)
+            if let query = query, !query.isEmpty {
+                contacts = contacts?.filter(NSPredicate(format: "firstName CONTAINS[cd] %@ OR lastName CONTAINS[cd] %@", query, query))
+            }
             tableView.reloadData()
         }
-        catch {}
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        catch {
+            print("Error!! \(error.localizedDescription)")
+        }
     }
 
     // MARK: - Table view data source
@@ -102,4 +123,12 @@ class ContactListController: UITableViewController {
     }
     */
 
+}
+
+extension ContactListController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        fetch(query: searchController.searchBar.text)
+    }
+    
 }
