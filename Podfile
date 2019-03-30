@@ -3,6 +3,7 @@ platform :ios, '11.4'
 target 'CT Rafael Nobre' do
   use_frameworks!
 
+  pod 'R.swift'
   pod 'RealmSwift'
 
   target 'CT Rafael NobreTests' do

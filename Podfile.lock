@@ -1,26 +1,34 @@
 PODS:
-  - Nimble (7.3.1)
-  - Realm (3.11.1):
-    - Realm/Headers (= 3.11.1)
-  - Realm/Headers (3.11.1)
-  - RealmSwift (3.11.1):
-    - Realm (= 3.11.1)
+  - Nimble (8.0.1)
+  - R.swift (5.0.3):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.0)
+  - Realm (3.14.0):
+    - Realm/Headers (= 3.14.0)
+  - Realm/Headers (3.14.0)
+  - RealmSwift (3.14.0):
+    - Realm (= 3.14.0)
 
 DEPENDENCIES:
   - Nimble
+  - R.swift
   - RealmSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Nimble
+    - R.swift
+    - R.swift.Library
     - Realm
     - RealmSwift
 
 SPEC CHECKSUMS:
-  Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
-  Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
-  RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
+  Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
+  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
+  R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
+  Realm: 221b25919bb5a010a3c597d707f8df3492dcd93a
+  RealmSwift: 28f22dfa6a27b9a778cfb09471558b6afcf1022c
 
-PODFILE CHECKSUM: 298ee4dba139d4588febb90dd168a683df627293
+PODFILE CHECKSUM: fd84e095a549f16fdb228049edeab8017659dbde
 
 COCOAPODS: 1.6.1

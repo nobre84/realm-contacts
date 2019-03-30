@@ -1,5 +1,5 @@
-osx_image: xcode10.1
+osx_image: xcode10.2
 language: objective-c
 cache: bundler
 script:
-- bundle exec fastlane test
+- bundle exec fastlane tests
