@@ -74,8 +74,10 @@ class ContactListController: UITableViewController {
 
         return cell
     }
+    
+    // MARK: - Actions
 
-    @IBAction func addTapped(_ sender: Any) {
+    @IBAction private func addTapped(_ sender: Any) {
         let contact = Contact()
         contact.firstName = "Rafael"
         contact.lastName = "Nobre"
@@ -113,15 +115,6 @@ class ContactListController: UITableViewController {
         
         tableView.reloadData()
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

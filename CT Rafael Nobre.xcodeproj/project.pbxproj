@@ -11,7 +11,7 @@
 		0085877B2248DC6B00B338E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 008587792248DC6B00B338E4 /* Main.storyboard */; };
 		0085877D2248DC6C00B338E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0085877C2248DC6C00B338E4 /* Assets.xcassets */; };
 		008587802248DC6C00B338E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0085877E2248DC6C00B338E4 /* LaunchScreen.storyboard */; };
-		0085878B2248DC6C00B338E4 /* CT_Rafael_NobreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0085878A2248DC6C00B338E4 /* CT_Rafael_NobreTests.swift */; };
+		0085878B2248DC6C00B338E4 /* ContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0085878A2248DC6C00B338E4 /* ContactTests.swift */; };
 		008587962248DC6C00B338E4 /* CT_Rafael_NobreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587952248DC6C00B338E4 /* CT_Rafael_NobreUITests.swift */; };
 		008587AA2248DE7200B338E4 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587A92248DE7200B338E4 /* Contact.swift */; };
 		008587AC2248E19700B338E4 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587AB2248E19700B338E4 /* Address.swift */; };
@@ -53,7 +53,7 @@
 		0085877F2248DC6C00B338E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		008587812248DC6C00B338E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		008587862248DC6C00B338E4 /* CT Rafael NobreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CT Rafael NobreTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0085878A2248DC6C00B338E4 /* CT_Rafael_NobreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CT_Rafael_NobreTests.swift; sourceTree = "<group>"; };
+		0085878A2248DC6C00B338E4 /* ContactTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTests.swift; sourceTree = "<group>"; };
 		0085878C2248DC6C00B338E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		008587912248DC6C00B338E4 /* CT Rafael NobreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CT Rafael NobreUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		008587952248DC6C00B338E4 /* CT_Rafael_NobreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CT_Rafael_NobreUITests.swift; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 		008587892248DC6C00B338E4 /* CT Rafael NobreTests */ = {
 			isa = PBXGroup;
 			children = (
-				0085878A2248DC6C00B338E4 /* CT_Rafael_NobreTests.swift */,
+				0085878A2248DC6C00B338E4 /* ContactTests.swift */,
 				0085878C2248DC6C00B338E4 /* Info.plist */,
 			);
 			path = "CT Rafael NobreTests";
@@ -337,13 +337,16 @@
 				TargetAttributes = {
 					008587712248DC6B00B338E4 = {
 						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Automatic;
 					};
 					008587852248DC6C00B338E4 = {
 						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 008587712248DC6B00B338E4;
 					};
 					008587902248DC6C00B338E4 = {
 						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 008587712248DC6B00B338E4;
 					};
 				};
@@ -533,7 +536,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0085878B2248DC6C00B338E4 /* CT_Rafael_NobreTests.swift in Sources */,
+				0085878B2248DC6C00B338E4 /* ContactTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
