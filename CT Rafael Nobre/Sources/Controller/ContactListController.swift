@@ -10,6 +10,8 @@ import UIKit
 import RealmSwift
 
 class ContactListController: UITableViewController {
+    
+    // MARK: - Private Variables
 
     private var contacts: Results<Contact>?
     
@@ -20,6 +22,8 @@ class ContactListController: UITableViewController {
         return searchController
     }()
     
+    // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,30 +31,6 @@ class ContactListController: UITableViewController {
         setupSearch()
         
         fetch()
-    }
-    
-    private func setupTableView() {
-        tableView.register(ContactCell.self)
-    }
-    
-    private func setupSearch() {
-        navigationItem.searchController = searchController
-        navigationItem.hidesSearchBarWhenScrolling = false
-        definesPresentationContext = false
-    }
-    
-    private func fetch(query: String? = nil) {
-        do {
-            let realm = try Realm()
-            contacts = realm.objects(Contact.self)
-            if let query = query, !query.isEmpty {
-                contacts = contacts?.filter(NSPredicate(format: "firstName CONTAINS[cd] %@ OR lastName CONTAINS[cd] %@", query, query))
-            }
-            tableView.reloadData()
-        }
-        catch {
-            print("Error!! \(error.localizedDescription)")
-        }
     }
 
     // MARK: - Table view data source
@@ -75,12 +55,63 @@ class ContactListController: UITableViewController {
         return cell
     }
     
-    // MARK: - Actions
+    // MARK: - Private Methods
+    
+    private func setupTableView() {
+        tableView.register(ContactCell.self)
+    }
+    
+    private func setupSearch() {
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        definesPresentationContext = false
+    }
+    
+    private func fetch(query: String? = nil) {
+        do {
+            let realm = try Realm()
+            contacts = realm.objects(Contact.self)
+            if let query = query, !query.isEmpty {
+                contacts = contacts?.filter(NSPredicate(format: "firstName CONTAINS[cd] %@ OR lastName CONTAINS[cd] %@", query, query))
+            }
+            tableView.reloadData()
+        }
+        catch {
+            print("Error!! \(error.localizedDescription)")
+        }
+    }
+    
+    private func collectInput(title: String, completion: @escaping (InputCollection) -> Void) {
+        let alertController = UIAlertController(title: title, message: "", preferredStyle: .alert)
+        
+        alertController.addTextField { textField in
+            textField.placeholder = "First name"
+            textField.autocapitalizationType = .words
+        }
+        
+        alertController.addTextField { textField in
+            textField.placeholder = "Last name"
+            textField.autocapitalizationType = .words
+        }
 
-    @IBAction private func addTapped(_ sender: Any) {
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+            completion(.cancel)
+        }
+        
+        let confirmAction = UIAlertAction(title: "OK", style: .default) { _ in
+            completion(.success(firstName: alertController.textFields?[0].text ?? "", lastName: alertController.textFields?[1].text ?? ""))
+        }
+
+        alertController.addAction(cancelAction)
+        alertController.addAction(confirmAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    private func insertContact(firstName: String, lastName: String) {
         let contact = Contact()
-        contact.firstName = "Rafael"
-        contact.lastName = "Nobre"
+        contact.firstName = firstName
+        contact.lastName = lastName
         let phones = List<PhoneNumber>()
         let phone = PhoneNumber()
         phone.label = "mobile"
@@ -108,12 +139,23 @@ class ContactListController: UITableViewController {
             try realm.write {
                 realm.add(contact)
             }
+            tableView.reloadData()
         }
         catch {
             print(error.localizedDescription)
         }
+    }
+    
+    // MARK: - Actions
+
+    @IBAction private func addTapped(_ sender: Any) {
         
-        tableView.reloadData()
+        collectInput(title: "New contact") { [weak self] input in
+            if case .success(let firstName, let lastName) = input {
+                self?.insertContact(firstName: firstName, lastName: lastName)
+            }
+        }
+        
     }
 
 }
@@ -124,4 +166,9 @@ extension ContactListController: UISearchResultsUpdating {
         fetch(query: searchController.searchBar.text)
     }
     
+}
+
+private enum InputCollection {
+    case success(firstName: String, lastName: String)
+    case cancel
 }

@@ -18,7 +18,9 @@ class ContactCell: UITableViewCell, NibLoadableView {
     }
     
     func setup(with contact: Contact) {
-        //nameLabel.text = contact.firstName
+        photoView.setRounded()
+        photoView.image = UIImage.from(components: [contact.firstName, contact.lastName], size: photoView.frame.size)
+        nameLabel.text = "\(contact.firstName ?? "emptyFirstName") \(contact.lastName ?? "emptyLastName")"
     }
 
 }

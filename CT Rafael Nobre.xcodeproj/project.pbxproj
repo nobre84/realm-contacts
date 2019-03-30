@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001EB971224F9A7C001792D9 /* UIImage+Initials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB970224F9A7C001792D9 /* UIImage+Initials.swift */; };
+		001EB973224F9FB5001792D9 /* String+Initials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB972224F9FB5001792D9 /* String+Initials.swift */; };
+		001EB975224FA1D9001792D9 /* UIView+Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB974224FA1D9001792D9 /* UIView+Rounded.swift */; };
+		001EB978224FA579001792D9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB977224FA579001792D9 /* Colors.swift */; };
 		008587762248DC6B00B338E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587752248DC6B00B338E4 /* AppDelegate.swift */; };
 		0085877B2248DC6B00B338E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 008587792248DC6B00B338E4 /* Main.storyboard */; };
 		0085877D2248DC6C00B338E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0085877C2248DC6C00B338E4 /* Assets.xcassets */; };
@@ -46,6 +50,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		001EB970224F9A7C001792D9 /* UIImage+Initials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Initials.swift"; sourceTree = "<group>"; };
+		001EB972224F9FB5001792D9 /* String+Initials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Initials.swift"; sourceTree = "<group>"; };
+		001EB974224FA1D9001792D9 /* UIView+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Rounded.swift"; sourceTree = "<group>"; };
+		001EB977224FA579001792D9 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		008587722248DC6B00B338E4 /* CT Rafael Nobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CT Rafael Nobre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		008587752248DC6B00B338E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0085877A2248DC6B00B338E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,6 +115,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		001EB96D224F985F001792D9 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				00C7F0A6224B7BC700C4DBEB /* ContactCell.xib */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		001EB96E224F9863001792D9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				008587792248DC6B00B338E4 /* Main.storyboard */,
+				0085877E2248DC6C00B338E4 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		001EB976224FA56B001792D9 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				001EB977224FA579001792D9 /* Colors.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
 		008587692248DC6B00B338E4 = {
 			isa = PBXGroup;
 			children = (
@@ -171,10 +204,9 @@
 		008587A42248DE1700B338E4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				008587792248DC6B00B338E4 /* Main.storyboard */,
+				001EB96E224F9863001792D9 /* Storyboard */,
+				001EB96D224F985F001792D9 /* XIB */,
 				0085877C2248DC6C00B338E4 /* Assets.xcassets */,
-				0085877E2248DC6C00B338E4 /* LaunchScreen.storyboard */,
-				00C7F0A6224B7BC700C4DBEB /* ContactCell.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -218,6 +250,7 @@
 		00C7F0AA224B818300C4DBEB /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				001EB976224FA56B001792D9 /* Styles */,
 				00C7F0B4224B82B300C4DBEB /* Reusable */,
 				00C7F0AB224B818A00C4DBEB /* Extensions */,
 			);
@@ -228,6 +261,9 @@
 			isa = PBXGroup;
 			children = (
 				00C7F0AE224B828000C4DBEB /* ReusableViewExtensions.swift */,
+				001EB970224F9A7C001792D9 /* UIImage+Initials.swift */,
+				001EB972224F9FB5001792D9 /* String+Initials.swift */,
+				001EB974224FA1D9001792D9 /* UIView+Rounded.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -524,13 +560,17 @@
 				00C7F0B1224B828000C4DBEB /* ReusableView.swift in Sources */,
 				008587AA2248DE7200B338E4 /* Contact.swift in Sources */,
 				008587B02248E1A900B338E4 /* Email.swift in Sources */,
+				001EB978224FA579001792D9 /* Colors.swift in Sources */,
 				008587AC2248E19700B338E4 /* Address.swift in Sources */,
+				001EB971224F9A7C001792D9 /* UIImage+Initials.swift in Sources */,
 				00C7F0B3224B82A000C4DBEB /* NibLoadableView.swift in Sources */,
+				001EB975224FA1D9001792D9 /* UIView+Rounded.swift in Sources */,
 				00C7F0A9224B7D9C00C4DBEB /* ContactCell.swift in Sources */,
 				00C7F0B0224B828000C4DBEB /* ReusableViewExtensions.swift in Sources */,
 				00C7F0A5224B7ADA00C4DBEB /* ContactListController.swift in Sources */,
 				008587AE2248E1A100B338E4 /* PhoneNumber.swift in Sources */,
 				008587762248DC6B00B338E4 /* AppDelegate.swift in Sources */,
+				001EB973224F9FB5001792D9 /* String+Initials.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

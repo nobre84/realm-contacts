@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" rowHeight="89" id="vwP-0F-GCR" customClass="ContactCell" customModule="CT_Rafael_Nobre" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vwP-0F-GCR" id="JjY-CB-MHm">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="88.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="g8k-1j-bEi">
+                        <rect key="frame" x="16" y="8" width="343" height="72.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3G3-UU-HdA">
+                                <rect key="frame" x="0.0" y="12.5" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="iBj-Hk-8yK"/>
+                                    <constraint firstAttribute="width" constant="48" id="oke-ag-wKb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJn-hm-4Is">
+                                <rect key="frame" x="64" y="26" width="279" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="byY-H1-MUp"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="g8k-1j-bEi" secondAttribute="trailing" constant="16" id="Eo9-j5-GvO"/>
+                    <constraint firstItem="g8k-1j-bEi" firstAttribute="leading" secondItem="JjY-CB-MHm" secondAttribute="leading" constant="16" id="ZSr-aq-cov"/>
+                    <constraint firstItem="g8k-1j-bEi" firstAttribute="top" secondItem="JjY-CB-MHm" secondAttribute="top" constant="8" id="qJg-xs-XIl"/>
+                    <constraint firstAttribute="bottom" secondItem="g8k-1j-bEi" secondAttribute="bottom" constant="8" id="rI7-wZ-UGU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="64" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="nameLabel" destination="BJn-hm-4Is" id="m70-iE-ljK"/>
+                <outlet property="photoView" destination="3G3-UU-HdA" id="Qjd-Qu-1hW"/>
+            </connections>
+            <point key="canvasLocation" x="-346.39999999999998" y="17.541229385307346"/>
+        </tableViewCell>
+    </objects>
+</document>
