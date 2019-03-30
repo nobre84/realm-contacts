@@ -11,7 +11,17 @@ import UIKit
 extension String {
 
     static func initials(from components: [String?]) -> String {
-        return components.compactMap { $0 }.compactMap { $0.first }.map { String($0) }.joined()
+        let nonNilComponents = components.compactMap { $0 }
+        let firstCharacters = nonNilComponents.compactMap { $0.first }
+        let count = firstCharacters.count
+        guard count > 0 else {
+            return ""
+        }
+        var initials = String(firstCharacters[0]).uppercased()
+        if count > 1 {
+            initials += String(firstCharacters[count - 1]).uppercased()
+        }
+        return initials
     }
 
 }

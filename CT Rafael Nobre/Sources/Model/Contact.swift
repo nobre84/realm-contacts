@@ -26,3 +26,9 @@ class Contact: Object {
     var phoneNumbers = List<PhoneNumber>()
     var emails = List<Email>()
 }
+
+extension Contact {
+    var fullName: String? {
+        return [firstName, lastName].compactMap { $0 }.filter { !$0.isEmpty }.joined(separator: " ")
+    }
+}

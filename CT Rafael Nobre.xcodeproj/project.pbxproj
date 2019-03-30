@@ -11,11 +11,12 @@
 		001EB973224F9FB5001792D9 /* String+Initials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB972224F9FB5001792D9 /* String+Initials.swift */; };
 		001EB975224FA1D9001792D9 /* UIView+Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB974224FA1D9001792D9 /* UIView+Rounded.swift */; };
 		001EB978224FA579001792D9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB977224FA579001792D9 /* Colors.swift */; };
+		0071C027224FAD10001500F8 /* ContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071C026224FAD10001500F8 /* ContactTests.swift */; };
 		008587762248DC6B00B338E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587752248DC6B00B338E4 /* AppDelegate.swift */; };
 		0085877B2248DC6B00B338E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 008587792248DC6B00B338E4 /* Main.storyboard */; };
 		0085877D2248DC6C00B338E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0085877C2248DC6C00B338E4 /* Assets.xcassets */; };
 		008587802248DC6C00B338E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0085877E2248DC6C00B338E4 /* LaunchScreen.storyboard */; };
-		0085878B2248DC6C00B338E4 /* ContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0085878A2248DC6C00B338E4 /* ContactTests.swift */; };
+		0085878B2248DC6C00B338E4 /* UIString+InitialsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0085878A2248DC6C00B338E4 /* UIString+InitialsTests.swift */; };
 		008587962248DC6C00B338E4 /* CT_Rafael_NobreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587952248DC6C00B338E4 /* CT_Rafael_NobreUITests.swift */; };
 		008587AA2248DE7200B338E4 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587A92248DE7200B338E4 /* Contact.swift */; };
 		008587AC2248E19700B338E4 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587AB2248E19700B338E4 /* Address.swift */; };
@@ -54,6 +55,7 @@
 		001EB972224F9FB5001792D9 /* String+Initials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Initials.swift"; sourceTree = "<group>"; };
 		001EB974224FA1D9001792D9 /* UIView+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Rounded.swift"; sourceTree = "<group>"; };
 		001EB977224FA579001792D9 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		0071C026224FAD10001500F8 /* ContactTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTests.swift; sourceTree = "<group>"; };
 		008587722248DC6B00B338E4 /* CT Rafael Nobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CT Rafael Nobre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		008587752248DC6B00B338E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0085877A2248DC6B00B338E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,7 +63,7 @@
 		0085877F2248DC6C00B338E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		008587812248DC6C00B338E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		008587862248DC6C00B338E4 /* CT Rafael NobreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CT Rafael NobreTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0085878A2248DC6C00B338E4 /* ContactTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTests.swift; sourceTree = "<group>"; };
+		0085878A2248DC6C00B338E4 /* UIString+InitialsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIString+InitialsTests.swift"; sourceTree = "<group>"; };
 		0085878C2248DC6C00B338E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		008587912248DC6C00B338E4 /* CT Rafael NobreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CT Rafael NobreUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		008587952248DC6C00B338E4 /* CT_Rafael_NobreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CT_Rafael_NobreUITests.swift; sourceTree = "<group>"; };
@@ -175,7 +177,8 @@
 		008587892248DC6C00B338E4 /* CT Rafael NobreTests */ = {
 			isa = PBXGroup;
 			children = (
-				0085878A2248DC6C00B338E4 /* ContactTests.swift */,
+				0071C026224FAD10001500F8 /* ContactTests.swift */,
+				0085878A2248DC6C00B338E4 /* UIString+InitialsTests.swift */,
 				0085878C2248DC6C00B338E4 /* Info.plist */,
 			);
 			path = "CT Rafael NobreTests";
@@ -578,7 +581,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0085878B2248DC6C00B338E4 /* ContactTests.swift in Sources */,
+				0071C027224FAD10001500F8 /* ContactTests.swift in Sources */,
+				0085878B2248DC6C00B338E4 /* UIString+InitialsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
