@@ -160,10 +160,10 @@
 		008587A32248DE1100B338E4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				00C7F0AA224B818300C4DBEB /* Support */,
 				008587A72248DE4E00B338E4 /* Model */,
 				008587A82248DE5500B338E4 /* View */,
 				008587A62248DE4700B338E4 /* Controller */,
+				00C7F0AA224B818300C4DBEB /* Support */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
