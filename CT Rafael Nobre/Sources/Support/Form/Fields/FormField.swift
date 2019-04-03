@@ -8,6 +8,6 @@
 
 import UIKit
 
-class FormField: NSObject {
-
+protocol FormField {
+    static var cellType: FormFieldCell.Type { get }
 }

@@ -8,17 +8,22 @@
 
 import UIKit
 
-class FormLabelFieldCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+class FormLabelFieldCell: UITableViewCell, FormFieldCell {
+   
+    weak var field: FormLabelField?
+    static var nib: UINib { return UINib(resource: R.nib.formLabelFieldCell) }
+    static var identifier: String { return R.reuseIdentifier.formLabelFieldCell.identifier }
+    
+    @IBOutlet weak var valueLabel: UILabel!
+    @IBOutlet weak var labelLabel: UILabel!
+    
+    func setup(with field: FormField?) {
+        self.field = field as? FormLabelField
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func updateUI() {
+        labelLabel.text = field?.label
+        valueLabel.text = field?.value
     }
     
 }

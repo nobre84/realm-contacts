@@ -8,6 +8,12 @@
 
 import UIKit
 
-class FormSection: NSObject {
-
+class FormSection {
+    
+    var fields = [FormField]()
+    
+    init(_ fields: [FormField] = []) {
+        self.fields = fields
+    }
+    
 }

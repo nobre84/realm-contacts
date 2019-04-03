@@ -5,6 +5,7 @@ target 'CT Rafael Nobre' do
 
   pod 'R.swift'
   pod 'RealmSwift'
+  pod 'TPKeyboardAvoiding'
 
   target 'CT Rafael NobreTests' do
     inherit! :search_paths

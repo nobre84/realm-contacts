@@ -9,14 +9,22 @@
 import UIKit
 
 class ContactDetailController: UIViewController {
+    
+    var form: ContactDetailForm?
 
+    @IBOutlet weak var formTableView: FormTableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupForm()
     }
     
-
+    private func setupForm() {
+        let form = ContactDetailForm(presenter: self, contact: Contact())
+        formTableView.sections = form.sections
+        self.form = form
+    }
+    
     /*
     // MARK: - Navigation
 

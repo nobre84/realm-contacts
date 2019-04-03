@@ -10,4 +10,9 @@ import UIKit
 
 class FormLabelField: FormField {
 
+    var label: String?
+    var value: String?
+    
+    static var cellType: FormFieldCell.Type = FormLabelFieldCell.self
+    
 }

@@ -8,17 +8,33 @@
 
 import UIKit
 
-class FormTextFieldCell: UITableViewCell {
+class FormTextFieldCell: UITableViewCell, FormFieldCell {
+    
+    weak var field: FormTextField?
+    static var nib: UINib { return UINib(resource: R.nib.formTextFieldCell) }
+    static var identifier: String { return R.reuseIdentifier.formTextFieldCell.identifier }
 
+    @IBOutlet weak var valueTextField: UITextField!
+    @IBOutlet weak var labelLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        valueTextField.addTarget(self, action: #selector(valueChanged), for: .valueChanged)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func setup(with field: FormField?) {
+        self.field = field as? FormTextField
+    }
+    
+    func updateUI() {
+        labelLabel.text = field?.label
+        valueTextField.text = field?.text
+    }
+    
+    @objc private func valueChanged() {
+        field?.text = valueTextField.text
+        field?.valueChanged()
     }
     
 }

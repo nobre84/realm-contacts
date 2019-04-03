@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0018BDE2225215A50028DC09 /* FormFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0018BDE1225215A50028DC09 /* FormFieldCell.swift */; };
+		0018BDE52252191B0028DC09 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0018BDE42252191B0028DC09 /* R.generated.swift */; };
 		001EB971224F9A7C001792D9 /* UIImage+Initials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB970224F9A7C001792D9 /* UIImage+Initials.swift */; };
 		001EB973224F9FB5001792D9 /* String+Initials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB972224F9FB5001792D9 /* String+Initials.swift */; };
 		001EB975224FA1D9001792D9 /* UIView+Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB974224FA1D9001792D9 /* UIView+Rounded.swift */; };
 		001EB978224FA579001792D9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB977224FA579001792D9 /* Colors.swift */; };
+		0022F4C822536D0E00B83A42 /* ContactDetailForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0022F4C722536D0E00B83A42 /* ContactDetailForm.swift */; };
 		0071C027224FAD10001500F8 /* ContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071C026224FAD10001500F8 /* ContactTests.swift */; };
 		0071C029224FBDB7001500F8 /* ContactDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071C028224FBDB7001500F8 /* ContactDetailController.swift */; };
 		0071C032224FBF86001500F8 /* FormTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071C031224FBF86001500F8 /* FormTableView.swift */; };
@@ -61,10 +64,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0018BDE1225215A50028DC09 /* FormFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFieldCell.swift; sourceTree = "<group>"; };
+		0018BDE42252191B0028DC09 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		001EB970224F9A7C001792D9 /* UIImage+Initials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Initials.swift"; sourceTree = "<group>"; };
 		001EB972224F9FB5001792D9 /* String+Initials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Initials.swift"; sourceTree = "<group>"; };
 		001EB974224FA1D9001792D9 /* UIView+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Rounded.swift"; sourceTree = "<group>"; };
 		001EB977224FA579001792D9 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		0022F4C722536D0E00B83A42 /* ContactDetailForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailForm.swift; sourceTree = "<group>"; };
 		0071C026224FAD10001500F8 /* ContactTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTests.swift; sourceTree = "<group>"; };
 		0071C028224FBDB7001500F8 /* ContactDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailController.swift; sourceTree = "<group>"; };
 		0071C031224FBF86001500F8 /* FormTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableView.swift; sourceTree = "<group>"; };
@@ -162,6 +168,14 @@
 			path = Styles;
 			sourceTree = "<group>";
 		};
+		0022F4C622536CF800B83A42 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				0022F4C722536D0E00B83A42 /* ContactDetailForm.swift */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
 		0071C02E224FBF62001500F8 /* Form */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +200,7 @@
 		0071C030224FBF75001500F8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				0018BDE1225215A50028DC09 /* FormFieldCell.swift */,
 				0071C03D224FC0EE001500F8 /* FormTextFieldCell.swift */,
 				0071C03E224FC0EE001500F8 /* FormTextFieldCell.xib */,
 				0071C041224FC109001500F8 /* FormLabelFieldCell.swift */,
@@ -269,6 +284,7 @@
 		008587A52248DE1C00B338E4 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				0018BDE42252191B0028DC09 /* R.generated.swift */,
 				008587752248DC6B00B338E4 /* AppDelegate.swift */,
 				008587812248DC6C00B338E4 /* Info.plist */,
 			);
@@ -278,6 +294,7 @@
 		008587A62248DE4700B338E4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0022F4C622536CF800B83A42 /* Form */,
 				00C7F0A4224B7ADA00C4DBEB /* ContactListController.swift */,
 				0071C028224FBDB7001500F8 /* ContactDetailController.swift */,
 			);
@@ -365,6 +382,7 @@
 			buildConfigurationList = 0085879A2248DC6C00B338E4 /* Build configuration list for PBXNativeTarget "CT Rafael Nobre" */;
 			buildPhases = (
 				BFCB525C05C9D1C125C224A3 /* [CP] Check Pods Manifest.lock */,
+				0018BDE3225218290028DC09 /* R.swift */,
 				0085876E2248DC6B00B338E4 /* Sources */,
 				0085876F2248DC6B00B338E4 /* Frameworks */,
 				008587702248DC6B00B338E4 /* Resources */,
@@ -430,10 +448,12 @@
 				TargetAttributes = {
 					008587712248DC6B00B338E4 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					008587852248DC6C00B338E4 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 008587712248DC6B00B338E4;
 					};
@@ -495,6 +515,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0018BDE3225218290028DC09 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$SRCROOT/CT Rafael Nobre/Supporting files/R.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/CT Rafael Nobre/Supporting files/R.generated.swift\"\n";
+		};
 		491B4361A0AB10387BDD14B8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -529,6 +569,7 @@
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -537,6 +578,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -617,15 +659,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				00C7F0B1224B828000C4DBEB /* ReusableView.swift in Sources */,
+				0018BDE2225215A50028DC09 /* FormFieldCell.swift in Sources */,
 				0071C03F224FC0EE001500F8 /* FormTextFieldCell.swift in Sources */,
 				0071C03A224FBFDA001500F8 /* FormSection.swift in Sources */,
 				0071C036224FBFB7001500F8 /* FormLabelField.swift in Sources */,
+				0022F4C822536D0E00B83A42 /* ContactDetailForm.swift in Sources */,
 				0071C029224FBDB7001500F8 /* ContactDetailController.swift in Sources */,
 				008587AA2248DE7200B338E4 /* Contact.swift in Sources */,
 				008587B02248E1A900B338E4 /* Email.swift in Sources */,
 				001EB978224FA579001792D9 /* Colors.swift in Sources */,
 				0071C032224FBF86001500F8 /* FormTableView.swift in Sources */,
 				0071C034224FBFA8001500F8 /* FormField.swift in Sources */,
+				0018BDE52252191B0028DC09 /* R.generated.swift in Sources */,
 				008587AC2248E19700B338E4 /* Address.swift in Sources */,
 				001EB971224F9A7C001792D9 /* UIImage+Initials.swift in Sources */,
 				00C7F0B3224B82A000C4DBEB /* NibLoadableView.swift in Sources */,
@@ -824,7 +869,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nobre.CT-Rafael-Nobre";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -844,7 +889,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nobre.CT-Rafael-Nobre";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -864,7 +909,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nobre.CT-Rafael-NobreTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CT Rafael Nobre.app/CT Rafael Nobre";
 			};
@@ -885,7 +930,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nobre.CT-Rafael-NobreTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CT Rafael Nobre.app/CT Rafael Nobre";
 			};
