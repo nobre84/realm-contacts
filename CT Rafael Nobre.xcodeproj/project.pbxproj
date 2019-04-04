@@ -7,8 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0018BDE2225215A50028DC09 /* FormFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0018BDE1225215A50028DC09 /* FormFieldCell.swift */; };
-		0018BDE52252191B0028DC09 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0018BDE42252191B0028DC09 /* R.generated.swift */; };
+		0005F147225612F100615D46 /* FormKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0005F13E225612F100615D46 /* FormKit.framework */; };
+		0005F14E225612F100615D46 /* FormKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0005F14D225612F100615D46 /* FormKitTests.swift */; };
+		0005F153225612F100615D46 /* FormKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0005F13E225612F100615D46 /* FormKit.framework */; };
+		0005F154225612F100615D46 /* FormKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0005F13E225612F100615D46 /* FormKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0005F1722256137400615D46 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0005F15F2256137400615D46 /* FormTextField.swift */; };
+		0005F1732256137400615D46 /* FormDateField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0005F1602256137400615D46 /* FormDateField.swift */; };
+		0005F1742256137400615D46 /* FormLabelField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0005F1612256137400615D46 /* FormLabelField.swift */; };
+		0005F1752256137400615D46 /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0005F1622256137400615D46 /* FormField.swift */; };
+		0005F1762256137400615D46 /* FormSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0005F1632256137400615D46 /* FormSection.swift */; };
+		0005F1772256137400615D46 /* FormTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0005F1662256137400615D46 /* FormTextFieldCell.swift */; };
+		0005F1782256137400615D46 /* FormLabelFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0005F1672256137400615D46 /* FormLabelFieldCell.swift */; };
+		0005F1792256137400615D46 /* FormFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0005F1682256137400615D46 /* FormFieldCell.swift */; };
+		0005F17A2256137400615D46 /* FormDateFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0005F1692256137400615D46 /* FormDateFieldCell.swift */; };
+		0005F17B2256137400615D46 /* FormTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0005F16A2256137400615D46 /* FormTableView.swift */; };
+		0005F1862256152700615D46 /* ReusableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0005F1822256152700615D46 /* ReusableViewExtensions.swift */; };
+		0005F1872256152700615D46 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0005F1842256152700615D46 /* NibLoadableView.swift */; };
+		0005F1882256152700615D46 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0005F1852256152700615D46 /* ReusableView.swift */; };
+		0005F189225617AF00615D46 /* FormTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0005F16D2256137400615D46 /* FormTextFieldCell.xib */; };
+		0005F18A225617B100615D46 /* FormDateFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0005F16E2256137400615D46 /* FormDateFieldCell.xib */; };
+		0005F18B225617B300615D46 /* FormLabelFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0005F16F2256137400615D46 /* FormLabelFieldCell.xib */; };
 		001EB971224F9A7C001792D9 /* UIImage+Initials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB970224F9A7C001792D9 /* UIImage+Initials.swift */; };
 		001EB973224F9FB5001792D9 /* String+Initials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB972224F9FB5001792D9 /* String+Initials.swift */; };
 		001EB975224FA1D9001792D9 /* UIView+Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB974224FA1D9001792D9 /* UIView+Rounded.swift */; };
@@ -16,21 +34,11 @@
 		0022F4C822536D0E00B83A42 /* ContactDetailForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0022F4C722536D0E00B83A42 /* ContactDetailForm.swift */; };
 		0071C027224FAD10001500F8 /* ContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071C026224FAD10001500F8 /* ContactTests.swift */; };
 		0071C029224FBDB7001500F8 /* ContactDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071C028224FBDB7001500F8 /* ContactDetailController.swift */; };
-		0071C032224FBF86001500F8 /* FormTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071C031224FBF86001500F8 /* FormTableView.swift */; };
-		0071C034224FBFA8001500F8 /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071C033224FBFA8001500F8 /* FormField.swift */; };
-		0071C036224FBFB7001500F8 /* FormLabelField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071C035224FBFB7001500F8 /* FormLabelField.swift */; };
-		0071C038224FBFC2001500F8 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071C037224FBFC2001500F8 /* FormTextField.swift */; };
-		0071C03A224FBFDA001500F8 /* FormSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071C039224FBFDA001500F8 /* FormSection.swift */; };
-		0071C03F224FC0EE001500F8 /* FormTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071C03D224FC0EE001500F8 /* FormTextFieldCell.swift */; };
-		0071C040224FC0EE001500F8 /* FormTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0071C03E224FC0EE001500F8 /* FormTextFieldCell.xib */; };
-		0071C043224FC109001500F8 /* FormLabelFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071C041224FC109001500F8 /* FormLabelFieldCell.swift */; };
-		0071C044224FC109001500F8 /* FormLabelFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0071C042224FC109001500F8 /* FormLabelFieldCell.xib */; };
 		008587762248DC6B00B338E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587752248DC6B00B338E4 /* AppDelegate.swift */; };
 		0085877B2248DC6B00B338E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 008587792248DC6B00B338E4 /* Main.storyboard */; };
 		0085877D2248DC6C00B338E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0085877C2248DC6C00B338E4 /* Assets.xcassets */; };
 		008587802248DC6C00B338E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0085877E2248DC6C00B338E4 /* LaunchScreen.storyboard */; };
 		0085878B2248DC6C00B338E4 /* UIString+InitialsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0085878A2248DC6C00B338E4 /* UIString+InitialsTests.swift */; };
-		008587962248DC6C00B338E4 /* CT_Rafael_NobreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587952248DC6C00B338E4 /* CT_Rafael_NobreUITests.swift */; };
 		008587AA2248DE7200B338E4 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587A92248DE7200B338E4 /* Contact.swift */; };
 		008587AC2248E19700B338E4 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587AB2248E19700B338E4 /* Address.swift */; };
 		008587AE2248E1A100B338E4 /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587AD2248E1A100B338E4 /* PhoneNumber.swift */; };
@@ -38,23 +46,35 @@
 		00C7F0A5224B7ADA00C4DBEB /* ContactListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7F0A4224B7ADA00C4DBEB /* ContactListController.swift */; };
 		00C7F0A7224B7BC700C4DBEB /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00C7F0A6224B7BC700C4DBEB /* ContactCell.xib */; };
 		00C7F0A9224B7D9C00C4DBEB /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7F0A8224B7D9C00C4DBEB /* ContactCell.swift */; };
-		00C7F0B0224B828000C4DBEB /* ReusableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7F0AE224B828000C4DBEB /* ReusableViewExtensions.swift */; };
-		00C7F0B1224B828000C4DBEB /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7F0AF224B828000C4DBEB /* ReusableView.swift */; };
-		00C7F0B3224B82A000C4DBEB /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7F0B2224B82A000C4DBEB /* NibLoadableView.swift */; };
+		1C98C79CD01434547F67AE12 /* Pods_FormKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA5B13789F21331C0A39658 /* Pods_FormKit.framework */; };
 		6395FD71718C70A70A853B3C /* Pods_CT_Rafael_NobreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA5343955FE4B914731F81F /* Pods_CT_Rafael_NobreTests.framework */; };
+		718FC5427E0662542BB0B183 /* Pods_FormKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F8FBAD19E5693B6EA0F459D /* Pods_FormKitTests.framework */; };
 		77315306A4FE8B9D51DB5ED9 /* Pods_CT_Rafael_Nobre.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E713D23D0EEC7BA0170B4DF4 /* Pods_CT_Rafael_Nobre.framework */; };
-		D18EB800640F8DEEA8C5BFD3 /* Pods_CT_Rafael_NobreUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2538C6E84C4091988759B077 /* Pods_CT_Rafael_NobreUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		008587872248DC6C00B338E4 /* PBXContainerItemProxy */ = {
+		0005F148225612F100615D46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0085876A2248DC6B00B338E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0005F13D225612F100615D46;
+			remoteInfo = FormKit;
+		};
+		0005F14A225612F100615D46 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0085876A2248DC6B00B338E4 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 008587712248DC6B00B338E4;
 			remoteInfo = "CT Rafael Nobre";
 		};
-		008587922248DC6C00B338E4 /* PBXContainerItemProxy */ = {
+		0005F151225612F100615D46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0085876A2248DC6B00B338E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0005F13D225612F100615D46;
+			remoteInfo = FormKit;
+		};
+		008587872248DC6C00B338E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0085876A2248DC6B00B338E4 /* Project object */;
 			proxyType = 1;
@@ -63,9 +83,46 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0005F158225612F100615D46 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0005F154225612F100615D46 /* FormKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0005F133225605A400615D46 /* FormDateFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDateFieldCell.swift; sourceTree = "<group>"; };
+		0005F134225605A400615D46 /* FormDateFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormDateFieldCell.xib; sourceTree = "<group>"; };
+		0005F137225605C300615D46 /* FormDateField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDateField.swift; sourceTree = "<group>"; };
+		0005F13E225612F100615D46 /* FormKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FormKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0005F146225612F100615D46 /* FormKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0005F14D225612F100615D46 /* FormKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormKitTests.swift; sourceTree = "<group>"; };
+		0005F14F225612F100615D46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0005F15F2256137400615D46 /* FormTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
+		0005F1602256137400615D46 /* FormDateField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormDateField.swift; sourceTree = "<group>"; };
+		0005F1612256137400615D46 /* FormLabelField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormLabelField.swift; sourceTree = "<group>"; };
+		0005F1622256137400615D46 /* FormField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
+		0005F1632256137400615D46 /* FormSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSection.swift; sourceTree = "<group>"; };
+		0005F1662256137400615D46 /* FormTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextFieldCell.swift; sourceTree = "<group>"; };
+		0005F1672256137400615D46 /* FormLabelFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormLabelFieldCell.swift; sourceTree = "<group>"; };
+		0005F1682256137400615D46 /* FormFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormFieldCell.swift; sourceTree = "<group>"; };
+		0005F1692256137400615D46 /* FormDateFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormDateFieldCell.swift; sourceTree = "<group>"; };
+		0005F16A2256137400615D46 /* FormTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTableView.swift; sourceTree = "<group>"; };
+		0005F16D2256137400615D46 /* FormTextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormTextFieldCell.xib; sourceTree = "<group>"; };
+		0005F16E2256137400615D46 /* FormDateFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormDateFieldCell.xib; sourceTree = "<group>"; };
+		0005F16F2256137400615D46 /* FormLabelFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormLabelFieldCell.xib; sourceTree = "<group>"; };
+		0005F1712256137400615D46 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0005F1822256152700615D46 /* ReusableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableViewExtensions.swift; sourceTree = "<group>"; };
+		0005F1842256152700615D46 /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
+		0005F1852256152700615D46 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		0018BDE1225215A50028DC09 /* FormFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFieldCell.swift; sourceTree = "<group>"; };
-		0018BDE42252191B0028DC09 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		001EB970224F9A7C001792D9 /* UIImage+Initials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Initials.swift"; sourceTree = "<group>"; };
 		001EB972224F9FB5001792D9 /* String+Initials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Initials.swift"; sourceTree = "<group>"; };
 		001EB974224FA1D9001792D9 /* UIView+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Rounded.swift"; sourceTree = "<group>"; };
@@ -91,9 +148,6 @@
 		008587862248DC6C00B338E4 /* CT Rafael NobreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CT Rafael NobreTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0085878A2248DC6C00B338E4 /* UIString+InitialsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIString+InitialsTests.swift"; sourceTree = "<group>"; };
 		0085878C2248DC6C00B338E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		008587912248DC6C00B338E4 /* CT Rafael NobreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CT Rafael NobreUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		008587952248DC6C00B338E4 /* CT_Rafael_NobreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CT_Rafael_NobreUITests.swift; sourceTree = "<group>"; };
-		008587972248DC6C00B338E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		008587A92248DE7200B338E4 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		008587AB2248E19700B338E4 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		008587AD2248E1A100B338E4 /* PhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
@@ -101,26 +155,47 @@
 		00C7F0A4224B7ADA00C4DBEB /* ContactListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListController.swift; sourceTree = "<group>"; };
 		00C7F0A6224B7BC700C4DBEB /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
 		00C7F0A8224B7D9C00C4DBEB /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
-		00C7F0AE224B828000C4DBEB /* ReusableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableViewExtensions.swift; sourceTree = "<group>"; };
-		00C7F0AF224B828000C4DBEB /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
-		00C7F0B2224B82A000C4DBEB /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
+		0F8FBAD19E5693B6EA0F459D /* Pods_FormKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FormKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F4DF0FE312DFD393B4C0F5 /* Pods-CT Rafael NobreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CT Rafael NobreTests.debug.xcconfig"; path = "Target Support Files/Pods-CT Rafael NobreTests/Pods-CT Rafael NobreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2538C6E84C4091988759B077 /* Pods_CT_Rafael_NobreUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CT_Rafael_NobreUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35484993223F32DDE0936FB0 /* Pods-FormKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormKitTests.debug.xcconfig"; path = "Target Support Files/Pods-FormKitTests/Pods-FormKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		61C125EF138B18361956E9E5 /* Pods-CT Rafael NobreUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CT Rafael NobreUITests.debug.xcconfig"; path = "Target Support Files/Pods-CT Rafael NobreUITests/Pods-CT Rafael NobreUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7EE912BE24B708EA29DD0679 /* Pods-CT Rafael NobreUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CT Rafael NobreUITests.release.xcconfig"; path = "Target Support Files/Pods-CT Rafael NobreUITests/Pods-CT Rafael NobreUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8AA5B13789F21331C0A39658 /* Pods_FormKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FormKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CA5343955FE4B914731F81F /* Pods_CT_Rafael_NobreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CT_Rafael_NobreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D17340DDFC17C5DBA6CA72 /* Pods-CT Rafael Nobre.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CT Rafael Nobre.release.xcconfig"; path = "Target Support Files/Pods-CT Rafael Nobre/Pods-CT Rafael Nobre.release.xcconfig"; sourceTree = "<group>"; };
+		BFF3DEB96E5138E1BECF3EDC /* Pods-FormKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormKitTests.release.xcconfig"; path = "Target Support Files/Pods-FormKitTests/Pods-FormKitTests.release.xcconfig"; sourceTree = "<group>"; };
+		C867B6F16D4FAA007E130085 /* Pods-FormKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormKit.release.xcconfig"; path = "Target Support Files/Pods-FormKit/Pods-FormKit.release.xcconfig"; sourceTree = "<group>"; };
+		DA1D70A0AF8F82CE2D1161D1 /* Pods-FormKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormKit.debug.xcconfig"; path = "Target Support Files/Pods-FormKit/Pods-FormKit.debug.xcconfig"; sourceTree = "<group>"; };
 		E713D23D0EEC7BA0170B4DF4 /* Pods_CT_Rafael_Nobre.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CT_Rafael_Nobre.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFEBA09A039356D98A12195F /* Pods-CT Rafael NobreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CT Rafael NobreTests.release.xcconfig"; path = "Target Support Files/Pods-CT Rafael NobreTests/Pods-CT Rafael NobreTests.release.xcconfig"; sourceTree = "<group>"; };
 		F77D63ECC6895EF09E9A419F /* Pods-CT Rafael Nobre.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CT Rafael Nobre.debug.xcconfig"; path = "Target Support Files/Pods-CT Rafael Nobre/Pods-CT Rafael Nobre.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0005F13B225612F100615D46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C98C79CD01434547F67AE12 /* Pods_FormKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0005F143225612F100615D46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0005F147225612F100615D46 /* FormKit.framework in Frameworks */,
+				718FC5427E0662542BB0B183 /* Pods_FormKitTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0085876F2248DC6B00B338E4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				77315306A4FE8B9D51DB5ED9 /* Pods_CT_Rafael_Nobre.framework in Frameworks */,
+				0005F153225612F100615D46 /* FormKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,17 +207,130 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0085878E2248DC6C00B338E4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D18EB800640F8DEEA8C5BFD3 /* Pods_CT_Rafael_NobreUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0005F13F225612F100615D46 /* FormKit */ = {
+			isa = PBXGroup;
+			children = (
+				0005F15C2256137400615D46 /* Sources */,
+				0005F16B2256137400615D46 /* Resources */,
+				0005F1702256137400615D46 /* Supporting files */,
+			);
+			path = FormKit;
+			sourceTree = "<group>";
+		};
+		0005F14C225612F100615D46 /* FormKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				0005F14D225612F100615D46 /* FormKitTests.swift */,
+				0005F14F225612F100615D46 /* Info.plist */,
+			);
+			path = FormKitTests;
+			sourceTree = "<group>";
+		};
+		0005F15C2256137400615D46 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0005F15D2256137400615D46 /* Model */,
+				0005F1642256137400615D46 /* View */,
+				0005F1802256152700615D46 /* Support */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		0005F15D2256137400615D46 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0005F15E2256137400615D46 /* Fields */,
+				0005F1632256137400615D46 /* FormSection.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0005F15E2256137400615D46 /* Fields */ = {
+			isa = PBXGroup;
+			children = (
+				0005F15F2256137400615D46 /* FormTextField.swift */,
+				0005F1602256137400615D46 /* FormDateField.swift */,
+				0005F1612256137400615D46 /* FormLabelField.swift */,
+				0005F1622256137400615D46 /* FormField.swift */,
+			);
+			path = Fields;
+			sourceTree = "<group>";
+		};
+		0005F1642256137400615D46 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0005F1652256137400615D46 /* Cells */,
+				0005F16A2256137400615D46 /* FormTableView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0005F1652256137400615D46 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0005F1682256137400615D46 /* FormFieldCell.swift */,
+				0005F1672256137400615D46 /* FormLabelFieldCell.swift */,
+				0005F1662256137400615D46 /* FormTextFieldCell.swift */,
+				0005F1692256137400615D46 /* FormDateFieldCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0005F16B2256137400615D46 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0005F16C2256137400615D46 /* XIB */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0005F16C2256137400615D46 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				0005F16D2256137400615D46 /* FormTextFieldCell.xib */,
+				0005F16E2256137400615D46 /* FormDateFieldCell.xib */,
+				0005F16F2256137400615D46 /* FormLabelFieldCell.xib */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		0005F1702256137400615D46 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				0005F1712256137400615D46 /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		0005F1802256152700615D46 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				0005F1812256152700615D46 /* Extensions */,
+				0005F1832256152700615D46 /* Reusable */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		0005F1812256152700615D46 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0005F1822256152700615D46 /* ReusableViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0005F1832256152700615D46 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				0005F1842256152700615D46 /* NibLoadableView.swift */,
+				0005F1852256152700615D46 /* ReusableView.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
 		001EB96D224F985F001792D9 /* XIB */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +381,7 @@
 				0071C033224FBFA8001500F8 /* FormField.swift */,
 				0071C035224FBFB7001500F8 /* FormLabelField.swift */,
 				0071C037224FBFC2001500F8 /* FormTextField.swift */,
+				0005F137225605C300615D46 /* FormDateField.swift */,
 			);
 			path = Fields;
 			sourceTree = "<group>";
@@ -205,6 +394,8 @@
 				0071C03E224FC0EE001500F8 /* FormTextFieldCell.xib */,
 				0071C041224FC109001500F8 /* FormLabelFieldCell.swift */,
 				0071C042224FC109001500F8 /* FormLabelFieldCell.xib */,
+				0005F133225605A400615D46 /* FormDateFieldCell.swift */,
+				0005F134225605A400615D46 /* FormDateFieldCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -214,7 +405,8 @@
 			children = (
 				008587742248DC6B00B338E4 /* CT Rafael Nobre */,
 				008587892248DC6C00B338E4 /* CT Rafael NobreTests */,
-				008587942248DC6C00B338E4 /* CT Rafael NobreUITests */,
+				0005F13F225612F100615D46 /* FormKit */,
+				0005F14C225612F100615D46 /* FormKitTests */,
 				008587732248DC6B00B338E4 /* Products */,
 				957224F4BDF8143AADA97137 /* Pods */,
 				1F173F4664F3A69BE45AC456 /* Frameworks */,
@@ -226,7 +418,8 @@
 			children = (
 				008587722248DC6B00B338E4 /* CT Rafael Nobre.app */,
 				008587862248DC6C00B338E4 /* CT Rafael NobreTests.xctest */,
-				008587912248DC6C00B338E4 /* CT Rafael NobreUITests.xctest */,
+				0005F13E225612F100615D46 /* FormKit.framework */,
+				0005F146225612F100615D46 /* FormKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -249,15 +442,6 @@
 				0085878C2248DC6C00B338E4 /* Info.plist */,
 			);
 			path = "CT Rafael NobreTests";
-			sourceTree = "<group>";
-		};
-		008587942248DC6C00B338E4 /* CT Rafael NobreUITests */ = {
-			isa = PBXGroup;
-			children = (
-				008587952248DC6C00B338E4 /* CT_Rafael_NobreUITests.swift */,
-				008587972248DC6C00B338E4 /* Info.plist */,
-			);
-			path = "CT Rafael NobreUITests";
 			sourceTree = "<group>";
 		};
 		008587A32248DE1100B338E4 /* Sources */ = {
@@ -284,7 +468,6 @@
 		008587A52248DE1C00B338E4 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				0018BDE42252191B0028DC09 /* R.generated.swift */,
 				008587752248DC6B00B338E4 /* AppDelegate.swift */,
 				008587812248DC6C00B338E4 /* Info.plist */,
 			);
@@ -325,7 +508,6 @@
 			children = (
 				0071C02E224FBF62001500F8 /* Form */,
 				001EB976224FA56B001792D9 /* Styles */,
-				00C7F0B4224B82B300C4DBEB /* Reusable */,
 				00C7F0AB224B818A00C4DBEB /* Extensions */,
 			);
 			path = Support;
@@ -334,21 +516,11 @@
 		00C7F0AB224B818A00C4DBEB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				00C7F0AE224B828000C4DBEB /* ReusableViewExtensions.swift */,
 				001EB970224F9A7C001792D9 /* UIImage+Initials.swift */,
 				001EB972224F9FB5001792D9 /* String+Initials.swift */,
 				001EB974224FA1D9001792D9 /* UIView+Rounded.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		00C7F0B4224B82B300C4DBEB /* Reusable */ = {
-			isa = PBXGroup;
-			children = (
-				00C7F0AF224B828000C4DBEB /* ReusableView.swift */,
-				00C7F0B2224B82A000C4DBEB /* NibLoadableView.swift */,
-			);
-			path = Reusable;
 			sourceTree = "<group>";
 		};
 		1F173F4664F3A69BE45AC456 /* Frameworks */ = {
@@ -357,6 +529,8 @@
 				E713D23D0EEC7BA0170B4DF4 /* Pods_CT_Rafael_Nobre.framework */,
 				8CA5343955FE4B914731F81F /* Pods_CT_Rafael_NobreTests.framework */,
 				2538C6E84C4091988759B077 /* Pods_CT_Rafael_NobreUITests.framework */,
+				8AA5B13789F21331C0A39658 /* Pods_FormKit.framework */,
+				0F8FBAD19E5693B6EA0F459D /* Pods_FormKitTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -370,27 +544,82 @@
 				EFEBA09A039356D98A12195F /* Pods-CT Rafael NobreTests.release.xcconfig */,
 				61C125EF138B18361956E9E5 /* Pods-CT Rafael NobreUITests.debug.xcconfig */,
 				7EE912BE24B708EA29DD0679 /* Pods-CT Rafael NobreUITests.release.xcconfig */,
+				DA1D70A0AF8F82CE2D1161D1 /* Pods-FormKit.debug.xcconfig */,
+				C867B6F16D4FAA007E130085 /* Pods-FormKit.release.xcconfig */,
+				35484993223F32DDE0936FB0 /* Pods-FormKitTests.debug.xcconfig */,
+				BFF3DEB96E5138E1BECF3EDC /* Pods-FormKitTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		0005F139225612F100615D46 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		0005F13D225612F100615D46 /* FormKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0005F155225612F100615D46 /* Build configuration list for PBXNativeTarget "FormKit" */;
+			buildPhases = (
+				A3769CFEBC895500A34F8102 /* [CP] Check Pods Manifest.lock */,
+				0005F139225612F100615D46 /* Headers */,
+				0005F13A225612F100615D46 /* Sources */,
+				0005F13B225612F100615D46 /* Frameworks */,
+				0005F13C225612F100615D46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FormKit;
+			productName = FormKit;
+			productReference = 0005F13E225612F100615D46 /* FormKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0005F145225612F100615D46 /* FormKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0005F159225612F100615D46 /* Build configuration list for PBXNativeTarget "FormKitTests" */;
+			buildPhases = (
+				9B159766B2D75B795CE889B6 /* [CP] Check Pods Manifest.lock */,
+				0005F142225612F100615D46 /* Sources */,
+				0005F143225612F100615D46 /* Frameworks */,
+				0005F144225612F100615D46 /* Resources */,
+				20DD4944FA003473949C2E98 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0005F149225612F100615D46 /* PBXTargetDependency */,
+				0005F14B225612F100615D46 /* PBXTargetDependency */,
+			);
+			name = FormKitTests;
+			productName = FormKitTests;
+			productReference = 0005F146225612F100615D46 /* FormKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		008587712248DC6B00B338E4 /* CT Rafael Nobre */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0085879A2248DC6C00B338E4 /* Build configuration list for PBXNativeTarget "CT Rafael Nobre" */;
 			buildPhases = (
 				BFCB525C05C9D1C125C224A3 /* [CP] Check Pods Manifest.lock */,
-				0018BDE3225218290028DC09 /* R.swift */,
 				0085876E2248DC6B00B338E4 /* Sources */,
 				0085876F2248DC6B00B338E4 /* Frameworks */,
 				008587702248DC6B00B338E4 /* Resources */,
 				637D801FC5C4B7689BB1B616 /* [CP] Embed Pods Frameworks */,
+				0005F158225612F100615D46 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0005F152225612F100615D46 /* PBXTargetDependency */,
 			);
 			name = "CT Rafael Nobre";
 			productName = "CT Rafael Nobre";
@@ -417,35 +646,23 @@
 			productReference = 008587862248DC6C00B338E4 /* CT Rafael NobreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		008587902248DC6C00B338E4 /* CT Rafael NobreUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 008587A02248DC6C00B338E4 /* Build configuration list for PBXNativeTarget "CT Rafael NobreUITests" */;
-			buildPhases = (
-				C12573FE6B562367C1C5DC0A /* [CP] Check Pods Manifest.lock */,
-				0085878D2248DC6C00B338E4 /* Sources */,
-				0085878E2248DC6C00B338E4 /* Frameworks */,
-				0085878F2248DC6C00B338E4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				008587932248DC6C00B338E4 /* PBXTargetDependency */,
-			);
-			name = "CT Rafael NobreUITests";
-			productName = "CT Rafael NobreUITests";
-			productReference = 008587912248DC6C00B338E4 /* CT Rafael NobreUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		0085876A2248DC6B00B338E4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Rafael Nobre";
 				TargetAttributes = {
+					0005F13D225612F100615D46 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					0005F145225612F100615D46 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 008587712248DC6B00B338E4;
+					};
 					008587712248DC6B00B338E4 = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1020;
@@ -454,11 +671,6 @@
 					008587852248DC6C00B338E4 = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1020;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 008587712248DC6B00B338E4;
-					};
-					008587902248DC6C00B338E4 = {
-						CreatedOnToolsVersion = 10.0;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 008587712248DC6B00B338E4;
 					};
@@ -479,12 +691,30 @@
 			targets = (
 				008587712248DC6B00B338E4 /* CT Rafael Nobre */,
 				008587852248DC6C00B338E4 /* CT Rafael NobreTests */,
-				008587902248DC6C00B338E4 /* CT Rafael NobreUITests */,
+				0005F13D225612F100615D46 /* FormKit */,
+				0005F145225612F100615D46 /* FormKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0005F13C225612F100615D46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0005F18A225617B100615D46 /* FormDateFieldCell.xib in Resources */,
+				0005F189225617AF00615D46 /* FormTextFieldCell.xib in Resources */,
+				0005F18B225617B300615D46 /* FormLabelFieldCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0005F144225612F100615D46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		008587702248DC6B00B338E4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -493,8 +723,6 @@
 				008587802248DC6C00B338E4 /* LaunchScreen.storyboard in Resources */,
 				0085877D2248DC6C00B338E4 /* Assets.xcassets in Resources */,
 				0085877B2248DC6B00B338E4 /* Main.storyboard in Resources */,
-				0071C040224FC0EE001500F8 /* FormTextFieldCell.xib in Resources */,
-				0071C044224FC109001500F8 /* FormLabelFieldCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,17 +733,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0085878F2248DC6C00B338E4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0018BDE3225218290028DC09 /* R.swift */ = {
+		20DD4944FA003473949C2E98 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -523,17 +744,19 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$TEMP_DIR/rswift-lastrun",
+				"${PODS_ROOT}/Target Support Files/Pods-FormKitTests/Pods-FormKitTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 			);
-			name = R.swift;
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/CT Rafael Nobre/Supporting files/R.generated.swift",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/CT Rafael Nobre/Supporting files/R.generated.swift\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FormKitTests/Pods-FormKitTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		491B4361A0AB10387BDD14B8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -566,7 +789,6 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CT Rafael Nobre/Pods-CT Rafael Nobre-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
@@ -575,7 +797,6 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
@@ -583,6 +804,50 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CT Rafael Nobre/Pods-CT Rafael Nobre-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B159766B2D75B795CE889B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FormKitTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3769CFEBC895500A34F8102 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FormKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B215BCDEAD5081C0066D0EC9 /* [CP] Embed Pods Frameworks */ = {
@@ -629,59 +894,53 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C12573FE6B562367C1C5DC0A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CT Rafael NobreUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0005F13A225612F100615D46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0005F1872256152700615D46 /* NibLoadableView.swift in Sources */,
+				0005F1732256137400615D46 /* FormDateField.swift in Sources */,
+				0005F1772256137400615D46 /* FormTextFieldCell.swift in Sources */,
+				0005F17A2256137400615D46 /* FormDateFieldCell.swift in Sources */,
+				0005F17B2256137400615D46 /* FormTableView.swift in Sources */,
+				0005F1762256137400615D46 /* FormSection.swift in Sources */,
+				0005F1862256152700615D46 /* ReusableViewExtensions.swift in Sources */,
+				0005F1882256152700615D46 /* ReusableView.swift in Sources */,
+				0005F1742256137400615D46 /* FormLabelField.swift in Sources */,
+				0005F1782256137400615D46 /* FormLabelFieldCell.swift in Sources */,
+				0005F1752256137400615D46 /* FormField.swift in Sources */,
+				0005F1792256137400615D46 /* FormFieldCell.swift in Sources */,
+				0005F1722256137400615D46 /* FormTextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0005F142225612F100615D46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0005F14E225612F100615D46 /* FormKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0085876E2248DC6B00B338E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00C7F0B1224B828000C4DBEB /* ReusableView.swift in Sources */,
-				0018BDE2225215A50028DC09 /* FormFieldCell.swift in Sources */,
-				0071C03F224FC0EE001500F8 /* FormTextFieldCell.swift in Sources */,
-				0071C03A224FBFDA001500F8 /* FormSection.swift in Sources */,
-				0071C036224FBFB7001500F8 /* FormLabelField.swift in Sources */,
 				0022F4C822536D0E00B83A42 /* ContactDetailForm.swift in Sources */,
 				0071C029224FBDB7001500F8 /* ContactDetailController.swift in Sources */,
 				008587AA2248DE7200B338E4 /* Contact.swift in Sources */,
 				008587B02248E1A900B338E4 /* Email.swift in Sources */,
 				001EB978224FA579001792D9 /* Colors.swift in Sources */,
-				0071C032224FBF86001500F8 /* FormTableView.swift in Sources */,
-				0071C034224FBFA8001500F8 /* FormField.swift in Sources */,
-				0018BDE52252191B0028DC09 /* R.generated.swift in Sources */,
 				008587AC2248E19700B338E4 /* Address.swift in Sources */,
 				001EB971224F9A7C001792D9 /* UIImage+Initials.swift in Sources */,
-				00C7F0B3224B82A000C4DBEB /* NibLoadableView.swift in Sources */,
-				0071C043224FC109001500F8 /* FormLabelFieldCell.swift in Sources */,
 				001EB975224FA1D9001792D9 /* UIView+Rounded.swift in Sources */,
 				00C7F0A9224B7D9C00C4DBEB /* ContactCell.swift in Sources */,
-				00C7F0B0224B828000C4DBEB /* ReusableViewExtensions.swift in Sources */,
 				00C7F0A5224B7ADA00C4DBEB /* ContactListController.swift in Sources */,
 				008587AE2248E1A100B338E4 /* PhoneNumber.swift in Sources */,
 				008587762248DC6B00B338E4 /* AppDelegate.swift in Sources */,
-				0071C038224FBFC2001500F8 /* FormTextField.swift in Sources */,
 				001EB973224F9FB5001792D9 /* String+Initials.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -695,26 +954,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0085878D2248DC6C00B338E4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				008587962248DC6C00B338E4 /* CT_Rafael_NobreUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0005F149225612F100615D46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0005F13D225612F100615D46 /* FormKit */;
+			targetProxy = 0005F148225612F100615D46 /* PBXContainerItemProxy */;
+		};
+		0005F14B225612F100615D46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 008587712248DC6B00B338E4 /* CT Rafael Nobre */;
+			targetProxy = 0005F14A225612F100615D46 /* PBXContainerItemProxy */;
+		};
+		0005F152225612F100615D46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0005F13D225612F100615D46 /* FormKit */;
+			targetProxy = 0005F151225612F100615D46 /* PBXContainerItemProxy */;
+		};
 		008587882248DC6C00B338E4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 008587712248DC6B00B338E4 /* CT Rafael Nobre */;
 			targetProxy = 008587872248DC6C00B338E4 /* PBXContainerItemProxy */;
-		};
-		008587932248DC6C00B338E4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 008587712248DC6B00B338E4 /* CT Rafael Nobre */;
-			targetProxy = 008587922248DC6C00B338E4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -738,6 +999,108 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0005F156225612F100615D46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA1D70A0AF8F82CE2D1161D1 /* Pods-FormKit.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 38KB8NBTE5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "FormKit/Supporting files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nobre.FormKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0005F157225612F100615D46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C867B6F16D4FAA007E130085 /* Pods-FormKit.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 38KB8NBTE5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "FormKit/Supporting files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nobre.FormKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0005F15A225612F100615D46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35484993223F32DDE0936FB0 /* Pods-FormKitTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38KB8NBTE5;
+				INFOPLIST_FILE = FormKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nobre.FormKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CT Rafael Nobre.app/CT Rafael Nobre";
+			};
+			name = Debug;
+		};
+		0005F15B225612F100615D46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFF3DEB96E5138E1BECF3EDC /* Pods-FormKitTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38KB8NBTE5;
+				INFOPLIST_FILE = FormKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nobre.FormKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CT Rafael Nobre.app/CT Rafael Nobre";
+			};
+			name = Release;
+		};
 		008587982248DC6C00B338E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -936,49 +1299,27 @@
 			};
 			name = Release;
 		};
-		008587A12248DC6C00B338E4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61C125EF138B18361956E9E5 /* Pods-CT Rafael NobreUITests.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 38KB8NBTE5;
-				INFOPLIST_FILE = "CT Rafael NobreUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nobre.CT-Rafael-NobreUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "CT Rafael Nobre";
-			};
-			name = Debug;
-		};
-		008587A22248DC6C00B338E4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EE912BE24B708EA29DD0679 /* Pods-CT Rafael NobreUITests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 38KB8NBTE5;
-				INFOPLIST_FILE = "CT Rafael NobreUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nobre.CT-Rafael-NobreUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "CT Rafael Nobre";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0005F155225612F100615D46 /* Build configuration list for PBXNativeTarget "FormKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0005F156225612F100615D46 /* Debug */,
+				0005F157225612F100615D46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0005F159225612F100615D46 /* Build configuration list for PBXNativeTarget "FormKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0005F15A225612F100615D46 /* Debug */,
+				0005F15B225612F100615D46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0085876D2248DC6B00B338E4 /* Build configuration list for PBXProject "CT Rafael Nobre" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1002,15 +1343,6 @@
 			buildConfigurations = (
 				0085879E2248DC6C00B338E4 /* Debug */,
 				0085879F2248DC6C00B338E4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		008587A02248DC6C00B338E4 /* Build configuration list for PBXNativeTarget "CT Rafael NobreUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				008587A12248DC6C00B338E4 /* Debug */,
-				008587A22248DC6C00B338E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

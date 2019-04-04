@@ -50,6 +50,26 @@
                ReferencedContainer = "container:CT Rafael Nobre.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0005F145225612F100615D46"
+               BuildableName = "FormKitTests.xctest"
+               BlueprintName = "FormKitTests"
+               ReferencedContainer = "container:CT Rafael Nobre.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "008587902248DC6C00B338E4"
+               BuildableName = "CT Rafael NobreUITests.xctest"
+               BlueprintName = "CT Rafael NobreUITests"
+               ReferencedContainer = "container:CT Rafael Nobre.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

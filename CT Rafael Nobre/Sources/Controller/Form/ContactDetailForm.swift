@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FormKit
 
 class ContactDetailForm {
     
@@ -23,11 +24,11 @@ class ContactDetailForm {
     }()
     
     lazy var infoSection: FormSection = {
-        return FormSection([firstNameField, lastNameField])
+        return FormSection(label: "Info", fields: [firstNameField, lastNameField, birthdayField])
     }()
     
     lazy var addressesSection: FormSection = {
-        return FormSection()
+        return FormSection(label: "Addresses")
     }()
     
     lazy var phoneSection: FormSection = {
@@ -39,7 +40,7 @@ class ContactDetailForm {
     }()
     
     lazy var firstNameField: FormTextField = {
-        let firstNameField = FormTextField(label: "First name", text: "", placeholder: "type the first name")
+        let firstNameField = FormTextField(label: "First name", text: contact.firstName, placeholder: "type the first name")
         firstNameField.valueChangedHandler = { [weak self] newValue in
             self?.contact.firstName = newValue
         }
@@ -47,11 +48,19 @@ class ContactDetailForm {
     }()
     
     lazy var lastNameField: FormTextField = {
-        let lastNameField = FormTextField(label: "Last name", text: "", placeholder: "type the last name")
+        let lastNameField = FormTextField(label: "Last name", text: contact.lastName, placeholder: "type the last name")
         lastNameField.valueChangedHandler = { [weak self] newValue in
             self?.contact.lastName = newValue
         }
         return firstNameField
+    }()
+    
+    lazy var birthdayField: FormDateField = {
+        let birthdayField = FormDateField(label: "Birthday", date: contact.birthday, placeholder: "pick a date")
+        birthdayField.valueChangedHandler = { [weak self] newValue in
+            self?.contact.birthday = newValue
+        }
+        return birthdayField
     }()
     
     init(presenter: UIViewController?, contact: Contact) {

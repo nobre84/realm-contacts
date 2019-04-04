@@ -1,6 +1,0 @@
-framework module Pods_CT_Rafael_NobreUITests {
-  umbrella header "Pods-CT Rafael NobreUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}

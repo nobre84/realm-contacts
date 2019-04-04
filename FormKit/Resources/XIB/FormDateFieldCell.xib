@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FormDateFieldCell" rowHeight="334" id="E75-Gh-tJX" customClass="FormDateFieldCell" customModule="FormKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="213"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E75-Gh-tJX" id="XlM-eX-uad">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="212.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VdT-Md-Jgs">
+                        <rect key="frame" x="16" y="8" width="288" height="196.5"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="U6o-Uj-z7G">
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="196.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yP2-aD-iUF">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="21"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="999" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hm5-kg-ybm">
+                                                <rect key="frame" x="0.0" y="0.0" width="173.5" height="21"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="999" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="placeholder" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ftD-yt-gnw">
+                                                <rect key="frame" x="193.5" y="0.0" width="94.5" height="21"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="G4D-N3-IHr">
+                                        <rect key="frame" x="0.0" y="21" width="288" height="175.5"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="576063436.68109596">
+                                            <!--2019-04-04 09:37:16 +0000-->
+                                        </date>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VdT-Md-Jgs" firstAttribute="top" secondItem="XlM-eX-uad" secondAttribute="top" constant="8" id="Btk-Jz-Ebi"/>
+                    <constraint firstAttribute="trailing" secondItem="VdT-Md-Jgs" secondAttribute="trailing" constant="16" id="Ovs-a0-eYy"/>
+                    <constraint firstItem="VdT-Md-Jgs" firstAttribute="leading" secondItem="XlM-eX-uad" secondAttribute="leading" constant="16" id="jdV-A5-ofa"/>
+                    <constraint firstAttribute="bottom" secondItem="VdT-Md-Jgs" secondAttribute="bottom" constant="8" id="kXF-qD-p8S"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="skb-nL-eev"/>
+            <connections>
+                <outlet property="datePicker" destination="G4D-N3-IHr" id="DaL-bL-6NI"/>
+                <outlet property="labelLabel" destination="Hm5-kg-ybm" id="cWJ-5e-Pma"/>
+                <outlet property="topStackView" destination="yP2-aD-iUF" id="fZL-j1-4R7"/>
+                <outlet property="valueTextField" destination="ftD-yt-gnw" id="73N-x2-iep"/>
+            </connections>
+            <point key="canvasLocation" x="40" y="198.35082458770617"/>
+        </tableViewCell>
+    </objects>
+</document>
