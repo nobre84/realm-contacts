@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00022A4522575BB1002381CE /* Object+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00022A4422575BB1002381CE /* Object+Dictionary.swift */; };
+		00022A4722575DA2002381CE /* Object+DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00022A4622575DA2002381CE /* Object+DictionaryTests.swift */; };
+		00022A492257651B002381CE /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00022A482257651B002381CE /* UIViewController+Alerts.swift */; };
 		0005F147225612F100615D46 /* FormKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0005F13E225612F100615D46 /* FormKit.framework */; };
 		0005F14E225612F100615D46 /* FormKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0005F14D225612F100615D46 /* FormKitTests.swift */; };
 		0005F153225612F100615D46 /* FormKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0005F13E225612F100615D46 /* FormKit.framework */; };
@@ -98,6 +101,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		00022A4422575BB1002381CE /* Object+Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Object+Dictionary.swift"; sourceTree = "<group>"; };
+		00022A4622575DA2002381CE /* Object+DictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Object+DictionaryTests.swift"; sourceTree = "<group>"; };
+		00022A482257651B002381CE /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		0005F133225605A400615D46 /* FormDateFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDateFieldCell.swift; sourceTree = "<group>"; };
 		0005F134225605A400615D46 /* FormDateFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormDateFieldCell.xib; sourceTree = "<group>"; };
 		0005F137225605C300615D46 /* FormDateField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDateField.swift; sourceTree = "<group>"; };
@@ -440,6 +446,7 @@
 				0071C026224FAD10001500F8 /* ContactTests.swift */,
 				0085878A2248DC6C00B338E4 /* UIString+InitialsTests.swift */,
 				0085878C2248DC6C00B338E4 /* Info.plist */,
+				00022A4622575DA2002381CE /* Object+DictionaryTests.swift */,
 			);
 			path = "CT Rafael NobreTests";
 			sourceTree = "<group>";
@@ -519,6 +526,8 @@
 				001EB970224F9A7C001792D9 /* UIImage+Initials.swift */,
 				001EB972224F9FB5001792D9 /* String+Initials.swift */,
 				001EB974224FA1D9001792D9 /* UIView+Rounded.swift */,
+				00022A4422575BB1002381CE /* Object+Dictionary.swift */,
+				00022A482257651B002381CE /* UIViewController+Alerts.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -933,6 +942,7 @@
 				0071C029224FBDB7001500F8 /* ContactDetailController.swift in Sources */,
 				008587AA2248DE7200B338E4 /* Contact.swift in Sources */,
 				008587B02248E1A900B338E4 /* Email.swift in Sources */,
+				00022A4522575BB1002381CE /* Object+Dictionary.swift in Sources */,
 				001EB978224FA579001792D9 /* Colors.swift in Sources */,
 				008587AC2248E19700B338E4 /* Address.swift in Sources */,
 				001EB971224F9A7C001792D9 /* UIImage+Initials.swift in Sources */,
@@ -941,6 +951,7 @@
 				00C7F0A5224B7ADA00C4DBEB /* ContactListController.swift in Sources */,
 				008587AE2248E1A100B338E4 /* PhoneNumber.swift in Sources */,
 				008587762248DC6B00B338E4 /* AppDelegate.swift in Sources */,
+				00022A492257651B002381CE /* UIViewController+Alerts.swift in Sources */,
 				001EB973224F9FB5001792D9 /* String+Initials.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -950,6 +961,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0071C027224FAD10001500F8 /* ContactTests.swift in Sources */,
+				00022A4722575DA2002381CE /* Object+DictionaryTests.swift in Sources */,
 				0085878B2248DC6C00B338E4 /* UIString+InitialsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

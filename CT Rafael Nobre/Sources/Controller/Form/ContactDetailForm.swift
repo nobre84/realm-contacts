@@ -15,6 +15,10 @@ class ContactDetailForm {
     var contact: Contact
     private var originalContact: Contact
     
+    var isModified: Bool {
+        return contact.toDictionary() as NSDictionary != originalContact.toDictionary() as NSDictionary
+    }
+    
     lazy var sections: [FormSection] = {
         return [ photoSection, infoSection, addressesSection, phoneSection, emailSection ]
     }()

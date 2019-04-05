@@ -10,6 +10,6 @@ import UIKit
 import RealmSwift
 
 class PhoneNumber: Object {
-    var label: String?
-    var number: String?
+    @objc dynamic var label: String?
+    @objc dynamic var number: String?
 }

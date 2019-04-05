@@ -64,14 +64,24 @@
                         <viewLayoutGuide key="safeArea" id="GlD-qY-6jn"/>
                     </view>
                     <navigationItem key="navigationItem" title="Contact" id="lU6-D8-0eN">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="RK9-Du-FcX"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ecc-U8-Xt1"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="RK9-Du-FcX">
+                            <connections>
+                                <action selector="cancelTapped:" destination="yvO-1l-Yy1" id="nXQ-3Y-IUy"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ecc-U8-Xt1">
+                            <connections>
+                                <action selector="saveTapped:" destination="yvO-1l-Yy1" id="POj-0H-AAL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="formTableView" destination="Mu7-vu-kOe" id="WvK-kx-ixv"/>
+                        <segue destination="obx-sD-eue" kind="unwind" identifier="unwindToContactList" unwindAction="unwindToContactList:" id="W9i-C2-E2L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BnU-v8-5vr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="obx-sD-eue" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2904.8000000000002" y="127.28635682158921"/>
         </scene>

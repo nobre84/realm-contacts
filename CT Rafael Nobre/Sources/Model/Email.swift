@@ -10,6 +10,6 @@ import UIKit
 import RealmSwift
 
 class Email: Object {
-    var label: String?
-    var email: String?
+    @objc dynamic var label: String?
+    @objc dynamic var email: String?
 }

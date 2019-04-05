@@ -26,6 +26,25 @@ class ContactDetailController: UIViewController {
         self.form = form
     }
     
+    private func close() {
+        performSegue(withIdentifier: "unwindToContactList", sender: nil)
+    }
+    
+    @IBAction func cancelTapped(_ sender: Any) {
+        guard !(form?.isModified ?? false) else {
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            let discardAction = UIAlertAction(title: "Discard", style: .destructive) { [weak self] _ in
+                self?.close()
+            }
+            return showConfirmation(title: "Confirmation", message: "Discard changes and close?", actions: [cancelAction, discardAction])
+        }
+        
+        close()
+    }
+    
+    @IBAction func saveTapped(_ sender: Any) {
+        
+    }
     /*
     // MARK: - Navigation
 

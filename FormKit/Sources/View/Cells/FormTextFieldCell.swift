@@ -18,7 +18,7 @@ class FormTextFieldCell: UITableViewCell, FormFieldCell, NibLoadableView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        valueTextField.addTarget(self, action: #selector(valueChanged), for: .valueChanged)
+        valueTextField.addTarget(self, action: #selector(valueChanged), for: .editingChanged)
     }
     
     func setup(with field: FormField?) {
