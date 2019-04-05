@@ -57,6 +57,8 @@ class ContactListController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let contact = contacts?[indexPath.row]
+        // TODO edit
     }
     
     // MARK: - Private Methods
@@ -112,55 +114,7 @@ class ContactListController: UITableViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    private func insertContact(firstName: String, lastName: String) {
-        let contact = Contact()
-        contact.firstName = firstName
-        contact.lastName = lastName
-        let phones = List<PhoneNumber>()
-        let phone = PhoneNumber()
-        phone.label = "mobile"
-        phone.number = "+5532988746640"
-        phones.append(phone)
-        contact.phoneNumbers = phones
-        let addresses = List<Address>()
-        let address = Address()
-        address.label = "home"
-        address.street = "Rua Dr. Acacio Teixeira"
-        address.number = "153"
-        address.city = "Juiz de Fora"
-        address.state = "Minas Gerais"
-        address.country = "Brazil"
-        address.zipCode = "36052390"
-        contact.addresses = addresses
-        let emails = List<Email>()
-        let email = Email()
-        email.label = "personal"
-        email.email = "nobre84@gmail.com"
-        contact.emails = emails
-        
-        do {
-            let realm = try Realm()
-            try realm.write {
-                realm.add(contact)
-            }
-            tableView.reloadData()
-        }
-        catch {
-            print(error.localizedDescription)
-        }
-    }
-    
     // MARK: - Actions
-
-    @IBAction private func addTapped(_ sender: Any) {
-        
-        collectInput(title: "New contact") { [weak self] input in
-            if case .success(let firstName, let lastName) = input {
-                self?.insertContact(firstName: firstName, lastName: lastName)
-            }
-        }
-        
-    }
     
     @IBAction func unwindToContactList(_ unwindSegue: UIStoryboardSegue) {
         let sourceViewController = unwindSegue.source

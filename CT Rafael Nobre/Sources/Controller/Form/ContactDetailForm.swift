@@ -8,6 +8,7 @@
 
 import UIKit
 import FormKit
+import RealmSwift
 
 class ContactDetailForm {
     
@@ -56,7 +57,7 @@ class ContactDetailForm {
         lastNameField.valueChangedHandler = { [weak self] newValue in
             self?.contact.lastName = newValue
         }
-        return firstNameField
+        return lastNameField
     }()
     
     lazy var birthdayField: FormDateField = {
@@ -71,6 +72,13 @@ class ContactDetailForm {
         self.presenter = presenter
         self.contact = Contact(value: contact)
         self.originalContact = Contact(value: contact)
+    }
+    
+    func save() throws {
+        let realm = try Realm()        
+        try realm.write {
+            realm.add(contact)
+        }
     }
     
 }

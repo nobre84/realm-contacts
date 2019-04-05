@@ -8,6 +8,7 @@
 
 import UIKit
 import FormKit
+import RealmSwift
 
 class ContactDetailController: UIViewController {
     
@@ -43,7 +44,13 @@ class ContactDetailController: UIViewController {
     }
     
     @IBAction func saveTapped(_ sender: Any) {
-        
+        do {
+            try form?.save()
+            close()
+        }
+        catch {
+            showError(error)
+        }
     }
     /*
     // MARK: - Navigation

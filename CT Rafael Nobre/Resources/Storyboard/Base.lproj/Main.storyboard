@@ -31,7 +31,6 @@
                     <navigationItem key="navigationItem" title="CT Rafael Nobre" id="F36-CV-Pa1">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hCy-gY-ciA">
                             <connections>
-                                <action selector="addTapped:" destination="EMP-Lv-FaT" id="JTs-nt-jJS"/>
                                 <segue destination="qCr-0n-Dti" kind="presentation" id="Xav-3p-YzF"/>
                             </connections>
                         </barButtonItem>
