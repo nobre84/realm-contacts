@@ -11,12 +11,14 @@ import UIKit
 public class FormSection {
     
     public var isEditing: Bool
+    public var deleteHandler: ((Int) -> Void)?
     
     var count: Int {
-        if fields.isEmpty && emptyField != nil {
-            return 1
-        }
-        return fields.count
+        return isShowingEmptyField ? 1 : fields.count
+    }
+    
+    var isShowingEmptyField: Bool {
+        return fields.isEmpty && emptyField != nil
     }
     
     var title: String?
@@ -34,10 +36,11 @@ public class FormSection {
     }
     
     subscript(index: Int) -> FormField {
-        if fields.isEmpty {
-            return emptyField!
-        }
-        return fields[index]
+        return isShowingEmptyField ? emptyField! : fields[index]
+    }
+    
+    func removeField(at index: Int) {
+        fields.remove(at: index)
     }
     
 }
@@ -46,7 +49,7 @@ public class FormSection {
 extension FormSection {
     
     var editingStyle: UITableViewCell.EditingStyle {
-        return isEditing && !(emptyField != nil) ? .delete : .none
+        return isEditing && !isShowingEmptyField ? .delete : .none
     }
     
     

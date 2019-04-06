@@ -110,6 +110,21 @@ extension FormTableView: UITableViewDataSource {
         return formSection.editingStyle
     }
     
+    public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let formSection = sections[indexPath.section]
+        if editingStyle == .delete {
+            formSection.removeField(at: indexPath.row)
+            formSection.deleteHandler?(indexPath.row)
+
+            beginUpdates()
+            deleteRows(at: [indexPath], with: .automatic)
+            if formSection.isShowingEmptyField {
+                insertRows(at: [indexPath], with: .automatic)
+            }
+            endUpdates()
+        }
+    }
+    
 }
 
 extension FormTableView: UITableViewDelegate {

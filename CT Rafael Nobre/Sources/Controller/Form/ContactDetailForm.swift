@@ -36,8 +36,19 @@ class ContactDetailForm {
         let addButton = FormButton(image: #imageLiteral(resourceName: "add_button")) {
             print("Add address tapped")
         }
+        
+        let emptyField = FormLabelField(label: "No phones added yet.", value: nil)
+        let section = FormSection(title: "Addresses".uppercased(), fields: addresses, button: addButton, isEditing: true,  emptyField: emptyField)
+        section.deleteHandler = { [weak self] index in
+            print("Deleted index \(index)")
+            self?.addresses.remove(at: index)
+        }
+        return section
+    }()
+    
+    lazy var addresses: [FormLabelField] = {
         let fields = [ FormLabelField(label: "home", value: "555-3333"), FormLabelField(label: "mobile", value: "333-3333") ]
-        return FormSection(title: "Addresses".uppercased(), fields: fields, button: addButton, isEditing: true)
+        return fields
     }()
     
     lazy var phoneSection: FormSection = {
