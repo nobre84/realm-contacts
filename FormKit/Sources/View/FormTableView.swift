@@ -34,14 +34,26 @@ public class FormTableView: TPKeyboardAvoidingTableView {
     private func initialize() {
         delegate = self
         dataSource = self
+        setupHeights()
         registerCells()
+        registerHeaderSectionViews()
         addFooterViewIfNeeded()
+    }
+    
+    private func setupHeights() {
+        estimatedRowHeight = 50
+        sectionHeaderHeight = UITableView.automaticDimension
+        estimatedSectionHeaderHeight = 40
     }
     
     private func registerCells() {
         registerFormFieldCell(FormLabelFieldCell.self)
         registerFormFieldCell(FormTextFieldCell.self)
         registerFormFieldCell(FormDateFieldCell.self)
+    }
+    
+    private func registerHeaderSectionViews() {
+        register(UINib(nibName: FormSectionHeaderView.nibName, bundle: Bundle(for: FormSectionHeaderView.self)), forHeaderFooterViewReuseIdentifier: FormSectionHeaderView.defaultReuseIdentifier)
     }
 
     private func addFooterViewIfNeeded() {
@@ -79,6 +91,14 @@ extension FormTableView: UITableViewDataSource {
         return cell
     }
     
+    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let formSection = sections[section]
+        let view = dequeueReusableHeaderFooterView(withIdentifier: FormSectionHeaderView.defaultReuseIdentifier) as? FormSectionHeaderView
+        view?.setup(with: formSection)
+        
+        return view
+    }
+
 }
 
 extension FormTableView: UITableViewDelegate {

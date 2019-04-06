@@ -25,27 +25,36 @@ class ContactDetailForm {
     }()
     
     lazy var photoSection: FormSection = {
-       return FormSection()
+        return FormSection(title: "Profile".uppercased())
     }()
     
     lazy var infoSection: FormSection = {
-        return FormSection(label: "Info", fields: [firstNameField, lastNameField, birthdayField])
+        return FormSection(title: "Information".uppercased(), fields: [firstNameField, lastNameField, birthdayField])
     }()
     
     lazy var addressesSection: FormSection = {
-        return FormSection(label: "Addresses")
+        let addButton = FormButton(image: #imageLiteral(resourceName: "add_button")) {
+            print("Add address tapped")
+        }
+        return FormSection(title: "Addresses".uppercased(), button: addButton)
     }()
     
     lazy var phoneSection: FormSection = {
-        return FormSection()
+        let addButton = FormButton(image: #imageLiteral(resourceName: "add_button")) {
+            print("Add phone tapped")
+        }
+        return FormSection(title: "Phones".uppercased(), button: addButton)
     }()
     
     lazy var emailSection: FormSection = {
-        return FormSection()
+        let addButton = FormButton(image: #imageLiteral(resourceName: "add_button")) {
+            print("Add tapped")
+        }
+        return FormSection(title: "E-mails".uppercased(), button: addButton)
     }()
     
     lazy var firstNameField: FormTextField = {
-        let firstNameField = FormTextField(label: "First name", text: contact.firstName, placeholder: "type the first name")
+        let firstNameField = FormTextField(label: "First name", text: contact.firstName, placeholder: "insert text")
         firstNameField.valueChangedHandler = { [weak self] newValue in
             self?.contact.firstName = newValue
         }
@@ -53,7 +62,7 @@ class ContactDetailForm {
     }()
     
     lazy var lastNameField: FormTextField = {
-        let lastNameField = FormTextField(label: "Last name", text: contact.lastName, placeholder: "type the last name")
+        let lastNameField = FormTextField(label: "Last name", text: contact.lastName, placeholder: "insert text")
         lastNameField.valueChangedHandler = { [weak self] newValue in
             self?.contact.lastName = newValue
         }

@@ -49,6 +49,9 @@
 		00C7F0A5224B7ADA00C4DBEB /* ContactListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7F0A4224B7ADA00C4DBEB /* ContactListController.swift */; };
 		00C7F0A7224B7BC700C4DBEB /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00C7F0A6224B7BC700C4DBEB /* ContactCell.xib */; };
 		00C7F0A9224B7D9C00C4DBEB /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7F0A8224B7D9C00C4DBEB /* ContactCell.swift */; };
+		00F8C87E2258D26B00944610 /* FormButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F8C87D2258D26B00944610 /* FormButton.swift */; };
+		00F8C8802258D65E00944610 /* FormSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00F8C87F2258D65E00944610 /* FormSectionHeaderView.xib */; };
+		00F8C8822258D80A00944610 /* FormSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F8C8812258D80A00944610 /* FormSectionHeaderView.swift */; };
 		1C98C79CD01434547F67AE12 /* Pods_FormKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA5B13789F21331C0A39658 /* Pods_FormKit.framework */; };
 		6395FD71718C70A70A853B3C /* Pods_CT_Rafael_NobreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA5343955FE4B914731F81F /* Pods_CT_Rafael_NobreTests.framework */; };
 		718FC5427E0662542BB0B183 /* Pods_FormKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F8FBAD19E5693B6EA0F459D /* Pods_FormKitTests.framework */; };
@@ -161,6 +164,9 @@
 		00C7F0A4224B7ADA00C4DBEB /* ContactListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListController.swift; sourceTree = "<group>"; };
 		00C7F0A6224B7BC700C4DBEB /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
 		00C7F0A8224B7D9C00C4DBEB /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		00F8C87D2258D26B00944610 /* FormButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormButton.swift; sourceTree = "<group>"; };
+		00F8C87F2258D65E00944610 /* FormSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormSectionHeaderView.xib; sourceTree = "<group>"; };
+		00F8C8812258D80A00944610 /* FormSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSectionHeaderView.swift; sourceTree = "<group>"; };
 		0F8FBAD19E5693B6EA0F459D /* Pods_FormKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FormKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F4DF0FE312DFD393B4C0F5 /* Pods-CT Rafael NobreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CT Rafael NobreTests.debug.xcconfig"; path = "Target Support Files/Pods-CT Rafael NobreTests/Pods-CT Rafael NobreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2538C6E84C4091988759B077 /* Pods_CT_Rafael_NobreUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CT_Rafael_NobreUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -270,6 +276,8 @@
 			children = (
 				0005F1652256137400615D46 /* Cells */,
 				0005F16A2256137400615D46 /* FormTableView.swift */,
+				00F8C87D2258D26B00944610 /* FormButton.swift */,
+				00F8C8812258D80A00944610 /* FormSectionHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -299,6 +307,7 @@
 				0005F16D2256137400615D46 /* FormTextFieldCell.xib */,
 				0005F16E2256137400615D46 /* FormDateFieldCell.xib */,
 				0005F16F2256137400615D46 /* FormLabelFieldCell.xib */,
+				00F8C87F2258D65E00944610 /* FormSectionHeaderView.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -714,6 +723,7 @@
 				0005F18A225617B100615D46 /* FormDateFieldCell.xib in Resources */,
 				0005F189225617AF00615D46 /* FormTextFieldCell.xib in Resources */,
 				0005F18B225617B300615D46 /* FormLabelFieldCell.xib in Resources */,
+				00F8C8802258D65E00944610 /* FormSectionHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -917,7 +927,9 @@
 				0005F17B2256137400615D46 /* FormTableView.swift in Sources */,
 				0005F1762256137400615D46 /* FormSection.swift in Sources */,
 				0005F1862256152700615D46 /* ReusableViewExtensions.swift in Sources */,
+				00F8C87E2258D26B00944610 /* FormButton.swift in Sources */,
 				0005F1882256152700615D46 /* ReusableView.swift in Sources */,
+				00F8C8822258D80A00944610 /* FormSectionHeaderView.swift in Sources */,
 				0005F1742256137400615D46 /* FormLabelField.swift in Sources */,
 				0005F1782256137400615D46 /* FormLabelFieldCell.swift in Sources */,
 				0005F1752256137400615D46 /* FormField.swift in Sources */,
