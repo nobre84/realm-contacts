@@ -10,14 +10,44 @@ import UIKit
 
 public class FormSection {
     
-    var title: String?
-    var fields = [FormField]()
-    var button: FormButton?
+    public var isEditing: Bool
     
-    public init(title: String? = nil, fields: [FormField] = [], button: FormButton? = nil) {
+    var count: Int {
+        if fields.isEmpty && emptyField != nil {
+            return 1
+        }
+        return fields.count
+    }
+    
+    var title: String?
+    var button: FormButton?
+    var emptyField: FormField?
+    
+    private var fields = [FormField]()
+    
+    public init(title: String? = nil, fields: [FormField] = [], button: FormButton? = nil, isEditing: Bool = false, emptyField: FormField? = nil) {
         self.title = title
         self.fields = fields
         self.button = button
+        self.isEditing = isEditing
+        self.emptyField = emptyField
     }
+    
+    subscript(index: Int) -> FormField {
+        if fields.isEmpty {
+            return emptyField!
+        }
+        return fields[index]
+    }
+    
+}
+
+// Table View Delegate helpers
+extension FormSection {
+    
+    var editingStyle: UITableViewCell.EditingStyle {
+        return isEditing && !(emptyField != nil) ? .delete : .none
+    }
+    
     
 }

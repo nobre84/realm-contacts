@@ -38,6 +38,7 @@ public class FormTableView: TPKeyboardAvoidingTableView {
         registerCells()
         registerHeaderSectionViews()
         addFooterViewIfNeeded()
+        isEditing = true
     }
     
     private func setupHeights() {
@@ -70,11 +71,11 @@ extension FormTableView: UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sections[section].fields.count
+        return sections[section].count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var field = sections[indexPath.section].fields[indexPath.row]
+        var field = sections[indexPath.section][indexPath.row]
         
         field.heightUpdateHandler = {
             tableView.reloadRows(at: [indexPath], with: .automatic)
@@ -98,13 +99,23 @@ extension FormTableView: UITableViewDataSource {
         
         return view
     }
+    
+    public func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        let formSection = sections[indexPath.section]
+        return formSection.editingStyle == .delete
+    }
 
+    public func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        let formSection = sections[indexPath.section]
+        return formSection.editingStyle
+    }
+    
 }
 
 extension FormTableView: UITableViewDelegate {
     
     public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let field = sections[indexPath.section].fields[indexPath.row]
+        let field = sections[indexPath.section][indexPath.row]
         
         if let formCell = cell as? FormFieldCell {
             formCell.setup(with: field)

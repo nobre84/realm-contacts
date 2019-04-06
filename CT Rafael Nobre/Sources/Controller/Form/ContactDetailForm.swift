@@ -36,21 +36,23 @@ class ContactDetailForm {
         let addButton = FormButton(image: #imageLiteral(resourceName: "add_button")) {
             print("Add address tapped")
         }
-        return FormSection(title: "Addresses".uppercased(), button: addButton)
+        let fields = [ FormLabelField(label: "home", value: "555-3333"), FormLabelField(label: "mobile", value: "333-3333") ]
+        return FormSection(title: "Addresses".uppercased(), fields: fields, button: addButton, isEditing: true)
     }()
     
     lazy var phoneSection: FormSection = {
         let addButton = FormButton(image: #imageLiteral(resourceName: "add_button")) {
             print("Add phone tapped")
         }
-        return FormSection(title: "Phones".uppercased(), button: addButton)
+        let emptyField = FormLabelField(label: "No phones added yet.", value: nil)
+        return FormSection(title: "Phones".uppercased(), button: addButton, isEditing: true, emptyField: emptyField)
     }()
     
     lazy var emailSection: FormSection = {
         let addButton = FormButton(image: #imageLiteral(resourceName: "add_button")) {
-            print("Add tapped")
+            print("Add e-mail tapped")
         }
-        return FormSection(title: "E-mails".uppercased(), button: addButton)
+        return FormSection(title: "E-mails".uppercased(), button: addButton, isEditing: true)
     }()
     
     lazy var firstNameField: FormTextField = {
