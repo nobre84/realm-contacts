@@ -26,3 +26,11 @@ class ProfileField: FormField {
     }
     
 }
+
+extension ProfileField {
+    
+    func valueChanged() {
+        valueChangedHandler?(picture?.pngData())
+    }
+    
+}

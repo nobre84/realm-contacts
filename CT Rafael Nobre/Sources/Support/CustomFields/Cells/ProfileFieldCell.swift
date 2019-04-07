@@ -35,10 +35,6 @@ class ProfileFieldCell: UITableViewCell, FormFieldCell, NibLoadableView {
         }
     }
     
-    @objc private func valueChanged() {
-        
-    }
-    
     @objc private func tapped() {
         let picker = UIImagePickerController()
         picker.sourceType = .camera
@@ -59,6 +55,7 @@ extension ProfileFieldCell: UIImagePickerControllerDelegate, UINavigationControl
         }
         
         field?.picture = image
+        field?.valueChanged()
         updateUI()
     }
     
