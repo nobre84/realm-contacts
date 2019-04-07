@@ -1,5 +1,5 @@
 //
-//  ContactDetailController.swift
+//  ContactFormController.swift
 //  CT Rafael Nobre
 //
 //  Created by Rafael Nobre on 30/03/19.
@@ -10,12 +10,13 @@ import UIKit
 import FormKit
 import RealmSwift
 
-class ContactDetailController: UIViewController {
+class ContactFormController: UIViewController {
     
-    var form: ContactDetailForm?
+    var form: ContactForm?
     var contact: Contact?
 
     @IBOutlet weak var formTableView: FormTableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,7 +25,7 @@ class ContactDetailController: UIViewController {
     }
     
     private func setupForm() {
-        let form = ContactDetailForm(presenter: self, contact: contact ?? Contact(), isUpdate: contact != nil)
+        let form = ContactForm(presenter: self, contact: contact ?? Contact(), isUpdate: contact != nil)
         formTableView.sections = form.sections
         self.form = form
     }
@@ -59,14 +60,5 @@ class ContactDetailController: UIViewController {
             showError(error)
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -36,14 +36,22 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 4 nibs.
   struct nib {
+    /// Nib `AddressFormController`.
+    static let addressFormController = _R.nib._AddressFormController()
     /// Nib `ContactCell`.
     static let contactCell = _R.nib._ContactCell()
     /// Nib `DualTextFieldCell`.
     static let dualTextFieldCell = _R.nib._DualTextFieldCell()
     /// Nib `ProfileFieldCell`.
     static let profileFieldCell = _R.nib._ProfileFieldCell()
+    
+    /// `UINib(name: "AddressFormController", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.addressFormController) instead")
+    static func addressFormController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.addressFormController)
+    }
     
     /// `UINib(name: "ContactCell", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.contactCell) instead")
@@ -61,6 +69,10 @@ struct R: Rswift.Validatable {
     @available(*, deprecated, message: "Use UINib(resource: R.nib.profileFieldCell) instead")
     static func profileFieldCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.profileFieldCell)
+    }
+    
+    static func addressFormController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.addressFormController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
     
     static func contactCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ContactCell? {
@@ -92,16 +104,16 @@ struct R: Rswift.Validatable {
   
   /// This `R.segue` struct is generated, and contains static references to 2 view controllers.
   struct segue {
-    /// This struct is generated for `ContactDetailController`, and contains static references to 1 segues.
-    struct contactDetailController {
+    /// This struct is generated for `ContactFormController`, and contains static references to 1 segues.
+    struct contactFormController {
       /// Segue identifier `unwindToContactList`.
-      static let unwindToContactList: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, ContactDetailController, UIKit.UIViewController> = Rswift.StoryboardSegueIdentifier(identifier: "unwindToContactList")
+      static let unwindToContactList: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, ContactFormController, UIKit.UIViewController> = Rswift.StoryboardSegueIdentifier(identifier: "unwindToContactList")
       
       /// Optionally returns a typed version of segue `unwindToContactList`.
       /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
       /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
-      static func unwindToContactList(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, ContactDetailController, UIKit.UIViewController>? {
-        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.contactDetailController.unwindToContactList, segue: segue)
+      static func unwindToContactList(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, ContactFormController, UIKit.UIViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.contactFormController.unwindToContactList, segue: segue)
       }
       
       fileprivate init() {}
@@ -167,6 +179,17 @@ struct _R: Rswift.Validatable {
   struct nib: Rswift.Validatable {
     static func validate() throws {
       try _ProfileFieldCell.validate()
+    }
+    
+    struct _AddressFormController: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "AddressFormController"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
     }
     
     struct _ContactCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {

@@ -10,6 +10,7 @@ import UIKit
 import RealmSwift
 
 class Address: Object {
+    @objc dynamic var id = UUID().uuidString
     @objc dynamic var label: String?
     @objc dynamic var street: String?
     @objc dynamic var number: String?
@@ -17,4 +18,8 @@ class Address: Object {
     @objc dynamic var state: String?
     @objc dynamic var country: String?
     @objc dynamic var zipCode: String?
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }

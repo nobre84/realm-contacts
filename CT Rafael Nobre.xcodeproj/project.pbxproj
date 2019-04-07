@@ -38,13 +38,15 @@
 		00121959225A02F600DA79BE /* Address+Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00121958225A02F600DA79BE /* Address+Summary.swift */; };
 		0012195C225A094A00DA79BE /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012195B225A094A00DA79BE /* R.generated.swift */; };
 		001642E1225A851800A5875C /* AddressForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001642E0225A851800A5875C /* AddressForm.swift */; };
+		001642E3225A982600A5875C /* AddressFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001642E2225A982600A5875C /* AddressFormController.swift */; };
+		001642E5225A98D600A5875C /* AddressFormController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 001642E4225A98D600A5875C /* AddressFormController.xib */; };
 		001EB971224F9A7C001792D9 /* UIImage+Initials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB970224F9A7C001792D9 /* UIImage+Initials.swift */; };
 		001EB973224F9FB5001792D9 /* String+Initials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB972224F9FB5001792D9 /* String+Initials.swift */; };
 		001EB975224FA1D9001792D9 /* UIView+Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB974224FA1D9001792D9 /* UIView+Rounded.swift */; };
 		001EB978224FA579001792D9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB977224FA579001792D9 /* Colors.swift */; };
-		0022F4C822536D0E00B83A42 /* ContactDetailForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0022F4C722536D0E00B83A42 /* ContactDetailForm.swift */; };
+		0022F4C822536D0E00B83A42 /* ContactForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0022F4C722536D0E00B83A42 /* ContactForm.swift */; };
 		0071C027224FAD10001500F8 /* ContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071C026224FAD10001500F8 /* ContactTests.swift */; };
-		0071C029224FBDB7001500F8 /* ContactDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071C028224FBDB7001500F8 /* ContactDetailController.swift */; };
+		0071C029224FBDB7001500F8 /* ContactFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071C028224FBDB7001500F8 /* ContactFormController.swift */; };
 		008587762248DC6B00B338E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587752248DC6B00B338E4 /* AppDelegate.swift */; };
 		0085877B2248DC6B00B338E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 008587792248DC6B00B338E4 /* Main.storyboard */; };
 		0085877D2248DC6C00B338E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0085877C2248DC6C00B338E4 /* Assets.xcassets */; };
@@ -147,13 +149,15 @@
 		00121958225A02F600DA79BE /* Address+Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Address+Summary.swift"; sourceTree = "<group>"; };
 		0012195B225A094A00DA79BE /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		001642E0225A851800A5875C /* AddressForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressForm.swift; sourceTree = "<group>"; };
+		001642E2225A982600A5875C /* AddressFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressFormController.swift; sourceTree = "<group>"; };
+		001642E4225A98D600A5875C /* AddressFormController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressFormController.xib; sourceTree = "<group>"; };
 		001EB970224F9A7C001792D9 /* UIImage+Initials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Initials.swift"; sourceTree = "<group>"; };
 		001EB972224F9FB5001792D9 /* String+Initials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Initials.swift"; sourceTree = "<group>"; };
 		001EB974224FA1D9001792D9 /* UIView+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Rounded.swift"; sourceTree = "<group>"; };
 		001EB977224FA579001792D9 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		0022F4C722536D0E00B83A42 /* ContactDetailForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailForm.swift; sourceTree = "<group>"; };
+		0022F4C722536D0E00B83A42 /* ContactForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactForm.swift; sourceTree = "<group>"; };
 		0071C026224FAD10001500F8 /* ContactTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTests.swift; sourceTree = "<group>"; };
-		0071C028224FBDB7001500F8 /* ContactDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailController.swift; sourceTree = "<group>"; };
+		0071C028224FBDB7001500F8 /* ContactFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormController.swift; sourceTree = "<group>"; };
 		008587722248DC6B00B338E4 /* CT Rafael Nobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CT Rafael Nobre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		008587752248DC6B00B338E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0085877A2248DC6B00B338E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -371,6 +375,7 @@
 				001219512259FE0100DA79BE /* DualTextFieldCell.xib */,
 				00C7F0A6224B7BC700C4DBEB /* ContactCell.xib */,
 				000CC847225A1E98001B1CFB /* ProfileFieldCell.xib */,
+				001642E4225A98D600A5875C /* AddressFormController.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -395,7 +400,7 @@
 		0022F4C622536CF800B83A42 /* Form */ = {
 			isa = PBXGroup;
 			children = (
-				0022F4C722536D0E00B83A42 /* ContactDetailForm.swift */,
+				0022F4C722536D0E00B83A42 /* ContactForm.swift */,
 				001642E0225A851800A5875C /* AddressForm.swift */,
 			);
 			path = Form;
@@ -451,6 +456,7 @@
 			children = (
 				008587A72248DE4E00B338E4 /* Model */,
 				008587A82248DE5500B338E4 /* View */,
+				0022F4C622536CF800B83A42 /* Form */,
 				008587A62248DE4700B338E4 /* Controller */,
 				00C7F0AA224B818300C4DBEB /* Support */,
 			);
@@ -480,9 +486,9 @@
 		008587A62248DE4700B338E4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0022F4C622536CF800B83A42 /* Form */,
 				00C7F0A4224B7ADA00C4DBEB /* ContactListController.swift */,
-				0071C028224FBDB7001500F8 /* ContactDetailController.swift */,
+				0071C028224FBDB7001500F8 /* ContactFormController.swift */,
+				001642E2225A982600A5875C /* AddressFormController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -740,6 +746,7 @@
 			files = (
 				001219532259FE0100DA79BE /* DualTextFieldCell.xib in Resources */,
 				00C7F0A7224B7BC700C4DBEB /* ContactCell.xib in Resources */,
+				001642E5225A98D600A5875C /* AddressFormController.xib in Resources */,
 				000CC848225A1E98001B1CFB /* ProfileFieldCell.xib in Resources */,
 				008587802248DC6C00B338E4 /* LaunchScreen.storyboard in Resources */,
 				0085877D2248DC6C00B338E4 /* Assets.xcassets in Resources */,
@@ -974,15 +981,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0022F4C822536D0E00B83A42 /* ContactDetailForm.swift in Sources */,
+				0022F4C822536D0E00B83A42 /* ContactForm.swift in Sources */,
 				00121957225A024900DA79BE /* DualTextField+Convenience.swift in Sources */,
 				001219522259FE0100DA79BE /* DualTextFieldCell.swift in Sources */,
-				0071C029224FBDB7001500F8 /* ContactDetailController.swift in Sources */,
+				0071C029224FBDB7001500F8 /* ContactFormController.swift in Sources */,
 				008587AA2248DE7200B338E4 /* Contact.swift in Sources */,
 				008587B02248E1A900B338E4 /* Email.swift in Sources */,
 				00022A4522575BB1002381CE /* Object+Dictionary.swift in Sources */,
 				0012195C225A094A00DA79BE /* R.generated.swift in Sources */,
 				00A1CB5B225A167500CFF33C /* ProfileField.swift in Sources */,
+				001642E3225A982600A5875C /* AddressFormController.swift in Sources */,
 				001EB978224FA579001792D9 /* Colors.swift in Sources */,
 				008587AC2248E19700B338E4 /* Address.swift in Sources */,
 				001EB971224F9A7C001792D9 /* UIImage+Initials.swift in Sources */,

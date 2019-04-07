@@ -35,7 +35,7 @@ class ContactListController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let typedInfo = R.segue.contactListController.editContact(segue: segue),
-            let contactDetailController = typedInfo.destination.topViewController as? ContactDetailController,
+            let contactDetailController = typedInfo.destination.topViewController as? ContactFormController,
             let contact = sender as? Contact {
             contactDetailController.contact = contact
         }

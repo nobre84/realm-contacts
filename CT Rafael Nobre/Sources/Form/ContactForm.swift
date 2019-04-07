@@ -1,5 +1,5 @@
 //
-//  ContactDetailForm.swift
+//  ContactForm.swift
 //  CT Rafael Nobre
 //
 //  Created by Rafael Nobre on 02/04/19.
@@ -10,7 +10,7 @@ import UIKit
 import FormKit
 import RealmSwift
 
-class ContactDetailForm {
+class ContactForm {
     
     weak var presenter: UIViewController?
     var contact: Contact
@@ -28,18 +28,15 @@ class ContactDetailForm {
     // MARK: Sections
     
     lazy var profileSection: FormSection = {
-        return FormSection(fields: [profileField, firstNameField, lastNameField, birthdayField])
+        return FormSection(title: "Profile".uppercased(), fields: [profileField, firstNameField, lastNameField, birthdayField])
     }()
     
     lazy var addressesSection: FormSection = {
-        let addButton = FormButton(image: #imageLiteral(resourceName: "add_button")) {
-            print("Add address tapped")
-//            let newField = FormLabelField(label: "novo", value: "234232434")
-//            self.addresses.append(newField)
-//            self.addressesSection.append(newField)
+        let addButton = FormButton(image: #imageLiteral(resourceName: "add_button")) { [weak self] in
+            self?.showAddressForm()
         }
         
-        let emptyField = FormLabelField(label: "No phones added yet.", value: nil)
+        let emptyField = FormLabelField(label: "No addresses yet.")
         let section = FormSection(title: "Addresses".uppercased(), button: addButton, isEditing: true,  emptyField: emptyField)
         return section
     }()
@@ -50,7 +47,7 @@ class ContactDetailForm {
             self?.contact.phoneNumbers.append(newPhone)
             self?.phoneSection.append(DualTextField(newPhone))
         }
-        let emptyField = FormLabelField(label: "There are no phones.", value: nil)
+        let emptyField = FormLabelField(label: "No phone numbers yet.")
         let section = FormSection(title: "Phones".uppercased(), fields: contact.phoneNumbers.map { DualTextField($0) } , button: addButton, isEditing: true, emptyField: emptyField)
         section.deleteHandler = { [weak self] index in
             self?.contact.phoneNumbers.remove(at: index)
@@ -64,7 +61,7 @@ class ContactDetailForm {
             self?.contact.emails.append(newEmail)
             self?.emailSection.append(DualTextField(newEmail))
         }
-        let emptyField = FormLabelField(label: "There are no e-mails.", value: nil)
+        let emptyField = FormLabelField(label: "No e-mails yet.")
         let section = FormSection(title: "E-mails".uppercased(), fields: contact.emails.map { DualTextField($0) } , button: addButton, isEditing: true, emptyField: emptyField)
         section.deleteHandler = { [weak self] index in
             self?.contact.emails.remove(at: index)
@@ -118,6 +115,23 @@ class ContactDetailForm {
         try realm.write {
             realm.add(contact, update: isUpdate)
         }
+    }
+    
+    private func showAddressForm(with address: Address? = nil) {
+        let isUpdate = address != nil
+        let addressFormController = AddressFormController()
+        addressFormController.address = address
+        addressFormController.backHandler = { [weak self] address in
+            guard let address = address else { return }
+            if !isUpdate {
+                self?.contact.addresses.append(address)
+            }
+            else {
+                //TODO update
+//                self?.contact.addresses[]
+            }
+        }
+        presenter?.show(addressFormController, sender: nil)
     }
     
 }

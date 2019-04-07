@@ -36,9 +36,9 @@ public class FormSection {
         self.title = title
         self.footerText = footerText
         isFooterHidden = footerText == nil
+        isHeaderHidden = false
         self.fields = fields
         self.button = button
-        isHeaderHidden = title == nil && button == nil
         self.isEditing = isEditing
         self.emptyField = emptyField
     }

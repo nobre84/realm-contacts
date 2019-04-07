@@ -26,6 +26,9 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="NEx-oX-my3"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <constraints>
