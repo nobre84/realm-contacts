@@ -26,7 +26,15 @@ class ContactDetailForm {
     }()
     
     lazy var photoSection: FormSection = {
-        return FormSection(title: "Profile".uppercased())
+        return FormSection(title: "Profile".uppercased(), fields: [profileField])
+    }()
+    
+    lazy var profileField: ProfileField = {
+        let profileField = ProfileField(contact.picture, presentationContext: self.presenter)
+        profileField.valueChangedHandler = { [weak self] pictureData in
+            self?.contact.picture = pictureData
+        }
+        return profileField
     }()
     
     lazy var infoSection: FormSection = {

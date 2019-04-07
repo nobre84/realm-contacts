@@ -19,14 +19,19 @@ class ContactDetailController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        registerCustomCells()
         setupForm()
-        formTableView.registerFormFieldCell(DualTextFieldCell.self)
     }
     
     private func setupForm() {
         let form = ContactDetailForm(presenter: self, contact: contact ?? Contact(), isUpdate: contact != nil)
         formTableView.sections = form.sections
         self.form = form
+    }
+    
+    private func registerCustomCells() {
+        formTableView.registerFormFieldCell(DualTextFieldCell.self)
+        formTableView.registerFormFieldCell(ProfileFieldCell.self)
     }
     
     private func close() {

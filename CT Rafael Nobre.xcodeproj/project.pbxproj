@@ -30,6 +30,7 @@
 		0005F189225617AF00615D46 /* FormTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0005F16D2256137400615D46 /* FormTextFieldCell.xib */; };
 		0005F18A225617B100615D46 /* FormDateFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0005F16E2256137400615D46 /* FormDateFieldCell.xib */; };
 		0005F18B225617B300615D46 /* FormLabelFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0005F16F2256137400615D46 /* FormLabelFieldCell.xib */; };
+		000CC848225A1E98001B1CFB /* ProfileFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 000CC847225A1E98001B1CFB /* ProfileFieldCell.xib */; };
 		001219522259FE0100DA79BE /* DualTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001219502259FE0100DA79BE /* DualTextFieldCell.swift */; };
 		001219532259FE0100DA79BE /* DualTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 001219512259FE0100DA79BE /* DualTextFieldCell.xib */; };
 		001219552259FE1500DA79BE /* DualTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001219542259FE1500DA79BE /* DualTextField.swift */; };
@@ -53,6 +54,8 @@
 		008587AE2248E1A100B338E4 /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587AD2248E1A100B338E4 /* PhoneNumber.swift */; };
 		008587B02248E1A900B338E4 /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587AF2248E1A900B338E4 /* Email.swift */; };
 		00A1CB59225A141000CFF33C /* DetachableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A1CB58225A141000CFF33C /* DetachableObject.swift */; };
+		00A1CB5B225A167500CFF33C /* ProfileField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A1CB5A225A167500CFF33C /* ProfileField.swift */; };
+		00A1CB5D225A168B00CFF33C /* ProfileFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A1CB5C225A168B00CFF33C /* ProfileFieldCell.swift */; };
 		00C7F0A5224B7ADA00C4DBEB /* ContactListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7F0A4224B7ADA00C4DBEB /* ContactListController.swift */; };
 		00C7F0A7224B7BC700C4DBEB /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00C7F0A6224B7BC700C4DBEB /* ContactCell.xib */; };
 		00C7F0A9224B7D9C00C4DBEB /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7F0A8224B7D9C00C4DBEB /* ContactCell.swift */; };
@@ -135,6 +138,7 @@
 		0005F1822256152700615D46 /* ReusableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableViewExtensions.swift; sourceTree = "<group>"; };
 		0005F1842256152700615D46 /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		0005F1852256152700615D46 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		000CC847225A1E98001B1CFB /* ProfileFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFieldCell.xib; sourceTree = "<group>"; };
 		001219502259FE0100DA79BE /* DualTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualTextFieldCell.swift; sourceTree = "<group>"; };
 		001219512259FE0100DA79BE /* DualTextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DualTextFieldCell.xib; sourceTree = "<group>"; };
 		001219542259FE1500DA79BE /* DualTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualTextField.swift; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 		008587AD2248E1A100B338E4 /* PhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
 		008587AF2248E1A900B338E4 /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
 		00A1CB58225A141000CFF33C /* DetachableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetachableObject.swift; sourceTree = "<group>"; };
+		00A1CB5A225A167500CFF33C /* ProfileField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileField.swift; sourceTree = "<group>"; };
+		00A1CB5C225A168B00CFF33C /* ProfileFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFieldCell.swift; sourceTree = "<group>"; };
 		00C7F0A4224B7ADA00C4DBEB /* ContactListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListController.swift; sourceTree = "<group>"; };
 		00C7F0A6224B7BC700C4DBEB /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
 		00C7F0A8224B7D9C00C4DBEB /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
@@ -350,9 +356,9 @@
 		0012194F2259FDD700DA79BE /* CustomFields */ = {
 			isa = PBXGroup;
 			children = (
-				001219502259FE0100DA79BE /* DualTextFieldCell.swift */,
-				001219512259FE0100DA79BE /* DualTextFieldCell.xib */,
+				00A1CB5E225A16C500CFF33C /* Cells */,
 				001219542259FE1500DA79BE /* DualTextField.swift */,
+				00A1CB5A225A167500CFF33C /* ProfileField.swift */,
 			);
 			path = CustomFields;
 			sourceTree = "<group>";
@@ -360,7 +366,9 @@
 		001EB96D224F985F001792D9 /* XIB */ = {
 			isa = PBXGroup;
 			children = (
+				001219512259FE0100DA79BE /* DualTextFieldCell.xib */,
 				00C7F0A6224B7BC700C4DBEB /* ContactCell.xib */,
+				000CC847225A1E98001B1CFB /* ProfileFieldCell.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -493,6 +501,15 @@
 				00C7F0A8224B7D9C00C4DBEB /* ContactCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		00A1CB5E225A16C500CFF33C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				001219502259FE0100DA79BE /* DualTextFieldCell.swift */,
+				00A1CB5C225A168B00CFF33C /* ProfileFieldCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		00C7F0AA224B818300C4DBEB /* Support */ = {
@@ -720,6 +737,7 @@
 			files = (
 				001219532259FE0100DA79BE /* DualTextFieldCell.xib in Resources */,
 				00C7F0A7224B7BC700C4DBEB /* ContactCell.xib in Resources */,
+				000CC848225A1E98001B1CFB /* ProfileFieldCell.xib in Resources */,
 				008587802248DC6C00B338E4 /* LaunchScreen.storyboard in Resources */,
 				0085877D2248DC6C00B338E4 /* Assets.xcassets in Resources */,
 				0085877B2248DC6B00B338E4 /* Main.storyboard in Resources */,
@@ -961,6 +979,7 @@
 				008587B02248E1A900B338E4 /* Email.swift in Sources */,
 				00022A4522575BB1002381CE /* Object+Dictionary.swift in Sources */,
 				0012195C225A094A00DA79BE /* R.generated.swift in Sources */,
+				00A1CB5B225A167500CFF33C /* ProfileField.swift in Sources */,
 				001EB978224FA579001792D9 /* Colors.swift in Sources */,
 				008587AC2248E19700B338E4 /* Address.swift in Sources */,
 				001EB971224F9A7C001792D9 /* UIImage+Initials.swift in Sources */,
@@ -972,6 +991,7 @@
 				008587AE2248E1A100B338E4 /* PhoneNumber.swift in Sources */,
 				008587762248DC6B00B338E4 /* AppDelegate.swift in Sources */,
 				00022A492257651B002381CE /* UIViewController+Alerts.swift in Sources */,
+				00A1CB5D225A168B00CFF33C /* ProfileFieldCell.swift in Sources */,
 				001EB973224F9FB5001792D9 /* String+Initials.swift in Sources */,
 				001219552259FE1500DA79BE /* DualTextField.swift in Sources */,
 			);

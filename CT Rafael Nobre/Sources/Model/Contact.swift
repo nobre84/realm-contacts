@@ -23,6 +23,7 @@ class Contact: Object {
     @objc dynamic var firstName: String?
     @objc dynamic var lastName: String?
     @objc dynamic var birthday: Date?
+    @objc dynamic var picture: Data?
     var addresses = List<Address>()
     var phoneNumbers = List<PhoneNumber>()
     var emails = List<Email>()

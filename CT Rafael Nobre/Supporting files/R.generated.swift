@@ -29,12 +29,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
   struct nib {
     /// Nib `ContactCell`.
     static let contactCell = _R.nib._ContactCell()
     /// Nib `DualTextFieldCell`.
     static let dualTextFieldCell = _R.nib._DualTextFieldCell()
+    /// Nib `ProfileFieldCell`.
+    static let profileFieldCell = _R.nib._ProfileFieldCell()
     
     /// `UINib(name: "ContactCell", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.contactCell) instead")
@@ -48,6 +50,12 @@ struct R: Rswift.Validatable {
       return UIKit.UINib(resource: R.nib.dualTextFieldCell)
     }
     
+    /// `UINib(name: "ProfileFieldCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.profileFieldCell) instead")
+    static func profileFieldCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.profileFieldCell)
+    }
+    
     static func contactCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ContactCell? {
       return R.nib.contactCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ContactCell
     }
@@ -56,15 +64,21 @@ struct R: Rswift.Validatable {
       return R.nib.dualTextFieldCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? DualTextFieldCell
     }
     
+    static func profileFieldCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ProfileFieldCell? {
+      return R.nib.profileFieldCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ProfileFieldCell
+    }
+    
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 2 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 3 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `ContactCell`.
     static let contactCell: Rswift.ReuseIdentifier<ContactCell> = Rswift.ReuseIdentifier(identifier: "ContactCell")
     /// Reuse identifier `DualTextFieldCell`.
     static let dualTextFieldCell: Rswift.ReuseIdentifier<DualTextFieldCell> = Rswift.ReuseIdentifier(identifier: "DualTextFieldCell")
+    /// Reuse identifier `ProfileFieldCell`.
+    static let profileFieldCell: Rswift.ReuseIdentifier<ProfileFieldCell> = Rswift.ReuseIdentifier(identifier: "ProfileFieldCell")
     
     fileprivate init() {}
   }
@@ -166,6 +180,20 @@ struct _R: Rswift.Validatable {
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> DualTextFieldCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? DualTextFieldCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _ProfileFieldCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = ProfileFieldCell
+      
+      let bundle = R.hostingBundle
+      let identifier = "ProfileFieldCell"
+      let name = "ProfileFieldCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ProfileFieldCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ProfileFieldCell
       }
       
       fileprivate init() {}
