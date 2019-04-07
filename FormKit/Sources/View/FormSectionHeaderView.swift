@@ -20,7 +20,7 @@ class FormSectionHeaderView: UITableViewHeaderFooterView, NibLoadableView, Reusa
 //        backgroundView = bgView
 //    }
     
-    func setup(with section: FormSection) {
+    func setup(with section: FormSection) {        
         sectionLabel.text = section.title
         if stackView.arrangedSubviews.count == 2 {
             stackView.arrangedSubviews[1].removeFromSuperview()

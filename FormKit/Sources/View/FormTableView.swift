@@ -44,6 +44,7 @@ public class FormTableView: TPKeyboardAvoidingTableView {
     private func setupHeights() {
         estimatedRowHeight = 50
         sectionHeaderHeight = UITableView.automaticDimension
+        sectionFooterHeight = CGFloat.leastNonzeroMagnitude
         estimatedSectionHeaderHeight = 40
     }
     
@@ -101,12 +102,33 @@ extension FormTableView: UITableViewDataSource {
         return cell
     }
     
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if sections[indexPath.section].isHidden { return CGFloat.leastNonzeroMagnitude }
+        return UITableView.automaticDimension
+    }
+    
     public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let formSection = sections[section]
         let view = dequeueReusableHeaderFooterView(withIdentifier: FormSectionHeaderView.defaultReuseIdentifier) as? FormSectionHeaderView
         view?.setup(with: formSection)
         
         return view
+    }
+    
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        let formSection = sections[section]
+        if formSection.isHidden || formSection.isHeaderHidden {
+            return CGFloat.leastNonzeroMagnitude
+        }
+        return UITableView.automaticDimension
+    }
+    
+    public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        let formSection = sections[section]
+        if formSection.isHidden || formSection.isFooterHidden {
+            return CGFloat.leastNonzeroMagnitude
+        }
+        return UITableView.automaticDimension
     }
     
     public func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

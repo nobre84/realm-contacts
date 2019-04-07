@@ -37,6 +37,7 @@
 		00121957225A024900DA79BE /* DualTextField+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00121956225A024900DA79BE /* DualTextField+Convenience.swift */; };
 		00121959225A02F600DA79BE /* Address+Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00121958225A02F600DA79BE /* Address+Summary.swift */; };
 		0012195C225A094A00DA79BE /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012195B225A094A00DA79BE /* R.generated.swift */; };
+		001642E1225A851800A5875C /* AddressForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001642E0225A851800A5875C /* AddressForm.swift */; };
 		001EB971224F9A7C001792D9 /* UIImage+Initials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB970224F9A7C001792D9 /* UIImage+Initials.swift */; };
 		001EB973224F9FB5001792D9 /* String+Initials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB972224F9FB5001792D9 /* String+Initials.swift */; };
 		001EB975224FA1D9001792D9 /* UIView+Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB974224FA1D9001792D9 /* UIView+Rounded.swift */; };
@@ -145,6 +146,7 @@
 		00121956225A024900DA79BE /* DualTextField+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DualTextField+Convenience.swift"; sourceTree = "<group>"; };
 		00121958225A02F600DA79BE /* Address+Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Address+Summary.swift"; sourceTree = "<group>"; };
 		0012195B225A094A00DA79BE /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		001642E0225A851800A5875C /* AddressForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressForm.swift; sourceTree = "<group>"; };
 		001EB970224F9A7C001792D9 /* UIImage+Initials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Initials.swift"; sourceTree = "<group>"; };
 		001EB972224F9FB5001792D9 /* String+Initials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Initials.swift"; sourceTree = "<group>"; };
 		001EB974224FA1D9001792D9 /* UIView+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Rounded.swift"; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 			isa = PBXGroup;
 			children = (
 				0022F4C722536D0E00B83A42 /* ContactDetailForm.swift */,
+				001642E0225A851800A5875C /* AddressForm.swift */,
 			);
 			path = Form;
 			sourceTree = "<group>";
@@ -993,6 +996,7 @@
 				00022A492257651B002381CE /* UIViewController+Alerts.swift in Sources */,
 				00A1CB5D225A168B00CFF33C /* ProfileFieldCell.swift in Sources */,
 				001EB973224F9FB5001792D9 /* String+Initials.swift in Sources */,
+				001642E1225A851800A5875C /* AddressForm.swift in Sources */,
 				001219552259FE1500DA79BE /* DualTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

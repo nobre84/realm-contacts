@@ -13,16 +13,16 @@ class ProfileField: FormField {
 
     static var cellType: FormFieldCell.Type = ProfileFieldCell.self
     
-    weak var presentationContext: UIViewController?
+    weak var presenter: UIViewController?
     var picture: UIImage?
     var valueChangedHandler: ((Data?) -> Void)?
     var heightUpdateHandler: (() -> Void)?
     
-    public init(_ imageData: Data? = nil, presentationContext: UIViewController?) {
+    public init(_ imageData: Data? = nil, presenter: UIViewController?) {
         if let imageData = imageData {
             self.picture = UIImage(data: imageData)
         }
-        self.presentationContext = presentationContext
+        self.presenter = presenter
     }
     
 }

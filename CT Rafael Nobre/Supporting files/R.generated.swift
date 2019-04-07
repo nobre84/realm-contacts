@@ -16,14 +16,21 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
-  /// This `R.image` struct is generated, and contains static references to 1 images.
+  /// This `R.image` struct is generated, and contains static references to 2 images.
   struct image {
     /// Image `add_button`.
     static let add_button = Rswift.ImageResource(bundle: R.hostingBundle, name: "add_button")
+    /// Image `blank_picture`.
+    static let blank_picture = Rswift.ImageResource(bundle: R.hostingBundle, name: "blank_picture")
     
     /// `UIImage(named: "add_button", bundle: ..., traitCollection: ...)`
     static func add_button(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.add_button, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "blank_picture", bundle: ..., traitCollection: ...)`
+    static func blank_picture(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.blank_picture, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
@@ -154,9 +161,14 @@ struct R: Rswift.Validatable {
 struct _R: Rswift.Validatable {
   static func validate() throws {
     try storyboard.validate()
+    try nib.validate()
   }
   
-  struct nib {
+  struct nib: Rswift.Validatable {
+    static func validate() throws {
+      try _ProfileFieldCell.validate()
+    }
+    
     struct _ContactCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
       typealias ReusableType = ContactCell
       
@@ -185,7 +197,7 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct _ProfileFieldCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+    struct _ProfileFieldCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType, Rswift.Validatable {
       typealias ReusableType = ProfileFieldCell
       
       let bundle = R.hostingBundle
@@ -194,6 +206,12 @@ struct _R: Rswift.Validatable {
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ProfileFieldCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ProfileFieldCell
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "blank_picture", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'blank_picture' is used in nib 'ProfileFieldCell', but couldn't be loaded.") }
+        if #available(iOS 11.0, *) {
+        }
       }
       
       fileprivate init() {}

@@ -22,23 +22,13 @@ class ContactDetailForm {
     }
     
     lazy var sections: [FormSection] = {
-        return [ photoSection, infoSection, addressesSection, phoneSection, emailSection ]
+        return [ profileSection, addressesSection, phoneSection, emailSection ]
     }()
     
-    lazy var photoSection: FormSection = {
-        return FormSection(title: "Profile".uppercased(), fields: [profileField])
-    }()
+    // MARK: Sections
     
-    lazy var profileField: ProfileField = {
-        let profileField = ProfileField(contact.picture, presentationContext: self.presenter)
-        profileField.valueChangedHandler = { [weak self] pictureData in
-            self?.contact.picture = pictureData
-        }
-        return profileField
-    }()
-    
-    lazy var infoSection: FormSection = {
-        return FormSection(title: "Information".uppercased(), fields: [firstNameField, lastNameField, birthdayField])
+    lazy var profileSection: FormSection = {
+        return FormSection(fields: [profileField, firstNameField, lastNameField, birthdayField])
     }()
     
     lazy var addressesSection: FormSection = {
@@ -51,7 +41,6 @@ class ContactDetailForm {
         
         let emptyField = FormLabelField(label: "No phones added yet.", value: nil)
         let section = FormSection(title: "Addresses".uppercased(), button: addButton, isEditing: true,  emptyField: emptyField)
-        
         return section
     }()
     
@@ -81,6 +70,16 @@ class ContactDetailForm {
             self?.contact.emails.remove(at: index)
         }
         return section
+    }()
+    
+    // MARK: - Fields
+    
+    lazy var profileField: ProfileField = {
+        let profileField = ProfileField(contact.picture, presenter: self.presenter)
+        profileField.valueChangedHandler = { [weak self] pictureData in
+            self?.contact.picture = pictureData
+        }
+        return profileField
     }()
     
     lazy var firstNameField: FormTextField = {

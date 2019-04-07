@@ -12,8 +12,12 @@ public class FormSection {
     
     public var isEditing: Bool
     public var deleteHandler: ((Int) -> Void)?
+    public var isHidden = false
+    public var isHeaderHidden: Bool
+    public var isFooterHidden: Bool
     
     var title: String?
+    var footerText: String?
     var button: FormButton?
     var emptyField: FormField?
     var insertHandler: ((Int, Bool) -> Void)?
@@ -28,10 +32,13 @@ public class FormSection {
     
     private var fields = [FormField]()
     
-    public init(title: String? = nil, fields: [FormField] = [], button: FormButton? = nil, isEditing: Bool = false, emptyField: FormField? = nil) {
+    public init(title: String? = nil, footerText: String? = nil, fields: [FormField] = [], button: FormButton? = nil, isEditing: Bool = false, emptyField: FormField? = nil) {
         self.title = title
+        self.footerText = footerText
+        isFooterHidden = footerText == nil
         self.fields = fields
         self.button = button
+        isHeaderHidden = title == nil && button == nil
         self.isEditing = isEditing
         self.emptyField = emptyField
     }

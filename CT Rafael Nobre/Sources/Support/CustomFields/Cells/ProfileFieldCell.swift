@@ -30,7 +30,9 @@ class ProfileFieldCell: UITableViewCell, FormFieldCell, NibLoadableView {
     }
     
     func updateUI() {
-        pictureImageView.image = field?.picture
+        if let picture = field?.picture {
+            pictureImageView.image = picture
+        }
     }
     
     @objc private func valueChanged() {
@@ -42,7 +44,7 @@ class ProfileFieldCell: UITableViewCell, FormFieldCell, NibLoadableView {
         picker.sourceType = .camera
         picker.allowsEditing = true
         picker.delegate = self
-        field?.presentationContext?.present(picker, animated: true)
+        field?.presenter?.present(picker, animated: true)
     }
 }
 
