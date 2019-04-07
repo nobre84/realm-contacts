@@ -30,6 +30,11 @@
 		0005F189225617AF00615D46 /* FormTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0005F16D2256137400615D46 /* FormTextFieldCell.xib */; };
 		0005F18A225617B100615D46 /* FormDateFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0005F16E2256137400615D46 /* FormDateFieldCell.xib */; };
 		0005F18B225617B300615D46 /* FormLabelFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0005F16F2256137400615D46 /* FormLabelFieldCell.xib */; };
+		001219522259FE0100DA79BE /* DualTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001219502259FE0100DA79BE /* DualTextFieldCell.swift */; };
+		001219532259FE0100DA79BE /* DualTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 001219512259FE0100DA79BE /* DualTextFieldCell.xib */; };
+		001219552259FE1500DA79BE /* DualTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001219542259FE1500DA79BE /* DualTextField.swift */; };
+		00121957225A024900DA79BE /* DualTextField+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00121956225A024900DA79BE /* DualTextField+Convenience.swift */; };
+		00121959225A02F600DA79BE /* Address+Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00121958225A02F600DA79BE /* Address+Summary.swift */; };
 		001EB971224F9A7C001792D9 /* UIImage+Initials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB970224F9A7C001792D9 /* UIImage+Initials.swift */; };
 		001EB973224F9FB5001792D9 /* String+Initials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB972224F9FB5001792D9 /* String+Initials.swift */; };
 		001EB975224FA1D9001792D9 /* UIView+Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB974224FA1D9001792D9 /* UIView+Rounded.swift */; };
@@ -107,9 +112,6 @@
 		00022A4422575BB1002381CE /* Object+Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Object+Dictionary.swift"; sourceTree = "<group>"; };
 		00022A4622575DA2002381CE /* Object+DictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Object+DictionaryTests.swift"; sourceTree = "<group>"; };
 		00022A482257651B002381CE /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
-		0005F133225605A400615D46 /* FormDateFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDateFieldCell.swift; sourceTree = "<group>"; };
-		0005F134225605A400615D46 /* FormDateFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormDateFieldCell.xib; sourceTree = "<group>"; };
-		0005F137225605C300615D46 /* FormDateField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDateField.swift; sourceTree = "<group>"; };
 		0005F13E225612F100615D46 /* FormKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FormKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0005F146225612F100615D46 /* FormKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0005F14D225612F100615D46 /* FormKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormKitTests.swift; sourceTree = "<group>"; };
@@ -131,7 +133,11 @@
 		0005F1822256152700615D46 /* ReusableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableViewExtensions.swift; sourceTree = "<group>"; };
 		0005F1842256152700615D46 /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		0005F1852256152700615D46 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
-		0018BDE1225215A50028DC09 /* FormFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFieldCell.swift; sourceTree = "<group>"; };
+		001219502259FE0100DA79BE /* DualTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualTextFieldCell.swift; sourceTree = "<group>"; };
+		001219512259FE0100DA79BE /* DualTextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DualTextFieldCell.xib; sourceTree = "<group>"; };
+		001219542259FE1500DA79BE /* DualTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualTextField.swift; sourceTree = "<group>"; };
+		00121956225A024900DA79BE /* DualTextField+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DualTextField+Convenience.swift"; sourceTree = "<group>"; };
+		00121958225A02F600DA79BE /* Address+Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Address+Summary.swift"; sourceTree = "<group>"; };
 		001EB970224F9A7C001792D9 /* UIImage+Initials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Initials.swift"; sourceTree = "<group>"; };
 		001EB972224F9FB5001792D9 /* String+Initials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Initials.swift"; sourceTree = "<group>"; };
 		001EB974224FA1D9001792D9 /* UIView+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Rounded.swift"; sourceTree = "<group>"; };
@@ -139,15 +145,6 @@
 		0022F4C722536D0E00B83A42 /* ContactDetailForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailForm.swift; sourceTree = "<group>"; };
 		0071C026224FAD10001500F8 /* ContactTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTests.swift; sourceTree = "<group>"; };
 		0071C028224FBDB7001500F8 /* ContactDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailController.swift; sourceTree = "<group>"; };
-		0071C031224FBF86001500F8 /* FormTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableView.swift; sourceTree = "<group>"; };
-		0071C033224FBFA8001500F8 /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
-		0071C035224FBFB7001500F8 /* FormLabelField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormLabelField.swift; sourceTree = "<group>"; };
-		0071C037224FBFC2001500F8 /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
-		0071C039224FBFDA001500F8 /* FormSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSection.swift; sourceTree = "<group>"; };
-		0071C03D224FC0EE001500F8 /* FormTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextFieldCell.swift; sourceTree = "<group>"; };
-		0071C03E224FC0EE001500F8 /* FormTextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormTextFieldCell.xib; sourceTree = "<group>"; };
-		0071C041224FC109001500F8 /* FormLabelFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormLabelFieldCell.swift; sourceTree = "<group>"; };
-		0071C042224FC109001500F8 /* FormLabelFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormLabelFieldCell.xib; sourceTree = "<group>"; };
 		008587722248DC6B00B338E4 /* CT Rafael Nobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CT Rafael Nobre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		008587752248DC6B00B338E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0085877A2248DC6B00B338E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -346,6 +343,16 @@
 			path = Reusable;
 			sourceTree = "<group>";
 		};
+		0012194F2259FDD700DA79BE /* CustomFields */ = {
+			isa = PBXGroup;
+			children = (
+				001219502259FE0100DA79BE /* DualTextFieldCell.swift */,
+				001219512259FE0100DA79BE /* DualTextFieldCell.xib */,
+				001219542259FE1500DA79BE /* DualTextField.swift */,
+			);
+			path = CustomFields;
+			sourceTree = "<group>";
+		};
 		001EB96D224F985F001792D9 /* XIB */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,42 +384,6 @@
 				0022F4C722536D0E00B83A42 /* ContactDetailForm.swift */,
 			);
 			path = Form;
-			sourceTree = "<group>";
-		};
-		0071C02E224FBF62001500F8 /* Form */ = {
-			isa = PBXGroup;
-			children = (
-				0071C030224FBF75001500F8 /* Cells */,
-				0071C02F224FBF6C001500F8 /* Fields */,
-				0071C031224FBF86001500F8 /* FormTableView.swift */,
-				0071C039224FBFDA001500F8 /* FormSection.swift */,
-			);
-			path = Form;
-			sourceTree = "<group>";
-		};
-		0071C02F224FBF6C001500F8 /* Fields */ = {
-			isa = PBXGroup;
-			children = (
-				0071C033224FBFA8001500F8 /* FormField.swift */,
-				0071C035224FBFB7001500F8 /* FormLabelField.swift */,
-				0071C037224FBFC2001500F8 /* FormTextField.swift */,
-				0005F137225605C300615D46 /* FormDateField.swift */,
-			);
-			path = Fields;
-			sourceTree = "<group>";
-		};
-		0071C030224FBF75001500F8 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				0018BDE1225215A50028DC09 /* FormFieldCell.swift */,
-				0071C03D224FC0EE001500F8 /* FormTextFieldCell.swift */,
-				0071C03E224FC0EE001500F8 /* FormTextFieldCell.xib */,
-				0071C041224FC109001500F8 /* FormLabelFieldCell.swift */,
-				0071C042224FC109001500F8 /* FormLabelFieldCell.xib */,
-				0005F133225605A400615D46 /* FormDateFieldCell.swift */,
-				0005F134225605A400615D46 /* FormDateFieldCell.xib */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		008587692248DC6B00B338E4 = {
@@ -522,7 +493,7 @@
 		00C7F0AA224B818300C4DBEB /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				0071C02E224FBF62001500F8 /* Form */,
+				0012194F2259FDD700DA79BE /* CustomFields */,
 				001EB976224FA56B001792D9 /* Styles */,
 				00C7F0AB224B818A00C4DBEB /* Extensions */,
 			);
@@ -537,6 +508,8 @@
 				001EB974224FA1D9001792D9 /* UIView+Rounded.swift */,
 				00022A4422575BB1002381CE /* Object+Dictionary.swift */,
 				00022A482257651B002381CE /* UIViewController+Alerts.swift */,
+				00121956225A024900DA79BE /* DualTextField+Convenience.swift */,
+				00121958225A02F600DA79BE /* Address+Summary.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -738,6 +711,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				001219532259FE0100DA79BE /* DualTextFieldCell.xib in Resources */,
 				00C7F0A7224B7BC700C4DBEB /* ContactCell.xib in Resources */,
 				008587802248DC6C00B338E4 /* LaunchScreen.storyboard in Resources */,
 				0085877D2248DC6C00B338E4 /* Assets.xcassets in Resources */,
@@ -951,6 +925,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0022F4C822536D0E00B83A42 /* ContactDetailForm.swift in Sources */,
+				00121957225A024900DA79BE /* DualTextField+Convenience.swift in Sources */,
+				001219522259FE0100DA79BE /* DualTextFieldCell.swift in Sources */,
 				0071C029224FBDB7001500F8 /* ContactDetailController.swift in Sources */,
 				008587AA2248DE7200B338E4 /* Contact.swift in Sources */,
 				008587B02248E1A900B338E4 /* Email.swift in Sources */,
@@ -961,10 +937,12 @@
 				001EB975224FA1D9001792D9 /* UIView+Rounded.swift in Sources */,
 				00C7F0A9224B7D9C00C4DBEB /* ContactCell.swift in Sources */,
 				00C7F0A5224B7ADA00C4DBEB /* ContactListController.swift in Sources */,
+				00121959225A02F600DA79BE /* Address+Summary.swift in Sources */,
 				008587AE2248E1A100B338E4 /* PhoneNumber.swift in Sources */,
 				008587762248DC6B00B338E4 /* AppDelegate.swift in Sources */,
 				00022A492257651B002381CE /* UIViewController+Alerts.swift in Sources */,
 				001EB973224F9FB5001792D9 /* String+Initials.swift in Sources */,
+				001219552259FE1500DA79BE /* DualTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

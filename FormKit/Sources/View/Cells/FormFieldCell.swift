@@ -15,10 +15,10 @@ public protocol FormFieldCell where Self: UITableViewCell {
     func updateUI()
 }
 
-extension FormFieldCell {
+public extension FormFieldCell {
     static var identifier: String { return self.defaultReuseIdentifier }
 }
 
-extension FormFieldCell where Self: NibLoadableView {
+public extension FormFieldCell where Self: NibLoadableView {
     static var nib: UINib { return UINib(nibName: self.nibName, bundle: Bundle(for: self)) }
 }

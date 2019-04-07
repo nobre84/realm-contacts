@@ -16,7 +16,7 @@ public class FormSection {
     var title: String?
     var button: FormButton?
     var emptyField: FormField?
-    var insertHandler: ((Int) -> Void)?
+    var insertHandler: ((Int, Bool) -> Void)?
     
     var count: Int {
         return isShowingEmptyField ? 1 : fields.count
@@ -46,8 +46,9 @@ public class FormSection {
     }
     
     public func append(_ field: FormField) {
+        let hadEmptyField = isShowingEmptyField
         fields.append(field)
-        insertHandler?(fields.count - 1)
+        insertHandler?(fields.count - 1, hadEmptyField)
     }
     
 }

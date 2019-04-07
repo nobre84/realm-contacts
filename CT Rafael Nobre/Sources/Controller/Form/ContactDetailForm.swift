@@ -55,11 +55,17 @@ class ContactDetailForm {
     }()
     
     lazy var phoneSection: FormSection = {
-        let addButton = FormButton(image: #imageLiteral(resourceName: "add_button")) {
-            print("Add phone tapped")
+        let addButton = FormButton(image: #imageLiteral(resourceName: "add_button")) { [weak self] in
+            let newPhone = PhoneNumber()
+            self?.contact.phoneNumbers.append(newPhone)
+            self?.phoneSection.append(DualTextField(newPhone))
         }
-        let emptyField = FormLabelField(label: "No phones added yet.", value: nil)
-        return FormSection(title: "Phones".uppercased(), button: addButton, isEditing: true, emptyField: emptyField)
+        let emptyField = FormLabelField(label: "There are no phones.", value: nil)
+        let section = FormSection(title: "Phones".uppercased(), fields: contact.phoneNumbers.map { DualTextField($0) } , button: addButton, isEditing: true, emptyField: emptyField)
+        section.deleteHandler = { [weak self] index in
+            self?.contact.phoneNumbers.remove(at: index)
+        }
+        return section
     }()
     
     lazy var emailSection: FormSection = {

@@ -19,6 +19,7 @@ class ContactDetailController: UIViewController {
         super.viewDidLoad()
 
         setupForm()
+        formTableView.registerFormFieldCell(DualTextFieldCell.self)
     }
     
     private func setupForm() {

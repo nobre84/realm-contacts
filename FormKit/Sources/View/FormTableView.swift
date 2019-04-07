@@ -72,8 +72,11 @@ extension FormTableView: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let formSection = sections[section]
-        formSection.insertHandler = { index in
+        formSection.insertHandler = { index, hadEmptyField in
             tableView.beginUpdates()
+            if hadEmptyField {
+                tableView.deleteRows(at: [IndexPath(row: 0, section: section)], with: .automatic)
+            }
             tableView.insertRows(at: [IndexPath(row: index, section: section)], with: .automatic)
             tableView.endUpdates()
         }
