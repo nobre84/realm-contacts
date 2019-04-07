@@ -35,6 +35,7 @@
 		001219552259FE1500DA79BE /* DualTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001219542259FE1500DA79BE /* DualTextField.swift */; };
 		00121957225A024900DA79BE /* DualTextField+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00121956225A024900DA79BE /* DualTextField+Convenience.swift */; };
 		00121959225A02F600DA79BE /* Address+Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00121958225A02F600DA79BE /* Address+Summary.swift */; };
+		0012195C225A094A00DA79BE /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012195B225A094A00DA79BE /* R.generated.swift */; };
 		001EB971224F9A7C001792D9 /* UIImage+Initials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB970224F9A7C001792D9 /* UIImage+Initials.swift */; };
 		001EB973224F9FB5001792D9 /* String+Initials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB972224F9FB5001792D9 /* String+Initials.swift */; };
 		001EB975224FA1D9001792D9 /* UIView+Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EB974224FA1D9001792D9 /* UIView+Rounded.swift */; };
@@ -51,6 +52,7 @@
 		008587AC2248E19700B338E4 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587AB2248E19700B338E4 /* Address.swift */; };
 		008587AE2248E1A100B338E4 /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587AD2248E1A100B338E4 /* PhoneNumber.swift */; };
 		008587B02248E1A900B338E4 /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008587AF2248E1A900B338E4 /* Email.swift */; };
+		00A1CB59225A141000CFF33C /* DetachableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A1CB58225A141000CFF33C /* DetachableObject.swift */; };
 		00C7F0A5224B7ADA00C4DBEB /* ContactListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7F0A4224B7ADA00C4DBEB /* ContactListController.swift */; };
 		00C7F0A7224B7BC700C4DBEB /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00C7F0A6224B7BC700C4DBEB /* ContactCell.xib */; };
 		00C7F0A9224B7D9C00C4DBEB /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7F0A8224B7D9C00C4DBEB /* ContactCell.swift */; };
@@ -138,6 +140,7 @@
 		001219542259FE1500DA79BE /* DualTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualTextField.swift; sourceTree = "<group>"; };
 		00121956225A024900DA79BE /* DualTextField+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DualTextField+Convenience.swift"; sourceTree = "<group>"; };
 		00121958225A02F600DA79BE /* Address+Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Address+Summary.swift"; sourceTree = "<group>"; };
+		0012195B225A094A00DA79BE /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		001EB970224F9A7C001792D9 /* UIImage+Initials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Initials.swift"; sourceTree = "<group>"; };
 		001EB972224F9FB5001792D9 /* String+Initials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Initials.swift"; sourceTree = "<group>"; };
 		001EB974224FA1D9001792D9 /* UIView+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Rounded.swift"; sourceTree = "<group>"; };
@@ -158,6 +161,7 @@
 		008587AB2248E19700B338E4 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		008587AD2248E1A100B338E4 /* PhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
 		008587AF2248E1A900B338E4 /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
+		00A1CB58225A141000CFF33C /* DetachableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetachableObject.swift; sourceTree = "<group>"; };
 		00C7F0A4224B7ADA00C4DBEB /* ContactListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListController.swift; sourceTree = "<group>"; };
 		00C7F0A6224B7BC700C4DBEB /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
 		00C7F0A8224B7D9C00C4DBEB /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
@@ -457,6 +461,7 @@
 			children = (
 				008587752248DC6B00B338E4 /* AppDelegate.swift */,
 				008587812248DC6C00B338E4 /* Info.plist */,
+				0012195B225A094A00DA79BE /* R.generated.swift */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -510,6 +515,7 @@
 				00022A482257651B002381CE /* UIViewController+Alerts.swift */,
 				00121956225A024900DA79BE /* DualTextField+Convenience.swift */,
 				00121958225A02F600DA79BE /* Address+Summary.swift */,
+				00A1CB58225A141000CFF33C /* DetachableObject.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -601,6 +607,7 @@
 			buildConfigurationList = 0085879A2248DC6C00B338E4 /* Build configuration list for PBXNativeTarget "CT Rafael Nobre" */;
 			buildPhases = (
 				BFCB525C05C9D1C125C224A3 /* [CP] Check Pods Manifest.lock */,
+				0012195A225A086100DA79BE /* R.swift */,
 				0085876E2248DC6B00B338E4 /* Sources */,
 				0085876F2248DC6B00B338E4 /* Frameworks */,
 				008587702248DC6B00B338E4 /* Resources */,
@@ -729,6 +736,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0012195A225A086100DA79BE /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$SRCROOT/CT Rafael Nobre/Supporting files/R.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/CT Rafael Nobre/Supporting files/R.generated.swift\"\n";
+		};
 		20DD4944FA003473949C2E98 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -782,6 +809,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CT Rafael Nobre/Pods-CT Rafael Nobre-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
@@ -790,6 +818,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
@@ -931,9 +960,11 @@
 				008587AA2248DE7200B338E4 /* Contact.swift in Sources */,
 				008587B02248E1A900B338E4 /* Email.swift in Sources */,
 				00022A4522575BB1002381CE /* Object+Dictionary.swift in Sources */,
+				0012195C225A094A00DA79BE /* R.generated.swift in Sources */,
 				001EB978224FA579001792D9 /* Colors.swift in Sources */,
 				008587AC2248E19700B338E4 /* Address.swift in Sources */,
 				001EB971224F9A7C001792D9 /* UIImage+Initials.swift in Sources */,
+				00A1CB59225A141000CFF33C /* DetachableObject.swift in Sources */,
 				001EB975224FA1D9001792D9 /* UIView+Rounded.swift in Sources */,
 				00C7F0A9224B7D9C00C4DBEB /* ContactCell.swift in Sources */,
 				00C7F0A5224B7ADA00C4DBEB /* ContactListController.swift in Sources */,

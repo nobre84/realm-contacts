@@ -13,6 +13,7 @@ import RealmSwift
 class ContactDetailController: UIViewController {
     
     var form: ContactDetailForm?
+    var contact: Contact?
 
     @IBOutlet weak var formTableView: FormTableView!
     override func viewDidLoad() {
@@ -23,7 +24,7 @@ class ContactDetailController: UIViewController {
     }
     
     private func setupForm() {
-        let form = ContactDetailForm(presenter: self, contact: Contact())
+        let form = ContactDetailForm(presenter: self, contact: contact ?? Contact(), isUpdate: contact != nil)
         formTableView.sections = form.sections
         self.form = form
     }

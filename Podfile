@@ -4,6 +4,7 @@ target 'CT Rafael Nobre' do
   use_frameworks!
 
   pod 'RealmSwift'
+  pod 'R.swift'
 
   target 'CT Rafael NobreTests' do
     inherit! :search_paths

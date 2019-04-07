@@ -32,6 +32,14 @@ class ContactListController: UITableViewController {
         
         fetch()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let typedInfo = R.segue.contactListController.editContact(segue: segue),
+            let contactDetailController = typedInfo.destination.topViewController as? ContactDetailController,
+            let contact = sender as? Contact {
+            contactDetailController.contact = contact
+        }
+    }
 
     // MARK: - Table view data source
 
@@ -58,7 +66,7 @@ class ContactListController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let contact = contacts?[indexPath.row]
-        // TODO edit
+        performSegue(withIdentifier: R.segue.contactListController.editContact, sender: contact)
     }
     
     // MARK: - Private Methods

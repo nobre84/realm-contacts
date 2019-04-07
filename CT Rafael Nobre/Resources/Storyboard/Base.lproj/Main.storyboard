@@ -35,6 +35,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="qCr-0n-Dti" kind="presentation" identifier="editContact" id="SQ8-db-miD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2kB-uG-3xk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -121,4 +124,7 @@
             <point key="canvasLocation" x="1965.5999999999999" y="127.28635682158921"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="SQ8-db-miD"/>
+    </inferredMetricsTieBreakers>
 </document>

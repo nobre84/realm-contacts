@@ -19,12 +19,18 @@ import RealmSwift
  */
 
 class Contact: Object {
+    @objc dynamic var id = UUID().uuidString
     @objc dynamic var firstName: String?
     @objc dynamic var lastName: String?
     @objc dynamic var birthday: Date?
     var addresses = List<Address>()
     var phoneNumbers = List<PhoneNumber>()
     var emails = List<Email>()
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+    
 }
 
 extension Contact {

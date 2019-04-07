@@ -1,5 +1,8 @@
 PODS:
   - Nimble (8.0.1)
+  - R.swift (5.0.3):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.0)
   - Realm (3.14.0):
     - Realm/Headers (= 3.14.0)
   - Realm/Headers (3.14.0)
@@ -9,22 +12,27 @@ PODS:
 
 DEPENDENCIES:
   - Nimble
+  - R.swift
   - RealmSwift
   - TPKeyboardAvoiding
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Nimble
+    - R.swift
+    - R.swift.Library
     - Realm
     - RealmSwift
     - TPKeyboardAvoiding
 
 SPEC CHECKSUMS:
   Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
+  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
+  R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
   Realm: 221b25919bb5a010a3c597d707f8df3492dcd93a
   RealmSwift: 28f22dfa6a27b9a778cfb09471558b6afcf1022c
   TPKeyboardAvoiding: cb69d5ddbe90ce0170e4bc2db1e5e41d4a3ad9a4
 
-PODFILE CHECKSUM: 4620892bff10cbf109508b581555c2dd6ac82bac
+PODFILE CHECKSUM: 57b98796ac2873892b323c2b5f21f867d0579bad
 
 COCOAPODS: 1.6.1

@@ -12,10 +12,18 @@ extension DualTextField {
     
     convenience init(_ phone: PhoneNumber) {
         self.init(leftText: phone.label, leftPlaceholder: "label", rightText: phone.number, rightPlaceholder: "number")
+        valueChangedHandler = { newLabel, newValue in
+            phone.label = newLabel
+            phone.number = newValue
+        }
     }
     
     convenience init(_ email: Email) {
         self.init(leftText: email.label, leftPlaceholder: "label", rightText: email.email, rightPlaceholder: "e-mail")
+        valueChangedHandler = { newLabel, newValue in
+            email.label = newLabel
+            email.email = newValue
+        }
     }
     
 }

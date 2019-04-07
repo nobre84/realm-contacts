@@ -15,6 +15,7 @@ class ContactDetailForm {
     weak var presenter: UIViewController?
     var contact: Contact
     private var originalContact: Contact
+    private (set) var isUpdate: Bool
     
     var isModified: Bool {
         return contact.toDictionary() as NSDictionary != originalContact.toDictionary() as NSDictionary
@@ -35,23 +36,15 @@ class ContactDetailForm {
     lazy var addressesSection: FormSection = {
         let addButton = FormButton(image: #imageLiteral(resourceName: "add_button")) {
             print("Add address tapped")
-            let newField = FormLabelField(label: "novo", value: "234232434")
-            self.addresses.append(newField)
-            self.addressesSection.append(newField)
+//            let newField = FormLabelField(label: "novo", value: "234232434")
+//            self.addresses.append(newField)
+//            self.addressesSection.append(newField)
         }
         
         let emptyField = FormLabelField(label: "No phones added yet.", value: nil)
-        let section = FormSection(title: "Addresses".uppercased(), fields: addresses, button: addButton, isEditing: true,  emptyField: emptyField)
-        section.deleteHandler = { [weak self] index in
-            print("Deleted index \(index)")
-            self?.addresses.remove(at: index)
-        }
+        let section = FormSection(title: "Addresses".uppercased(), button: addButton, isEditing: true,  emptyField: emptyField)
+        
         return section
-    }()
-    
-    lazy var addresses: [FormLabelField] = {
-        let fields = [ FormLabelField(label: "home", value: "555-3333"), FormLabelField(label: "mobile", value: "333-3333") ]
-        return fields
     }()
     
     lazy var phoneSection: FormSection = {
@@ -69,10 +62,17 @@ class ContactDetailForm {
     }()
     
     lazy var emailSection: FormSection = {
-        let addButton = FormButton(image: #imageLiteral(resourceName: "add_button")) {
-            print("Add e-mail tapped")
+        let addButton = FormButton(image: #imageLiteral(resourceName: "add_button")) { [weak self] in
+            let newEmail = Email()
+            self?.contact.emails.append(newEmail)
+            self?.emailSection.append(DualTextField(newEmail))
         }
-        return FormSection(title: "E-mails".uppercased(), button: addButton, isEditing: true)
+        let emptyField = FormLabelField(label: "There are no e-mails.", value: nil)
+        let section = FormSection(title: "E-mails".uppercased(), fields: contact.emails.map { DualTextField($0) } , button: addButton, isEditing: true, emptyField: emptyField)
+        section.deleteHandler = { [weak self] index in
+            self?.contact.emails.remove(at: index)
+        }
+        return section
     }()
     
     lazy var firstNameField: FormTextField = {
@@ -99,16 +99,17 @@ class ContactDetailForm {
         return birthdayField
     }()
     
-    init(presenter: UIViewController?, contact: Contact) {
+    init(presenter: UIViewController?, contact: Contact, isUpdate: Bool) {
         self.presenter = presenter
-        self.contact = Contact(value: contact)
-        self.originalContact = Contact(value: contact)
+        self.contact = contact.detached()
+        self.originalContact = contact.detached()
+        self.isUpdate = isUpdate
     }
     
     func save() throws {
         let realm = try Realm()        
         try realm.write {
-            realm.add(contact)
+            realm.add(contact, update: isUpdate)
         }
     }
     
