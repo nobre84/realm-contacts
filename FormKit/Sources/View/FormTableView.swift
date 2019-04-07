@@ -71,7 +71,13 @@ extension FormTableView: UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sections[section].count
+        let formSection = sections[section]
+        formSection.insertHandler = { index in
+            tableView.beginUpdates()
+            tableView.insertRows(at: [IndexPath(row: index, section: section)], with: .automatic)
+            tableView.endUpdates()
+        }
+        return formSection.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -113,9 +119,7 @@ extension FormTableView: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         let formSection = sections[indexPath.section]
         if editingStyle == .delete {
-            formSection.removeField(at: indexPath.row)
-            formSection.deleteHandler?(indexPath.row)
-
+            formSection.remove(at: indexPath.row)
             beginUpdates()
             deleteRows(at: [indexPath], with: .automatic)
             if formSection.isShowingEmptyField {

@@ -35,6 +35,9 @@ class ContactDetailForm {
     lazy var addressesSection: FormSection = {
         let addButton = FormButton(image: #imageLiteral(resourceName: "add_button")) {
             print("Add address tapped")
+            let newField = FormLabelField(label: "novo", value: "234232434")
+            self.addresses.append(newField)
+            self.addressesSection.append(newField)
         }
         
         let emptyField = FormLabelField(label: "No phones added yet.", value: nil)

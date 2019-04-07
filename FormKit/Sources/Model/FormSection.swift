@@ -13,6 +13,11 @@ public class FormSection {
     public var isEditing: Bool
     public var deleteHandler: ((Int) -> Void)?
     
+    var title: String?
+    var button: FormButton?
+    var emptyField: FormField?
+    var insertHandler: ((Int) -> Void)?
+    
     var count: Int {
         return isShowingEmptyField ? 1 : fields.count
     }
@@ -20,10 +25,6 @@ public class FormSection {
     var isShowingEmptyField: Bool {
         return fields.isEmpty && emptyField != nil
     }
-    
-    var title: String?
-    var button: FormButton?
-    var emptyField: FormField?
     
     private var fields = [FormField]()
     
@@ -35,12 +36,18 @@ public class FormSection {
         self.emptyField = emptyField
     }
     
-    subscript(index: Int) -> FormField {
+    public subscript(index: Int) -> FormField {
         return isShowingEmptyField ? emptyField! : fields[index]
     }
     
-    func removeField(at index: Int) {
+    public func remove(at index: Int) {
         fields.remove(at: index)
+        deleteHandler?(index)
+    }
+    
+    public func append(_ field: FormField) {
+        fields.append(field)
+        insertHandler?(fields.count - 1)
     }
     
 }
