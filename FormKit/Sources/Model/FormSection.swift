@@ -21,6 +21,7 @@ public class FormSection {
     var button: FormButton?
     var emptyField: FormField?
     var insertHandler: ((Int, Bool) -> Void)?
+    var reloadHandler: (() -> Void)?
     
     var count: Int {
         return isShowingEmptyField ? 1 : fields.count
@@ -56,6 +57,10 @@ public class FormSection {
         let hadEmptyField = isShowingEmptyField
         fields.append(field)
         insertHandler?(fields.count - 1, hadEmptyField)
+    }
+    
+    public func reload() {
+        reloadHandler?()
     }
     
 }

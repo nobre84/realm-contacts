@@ -22,4 +22,8 @@ class Address: Object {
     override static func primaryKey() -> String? {
         return "id"
     }
+    
+    var isEmpty: Bool {
+        return label?.isEmpty ?? true && street?.isEmpty ?? true && number?.isEmpty ?? true && city?.isEmpty ?? true && state?.isEmpty ?? true && country?.isEmpty ?? true && zipCode?.isEmpty ?? true
+    }
 }

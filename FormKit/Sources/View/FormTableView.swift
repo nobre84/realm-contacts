@@ -52,6 +52,7 @@ public class FormTableView: TPKeyboardAvoidingTableView {
         registerFormFieldCell(FormLabelFieldCell.self)
         registerFormFieldCell(FormTextFieldCell.self)
         registerFormFieldCell(FormDateFieldCell.self)
+        registerFormFieldCell(FormLookupFieldCell.self)
     }
     
     private func registerHeaderSectionViews() {
@@ -79,6 +80,10 @@ extension FormTableView: UITableViewDataSource {
                 tableView.deleteRows(at: [IndexPath(row: 0, section: section)], with: .automatic)
             }
             tableView.insertRows(at: [IndexPath(row: index, section: section)], with: .automatic)
+            tableView.endUpdates()
+        }
+        formSection.reloadHandler = {
+            tableView.beginUpdates()
             tableView.endUpdates()
         }
         return formSection.count

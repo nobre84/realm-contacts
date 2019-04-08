@@ -12,10 +12,8 @@ import RealmSwift
 
 class ContactForm {
     
-    weak var presenter: UIViewController?
     var contact: Contact
-    private var originalContact: Contact
-    private (set) var isUpdate: Bool
+    
     
     var isModified: Bool {
         return contact.toDictionary() as NSDictionary != originalContact.toDictionary() as NSDictionary
@@ -25,23 +23,30 @@ class ContactForm {
         return [ profileSection, addressesSection, phoneSection, emailSection ]
     }()
     
+    private weak var presenter: UIViewController?
+    private var originalContact: Contact
+    private (set) var isUpdate: Bool
+    
     // MARK: Sections
     
-    lazy var profileSection: FormSection = {
+    private(set) lazy var profileSection: FormSection = {
         return FormSection(title: "Profile".uppercased(), fields: [profileField, firstNameField, lastNameField, birthdayField])
     }()
     
-    lazy var addressesSection: FormSection = {
+    private(set) lazy var addressesSection: FormSection = {
         let addButton = FormButton(image: #imageLiteral(resourceName: "add_button")) { [weak self] in
             self?.showAddressForm()
         }
         
         let emptyField = FormLabelField(label: "No addresses yet.")
-        let section = FormSection(title: "Addresses".uppercased(), button: addButton, isEditing: true,  emptyField: emptyField)
+        let section = FormSection(title: "Addresses".uppercased(), fields: contact.addresses.map { addressField(with: $0) } ,button: addButton, isEditing: true,  emptyField: emptyField)
+        section.deleteHandler = { [weak self] index in
+            self?.contact.addresses.remove(at: index)
+        }
         return section
     }()
     
-    lazy var phoneSection: FormSection = {
+    private(set) lazy var phoneSection: FormSection = {
         let addButton = FormButton(image: #imageLiteral(resourceName: "add_button")) { [weak self] in
             let newPhone = PhoneNumber()
             self?.contact.phoneNumbers.append(newPhone)
@@ -55,7 +60,7 @@ class ContactForm {
         return section
     }()
     
-    lazy var emailSection: FormSection = {
+    private(set) lazy var emailSection: FormSection = {
         let addButton = FormButton(image: #imageLiteral(resourceName: "add_button")) { [weak self] in
             let newEmail = Email()
             self?.contact.emails.append(newEmail)
@@ -69,9 +74,9 @@ class ContactForm {
         return section
     }()
     
-    // MARK: - Fields
+    // MARK: Fields
     
-    lazy var profileField: ProfileField = {
+    private(set) lazy var profileField: ProfileField = {
         let profileField = ProfileField(contact.picture, presenter: self.presenter)
         profileField.valueChangedHandler = { [weak self] pictureData in
             self?.contact.picture = pictureData
@@ -79,7 +84,7 @@ class ContactForm {
         return profileField
     }()
     
-    lazy var firstNameField: FormTextField = {
+    private(set) lazy var firstNameField: FormTextField = {
         let firstNameField = FormTextField(label: "First name", text: contact.firstName, placeholder: "insert text")
         firstNameField.valueChangedHandler = { [weak self] newValue in
             self?.contact.firstName = newValue
@@ -87,7 +92,7 @@ class ContactForm {
         return firstNameField
     }()
     
-    lazy var lastNameField: FormTextField = {
+    private(set) lazy var lastNameField: FormTextField = {
         let lastNameField = FormTextField(label: "Last name", text: contact.lastName, placeholder: "insert text")
         lastNameField.valueChangedHandler = { [weak self] newValue in
             self?.contact.lastName = newValue
@@ -95,7 +100,7 @@ class ContactForm {
         return lastNameField
     }()
     
-    lazy var birthdayField: FormDateField = {
+    private(set) lazy var birthdayField: FormDateField = {
         let birthdayField = FormDateField(label: "Birthday", date: contact.birthday, placeholder: "pick a date")
         birthdayField.valueChangedHandler = { [weak self] newValue in
             self?.contact.birthday = newValue
@@ -117,18 +122,30 @@ class ContactForm {
         }
     }
     
+    private func addressField(with address: Address) -> FormLookupField {
+        let field = FormLookupField(address)
+        field.tappedHandler = { [weak self] in
+            self?.showAddressForm(with: address)
+        }
+        return field
+    }
+    
     private func showAddressForm(with address: Address? = nil) {
         let isUpdate = address != nil
         let addressFormController = AddressFormController()
         addressFormController.address = address
         addressFormController.backHandler = { [weak self] address in
-            guard let address = address else { return }
+            guard let self = self else { return }
+            guard let address = address, !address.isEmpty else { return }
             if !isUpdate {
-                self?.contact.addresses.append(address)
+                self.contact.addresses.append(address)
+                self.addressesSection.append(self.addressField(with: address))
             }
             else {
-                //TODO update
-//                self?.contact.addresses[]
+                guard let item = self.contact.addresses.first(where: { $0.id == address.id }),
+                    let index = self.contact.addresses.index(of: item) else { return }
+                self.contact.addresses.replace(index: index, object: address)
+                self.addressesSection.reload()
             }
         }
         presenter?.show(addressFormController, sender: nil)

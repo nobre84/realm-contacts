@@ -31,6 +31,12 @@
 		0005F18A225617B100615D46 /* FormDateFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0005F16E2256137400615D46 /* FormDateFieldCell.xib */; };
 		0005F18B225617B300615D46 /* FormLabelFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0005F16F2256137400615D46 /* FormLabelFieldCell.xib */; };
 		000CC848225A1E98001B1CFB /* ProfileFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 000CC847225A1E98001B1CFB /* ProfileFieldCell.xib */; };
+		0010DA81225B48C800187D59 /* FormLookupField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010DA80225B48C800187D59 /* FormLookupField.swift */; };
+		0010DA83225B4A8300187D59 /* FormLookupFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010DA82225B4A8300187D59 /* FormLookupFieldCell.swift */; };
+		0010DA85225B4AE300187D59 /* FormLookupFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0010DA84225B4AE300187D59 /* FormLookupFieldCell.xib */; };
+		0010DA87225B4B8D00187D59 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0010DA86225B4B8D00187D59 /* Media.xcassets */; };
+		0010DA8B225B56B200187D59 /* Address+FormLookupFieldValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010DA8A225B56B200187D59 /* Address+FormLookupFieldValue.swift */; };
+		0010DA8D225B573D00187D59 /* FormLookupField+Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010DA8C225B573D00187D59 /* FormLookupField+Address.swift */; };
 		001219522259FE0100DA79BE /* DualTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001219502259FE0100DA79BE /* DualTextFieldCell.swift */; };
 		001219532259FE0100DA79BE /* DualTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 001219512259FE0100DA79BE /* DualTextFieldCell.xib */; };
 		001219552259FE1500DA79BE /* DualTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001219542259FE1500DA79BE /* DualTextField.swift */; };
@@ -142,6 +148,12 @@
 		0005F1842256152700615D46 /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		0005F1852256152700615D46 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		000CC847225A1E98001B1CFB /* ProfileFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFieldCell.xib; sourceTree = "<group>"; };
+		0010DA80225B48C800187D59 /* FormLookupField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormLookupField.swift; sourceTree = "<group>"; };
+		0010DA82225B4A8300187D59 /* FormLookupFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormLookupFieldCell.swift; sourceTree = "<group>"; };
+		0010DA84225B4AE300187D59 /* FormLookupFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormLookupFieldCell.xib; sourceTree = "<group>"; };
+		0010DA86225B4B8D00187D59 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		0010DA8A225B56B200187D59 /* Address+FormLookupFieldValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Address+FormLookupFieldValue.swift"; sourceTree = "<group>"; };
+		0010DA8C225B573D00187D59 /* FormLookupField+Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FormLookupField+Address.swift"; sourceTree = "<group>"; };
 		001219502259FE0100DA79BE /* DualTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualTextFieldCell.swift; sourceTree = "<group>"; };
 		001219512259FE0100DA79BE /* DualTextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DualTextFieldCell.xib; sourceTree = "<group>"; };
 		001219542259FE1500DA79BE /* DualTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualTextField.swift; sourceTree = "<group>"; };
@@ -276,10 +288,11 @@
 		0005F15E2256137400615D46 /* Fields */ = {
 			isa = PBXGroup;
 			children = (
+				0005F1622256137400615D46 /* FormField.swift */,
 				0005F15F2256137400615D46 /* FormTextField.swift */,
 				0005F1602256137400615D46 /* FormDateField.swift */,
 				0005F1612256137400615D46 /* FormLabelField.swift */,
-				0005F1622256137400615D46 /* FormField.swift */,
+				0010DA80225B48C800187D59 /* FormLookupField.swift */,
 			);
 			path = Fields;
 			sourceTree = "<group>";
@@ -302,6 +315,7 @@
 				0005F1672256137400615D46 /* FormLabelFieldCell.swift */,
 				0005F1662256137400615D46 /* FormTextFieldCell.swift */,
 				0005F1692256137400615D46 /* FormDateFieldCell.swift */,
+				0010DA82225B4A8300187D59 /* FormLookupFieldCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -310,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				0005F16C2256137400615D46 /* XIB */,
+				0010DA86225B4B8D00187D59 /* Media.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -321,6 +336,7 @@
 				0005F16E2256137400615D46 /* FormDateFieldCell.xib */,
 				0005F16F2256137400615D46 /* FormLabelFieldCell.xib */,
 				00F8C87F2258D65E00944610 /* FormSectionHeaderView.xib */,
+				0010DA84225B4AE300187D59 /* FormLookupFieldCell.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -542,6 +558,8 @@
 				00121956225A024900DA79BE /* DualTextField+Convenience.swift */,
 				00121958225A02F600DA79BE /* Address+Summary.swift */,
 				00A1CB58225A141000CFF33C /* DetachableObject.swift */,
+				0010DA8A225B56B200187D59 /* Address+FormLookupFieldValue.swift */,
+				0010DA8C225B573D00187D59 /* FormLookupField+Address.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -727,8 +745,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0005F18A225617B100615D46 /* FormDateFieldCell.xib in Resources */,
+				0010DA85225B4AE300187D59 /* FormLookupFieldCell.xib in Resources */,
 				0005F189225617AF00615D46 /* FormTextFieldCell.xib in Resources */,
 				0005F18B225617B300615D46 /* FormLabelFieldCell.xib in Resources */,
+				0010DA87225B4B8D00187D59 /* Media.xcassets in Resources */,
 				00F8C8802258D65E00944610 /* FormSectionHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -952,7 +972,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0005F1872256152700615D46 /* NibLoadableView.swift in Sources */,
+				0010DA83225B4A8300187D59 /* FormLookupFieldCell.swift in Sources */,
 				0005F1732256137400615D46 /* FormDateField.swift in Sources */,
+				0010DA81225B48C800187D59 /* FormLookupField.swift in Sources */,
 				0005F1772256137400615D46 /* FormTextFieldCell.swift in Sources */,
 				0005F17A2256137400615D46 /* FormDateFieldCell.swift in Sources */,
 				0005F17B2256137400615D46 /* FormTableView.swift in Sources */,
@@ -991,9 +1013,11 @@
 				0012195C225A094A00DA79BE /* R.generated.swift in Sources */,
 				00A1CB5B225A167500CFF33C /* ProfileField.swift in Sources */,
 				001642E3225A982600A5875C /* AddressFormController.swift in Sources */,
+				0010DA8D225B573D00187D59 /* FormLookupField+Address.swift in Sources */,
 				001EB978224FA579001792D9 /* Colors.swift in Sources */,
 				008587AC2248E19700B338E4 /* Address.swift in Sources */,
 				001EB971224F9A7C001792D9 /* UIImage+Initials.swift in Sources */,
+				0010DA8B225B56B200187D59 /* Address+FormLookupFieldValue.swift in Sources */,
 				00A1CB59225A141000CFF33C /* DetachableObject.swift in Sources */,
 				001EB975224FA1D9001792D9 /* UIView+Rounded.swift in Sources */,
 				00C7F0A9224B7D9C00C4DBEB /* ContactCell.swift in Sources */,
