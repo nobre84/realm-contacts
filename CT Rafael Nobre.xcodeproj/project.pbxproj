@@ -69,6 +69,7 @@
 		00AFA1C3225C1EA100E7E313 /* FormEmptyFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFA1C2225C1EA100E7E313 /* FormEmptyFieldCell.swift */; };
 		00AFA1C5225C1EE600E7E313 /* FormEmptyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFA1C4225C1EE600E7E313 /* FormEmptyField.swift */; };
 		00AFA1C7225C23CF00E7E313 /* FormInputTraits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFA1C6225C23CF00E7E313 /* FormInputTraits.swift */; };
+		00AFA1CB225C4CC900E7E313 /* CTError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFA1CA225C4CC900E7E313 /* CTError.swift */; };
 		00C7F0A5224B7ADA00C4DBEB /* ContactListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7F0A4224B7ADA00C4DBEB /* ContactListController.swift */; };
 		00C7F0A7224B7BC700C4DBEB /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00C7F0A6224B7BC700C4DBEB /* ContactCell.xib */; };
 		00C7F0A9224B7D9C00C4DBEB /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7F0A8224B7D9C00C4DBEB /* ContactCell.swift */; };
@@ -194,6 +195,7 @@
 		00AFA1C2225C1EA100E7E313 /* FormEmptyFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormEmptyFieldCell.swift; sourceTree = "<group>"; };
 		00AFA1C4225C1EE600E7E313 /* FormEmptyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormEmptyField.swift; sourceTree = "<group>"; };
 		00AFA1C6225C23CF00E7E313 /* FormInputTraits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormInputTraits.swift; sourceTree = "<group>"; };
+		00AFA1CA225C4CC900E7E313 /* CTError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTError.swift; sourceTree = "<group>"; };
 		00C7F0A4224B7ADA00C4DBEB /* ContactListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListController.swift; sourceTree = "<group>"; };
 		00C7F0A6224B7BC700C4DBEB /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
 		00C7F0A8224B7D9C00C4DBEB /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
@@ -528,6 +530,7 @@
 				008587AB2248E19700B338E4 /* Address.swift */,
 				008587AD2248E1A100B338E4 /* PhoneNumber.swift */,
 				008587AF2248E1A900B338E4 /* Email.swift */,
+				00AFA1CA225C4CC900E7E313 /* CTError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1032,6 +1035,7 @@
 				0010DA8D225B573D00187D59 /* FormLookupField+Address.swift in Sources */,
 				001EB978224FA579001792D9 /* Colors.swift in Sources */,
 				008587AC2248E19700B338E4 /* Address.swift in Sources */,
+				00AFA1CB225C4CC900E7E313 /* CTError.swift in Sources */,
 				001EB971224F9A7C001792D9 /* UIImage+Initials.swift in Sources */,
 				0010DA8B225B56B200187D59 /* Address+FormLookupFieldValue.swift in Sources */,
 				00A1CB59225A141000CFF33C /* DetachableObject.swift in Sources */,

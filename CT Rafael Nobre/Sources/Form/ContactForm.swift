@@ -120,6 +120,8 @@ class ContactForm {
     }
     
     func save() throws {
+        guard let firstName = contact.firstName, !firstName.isEmpty else { throw CTError.missingName }
+        
         let realm = try Realm()        
         try realm.write {
             realm.add(contact, update: isUpdate)
