@@ -46,8 +46,11 @@ class Object_DictionaryTests: XCTestCase {
     
     func testContactConvertsToDictionary() {
         expect(self.contact.toDictionary() as NSDictionary) == [
+                "id": "\(self.contact.id)",
                 "addresses": [
-                    ["city":"Juiz de Fora","country":"Brazil","label":"home","number":"153","state":"Minas Gerais","street":"Rua Dr. Acacio Teixeira","zipCode":"36052390"]
+                    [
+                        "id": "\(self.contact.addresses[0].id)",
+                        "city":"Juiz de Fora","country":"Brazil","label":"home","number":"153","state":"Minas Gerais","street":"Rua Dr. Acacio Teixeira","zipCode":"36052390"]
                 ],
                 "birthday":Date(timeIntervalSince1970: 0),
                 "emails": [
@@ -57,7 +60,8 @@ class Object_DictionaryTests: XCTestCase {
                 "lastName":"Nobre",
                 "phoneNumbers": [
                     ["label":"mobile","number":"+5532988746640"]
-                ]
+                ],
+                "picture": nil
             ] as NSDictionary
     }
 }

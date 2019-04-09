@@ -14,7 +14,7 @@ class AddressForm {
     var address: Address
     
     var isModified: Bool {
-        return address.toDictionary() as NSDictionary != address.toDictionary() as NSDictionary
+        return address.toDictionary() as NSDictionary != originalAddress.toDictionary() as NSDictionary
     }
     
     private weak var presenter: UIViewController?
@@ -45,6 +45,7 @@ class AddressForm {
         streetField.valueChangedHandler = { [weak self] newValue in
             self?.address.street = newValue
         }
+        streetField.inputTraits = FormInputTraits(autocapitalizationType: .words)
         return streetField
     }()
     
@@ -53,6 +54,7 @@ class AddressForm {
         numberField.valueChangedHandler = { [weak self] newValue in
             self?.address.number = newValue
         }
+        numberField.inputTraits = FormInputTraits(keyboardType: .numbersAndPunctuation)
         return numberField
     }()
     
@@ -61,6 +63,7 @@ class AddressForm {
         cityField.valueChangedHandler = { [weak self] newValue in
             self?.address.city = newValue
         }
+        cityField.inputTraits = FormInputTraits(autocapitalizationType: .words)
         return cityField
     }()
     
@@ -69,6 +72,7 @@ class AddressForm {
         stateField.valueChangedHandler = { [weak self] newValue in
             self?.address.state = newValue
         }
+        stateField.inputTraits = FormInputTraits(autocapitalizationType: .words)
         return stateField
     }()
     
@@ -77,6 +81,7 @@ class AddressForm {
         countryField.valueChangedHandler = { [weak self] newValue in
             self?.address.country = newValue
         }
+        countryField.inputTraits = FormInputTraits(autocapitalizationType: .words)
         return countryField
     }()
     
@@ -85,6 +90,7 @@ class AddressForm {
         zipField.valueChangedHandler = { [weak self] newValue in
             self?.address.zipCode = newValue
         }
+        zipField.inputTraits = FormInputTraits(keyboardType: .numberPad)
         return zipField
     }()
     

@@ -53,6 +53,7 @@ public class FormTableView: TPKeyboardAvoidingTableView {
         registerFormFieldCell(FormTextFieldCell.self)
         registerFormFieldCell(FormDateFieldCell.self)
         registerFormFieldCell(FormLookupFieldCell.self)
+        registerFormFieldCell(FormEmptyFieldCell.self)
     }
     
     private func registerHeaderSectionViews() {
@@ -83,8 +84,9 @@ extension FormTableView: UITableViewDataSource {
             tableView.endUpdates()
         }
         formSection.reloadHandler = {
-            tableView.beginUpdates()
-            tableView.endUpdates()
+            tableView.reloadSections(IndexSet(arrayLiteral: section), with: .automatic)
+//            tableView.beginUpdates()
+//            tableView.endUpdates()
         }
         return formSection.count
     }
@@ -123,7 +125,7 @@ extension FormTableView: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         let formSection = sections[section]
         if formSection.isHidden || formSection.isHeaderHidden {
-            return CGFloat.leastNonzeroMagnitude
+            return 0
         }
         return UITableView.automaticDimension
     }
@@ -131,7 +133,7 @@ extension FormTableView: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         let formSection = sections[section]
         if formSection.isHidden || formSection.isFooterHidden {
-            return CGFloat.leastNonzeroMagnitude
+            return 0
         }
         return UITableView.automaticDimension
     }

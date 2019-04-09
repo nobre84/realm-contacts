@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FormKit
 
 extension DualTextField {
     
@@ -16,6 +17,7 @@ extension DualTextField {
             phone.label = newLabel
             phone.number = newValue
         }
+        rightInputTraits = FormInputTraits(keyboardType: .phonePad)
     }
     
     convenience init(_ email: Email) {
@@ -24,6 +26,7 @@ extension DualTextField {
             email.label = newLabel
             email.email = newValue
         }
+        rightInputTraits = FormInputTraits(autocapitalizationType: .none, keyboardType: .emailAddress)
     }
     
 }

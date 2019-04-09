@@ -15,6 +15,7 @@ public class FormTextField: FormField {
     public var label: String?
     public var text: String?
     public var placeholder: String?
+    public var inputTraits: FormInputTraits?
     public var valueChangedHandler: ((String?) -> Void)?
     public var heightUpdateHandler: (() -> Void)?
     

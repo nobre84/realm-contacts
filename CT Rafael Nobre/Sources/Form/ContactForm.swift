@@ -30,7 +30,9 @@ class ContactForm {
     // MARK: Sections
     
     private(set) lazy var profileSection: FormSection = {
-        return FormSection(title: "Profile".uppercased(), fields: [profileField, firstNameField, lastNameField, birthdayField])
+        let section = FormSection(fields: [profileField, firstNameField, lastNameField, birthdayField])
+        section.isHeaderHidden = true
+        return section
     }()
     
     private(set) lazy var addressesSection: FormSection = {
@@ -38,7 +40,7 @@ class ContactForm {
             self?.showAddressForm()
         }
         
-        let emptyField = FormLabelField(label: "No addresses yet.")
+        let emptyField = FormEmptyField(text: "No addresses yet.")
         let section = FormSection(title: "Addresses".uppercased(), fields: contact.addresses.map { addressField(with: $0) } ,button: addButton, isEditing: true,  emptyField: emptyField)
         section.deleteHandler = { [weak self] index in
             self?.contact.addresses.remove(at: index)
@@ -52,7 +54,7 @@ class ContactForm {
             self?.contact.phoneNumbers.append(newPhone)
             self?.phoneSection.append(DualTextField(newPhone))
         }
-        let emptyField = FormLabelField(label: "No phone numbers yet.")
+        let emptyField = FormEmptyField(text: "No phone numbers yet.")
         let section = FormSection(title: "Phones".uppercased(), fields: contact.phoneNumbers.map { DualTextField($0) } , button: addButton, isEditing: true, emptyField: emptyField)
         section.deleteHandler = { [weak self] index in
             self?.contact.phoneNumbers.remove(at: index)
@@ -66,7 +68,7 @@ class ContactForm {
             self?.contact.emails.append(newEmail)
             self?.emailSection.append(DualTextField(newEmail))
         }
-        let emptyField = FormLabelField(label: "No e-mails yet.")
+        let emptyField = FormEmptyField(text: "No e-mails yet.")
         let section = FormSection(title: "E-mails".uppercased(), fields: contact.emails.map { DualTextField($0) } , button: addButton, isEditing: true, emptyField: emptyField)
         section.deleteHandler = { [weak self] index in
             self?.contact.emails.remove(at: index)
@@ -89,6 +91,7 @@ class ContactForm {
         firstNameField.valueChangedHandler = { [weak self] newValue in
             self?.contact.firstName = newValue
         }
+        firstNameField.inputTraits = FormInputTraits(autocapitalizationType: .words)
         return firstNameField
     }()
     
@@ -97,6 +100,7 @@ class ContactForm {
         lastNameField.valueChangedHandler = { [weak self] newValue in
             self?.contact.lastName = newValue
         }
+        lastNameField.inputTraits = FormInputTraits(autocapitalizationType: .words)
         return lastNameField
     }()
     
@@ -124,20 +128,26 @@ class ContactForm {
     
     private func addressField(with address: Address) -> FormLookupField {
         let field = FormLookupField(address)
-        field.tappedHandler = { [weak self] in
-            self?.showAddressForm(with: address)
+        field.tappedHandler = { [weak self, weak field] in
+            self?.showAddressForm(with: field?.value as? Address) { [weak field] newValue in
+                field?.value = newValue
+            }
         }
         return field
     }
     
-    private func showAddressForm(with address: Address? = nil) {
-        let isUpdate = address != nil
+    private func showAddressForm(with address: Address? = nil, completion: ((Address) -> Void)? = nil) {
+        let isNew = address == nil
         let addressFormController = AddressFormController()
         addressFormController.address = address
-        addressFormController.backHandler = { [weak self] address in
-            guard let self = self else { return }
-            guard let address = address, !address.isEmpty else { return }
-            if !isUpdate {
+        addressFormController.backHandler = { [weak self, weak addressFormController] address in
+            guard let self = self,
+                let address = address,
+                let form = addressFormController?.form,
+                form.isModified else { return }
+            
+            completion?(address)
+            if isNew {
                 self.contact.addresses.append(address)
                 self.addressesSection.append(self.addressField(with: address))
             }
@@ -145,8 +155,8 @@ class ContactForm {
                 guard let item = self.contact.addresses.first(where: { $0.id == address.id }),
                     let index = self.contact.addresses.index(of: item) else { return }
                 self.contact.addresses.replace(index: index, object: address)
-                self.addressesSection.reload()
             }
+            self.addressesSection.reload()
         }
         presenter?.show(addressFormController, sender: nil)
     }

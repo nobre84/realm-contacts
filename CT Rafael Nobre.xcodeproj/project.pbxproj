@@ -65,6 +65,10 @@
 		00A1CB59225A141000CFF33C /* DetachableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A1CB58225A141000CFF33C /* DetachableObject.swift */; };
 		00A1CB5B225A167500CFF33C /* ProfileField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A1CB5A225A167500CFF33C /* ProfileField.swift */; };
 		00A1CB5D225A168B00CFF33C /* ProfileFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A1CB5C225A168B00CFF33C /* ProfileFieldCell.swift */; };
+		00AFA1C1225C1E3400E7E313 /* FormEmptyFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00AFA1C0225C1E3400E7E313 /* FormEmptyFieldCell.xib */; };
+		00AFA1C3225C1EA100E7E313 /* FormEmptyFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFA1C2225C1EA100E7E313 /* FormEmptyFieldCell.swift */; };
+		00AFA1C5225C1EE600E7E313 /* FormEmptyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFA1C4225C1EE600E7E313 /* FormEmptyField.swift */; };
+		00AFA1C7225C23CF00E7E313 /* FormInputTraits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFA1C6225C23CF00E7E313 /* FormInputTraits.swift */; };
 		00C7F0A5224B7ADA00C4DBEB /* ContactListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7F0A4224B7ADA00C4DBEB /* ContactListController.swift */; };
 		00C7F0A7224B7BC700C4DBEB /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00C7F0A6224B7BC700C4DBEB /* ContactCell.xib */; };
 		00C7F0A9224B7D9C00C4DBEB /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7F0A8224B7D9C00C4DBEB /* ContactCell.swift */; };
@@ -186,6 +190,10 @@
 		00A1CB58225A141000CFF33C /* DetachableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetachableObject.swift; sourceTree = "<group>"; };
 		00A1CB5A225A167500CFF33C /* ProfileField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileField.swift; sourceTree = "<group>"; };
 		00A1CB5C225A168B00CFF33C /* ProfileFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFieldCell.swift; sourceTree = "<group>"; };
+		00AFA1C0225C1E3400E7E313 /* FormEmptyFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormEmptyFieldCell.xib; sourceTree = "<group>"; };
+		00AFA1C2225C1EA100E7E313 /* FormEmptyFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormEmptyFieldCell.swift; sourceTree = "<group>"; };
+		00AFA1C4225C1EE600E7E313 /* FormEmptyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormEmptyField.swift; sourceTree = "<group>"; };
+		00AFA1C6225C23CF00E7E313 /* FormInputTraits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormInputTraits.swift; sourceTree = "<group>"; };
 		00C7F0A4224B7ADA00C4DBEB /* ContactListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListController.swift; sourceTree = "<group>"; };
 		00C7F0A6224B7BC700C4DBEB /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
 		00C7F0A8224B7D9C00C4DBEB /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
@@ -281,6 +289,7 @@
 			children = (
 				0005F15E2256137400615D46 /* Fields */,
 				0005F1632256137400615D46 /* FormSection.swift */,
+				00AFA1C6225C23CF00E7E313 /* FormInputTraits.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -292,6 +301,7 @@
 				0005F15F2256137400615D46 /* FormTextField.swift */,
 				0005F1602256137400615D46 /* FormDateField.swift */,
 				0005F1612256137400615D46 /* FormLabelField.swift */,
+				00AFA1C4225C1EE600E7E313 /* FormEmptyField.swift */,
 				0010DA80225B48C800187D59 /* FormLookupField.swift */,
 			);
 			path = Fields;
@@ -313,6 +323,7 @@
 			children = (
 				0005F1682256137400615D46 /* FormFieldCell.swift */,
 				0005F1672256137400615D46 /* FormLabelFieldCell.swift */,
+				00AFA1C2225C1EA100E7E313 /* FormEmptyFieldCell.swift */,
 				0005F1662256137400615D46 /* FormTextFieldCell.swift */,
 				0005F1692256137400615D46 /* FormDateFieldCell.swift */,
 				0010DA82225B4A8300187D59 /* FormLookupFieldCell.swift */,
@@ -335,6 +346,7 @@
 				0005F16D2256137400615D46 /* FormTextFieldCell.xib */,
 				0005F16E2256137400615D46 /* FormDateFieldCell.xib */,
 				0005F16F2256137400615D46 /* FormLabelFieldCell.xib */,
+				00AFA1C0225C1E3400E7E313 /* FormEmptyFieldCell.xib */,
 				00F8C87F2258D65E00944610 /* FormSectionHeaderView.xib */,
 				0010DA84225B4AE300187D59 /* FormLookupFieldCell.xib */,
 			);
@@ -461,8 +473,8 @@
 			children = (
 				0071C026224FAD10001500F8 /* ContactTests.swift */,
 				0085878A2248DC6C00B338E4 /* UIString+InitialsTests.swift */,
-				0085878C2248DC6C00B338E4 /* Info.plist */,
 				00022A4622575DA2002381CE /* Object+DictionaryTests.swift */,
+				0085878C2248DC6C00B338E4 /* Info.plist */,
 			);
 			path = "CT Rafael NobreTests";
 			sourceTree = "<group>";
@@ -748,6 +760,7 @@
 				0010DA85225B4AE300187D59 /* FormLookupFieldCell.xib in Resources */,
 				0005F189225617AF00615D46 /* FormTextFieldCell.xib in Resources */,
 				0005F18B225617B300615D46 /* FormLabelFieldCell.xib in Resources */,
+				00AFA1C1225C1E3400E7E313 /* FormEmptyFieldCell.xib in Resources */,
 				0010DA87225B4B8D00187D59 /* Media.xcassets in Resources */,
 				00F8C8802258D65E00944610 /* FormSectionHeaderView.xib in Resources */,
 			);
@@ -971,11 +984,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00AFA1C3225C1EA100E7E313 /* FormEmptyFieldCell.swift in Sources */,
+				00AFA1C5225C1EE600E7E313 /* FormEmptyField.swift in Sources */,
 				0005F1872256152700615D46 /* NibLoadableView.swift in Sources */,
 				0010DA83225B4A8300187D59 /* FormLookupFieldCell.swift in Sources */,
 				0005F1732256137400615D46 /* FormDateField.swift in Sources */,
 				0010DA81225B48C800187D59 /* FormLookupField.swift in Sources */,
 				0005F1772256137400615D46 /* FormTextFieldCell.swift in Sources */,
+				00AFA1C7225C23CF00E7E313 /* FormInputTraits.swift in Sources */,
 				0005F17A2256137400615D46 /* FormDateFieldCell.swift in Sources */,
 				0005F17B2256137400615D46 /* FormTableView.swift in Sources */,
 				0005F1762256137400615D46 /* FormSection.swift in Sources */,

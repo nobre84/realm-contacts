@@ -15,8 +15,10 @@ class DualTextField: FormField {
     
     var leftText: String?
     var leftPlaceholder: String?
+    var leftInputTraits: FormInputTraits?
     var rightText: String?
     var rightPlaceholder: String?
+    var rightInputTraits: FormInputTraits?
     
     var valueChangedHandler: ((String?, String?) -> Void)?
     var heightUpdateHandler: (() -> Void)?

@@ -30,8 +30,10 @@ class DualTextFieldCell: UITableViewCell, FormFieldCell, NibLoadableView {
     func updateUI() {
         leftTextField.text = field?.leftText
         leftTextField.placeholder = field?.leftPlaceholder
+        leftTextField.setTraits(field?.leftInputTraits)
         rightTextField.text = field?.rightText
         rightTextField.placeholder = field?.rightPlaceholder
+        rightTextField.setTraits(field?.rightInputTraits)
     }
     
     @objc private func valueChanged() {

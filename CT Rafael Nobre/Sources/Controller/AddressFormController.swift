@@ -20,6 +20,7 @@ class AddressFormController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupUI()
         setupForm()
     }
     
@@ -28,6 +29,10 @@ class AddressFormController: UIViewController {
         if navigationController?.topViewController != self {
             backHandler?(form?.address)
         }
+    }
+    
+    private func setupUI() {
+        title = address == nil ? "New address" : "Edit address"
     }
     
     private func setupForm() {

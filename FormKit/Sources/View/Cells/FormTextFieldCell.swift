@@ -29,6 +29,7 @@ class FormTextFieldCell: UITableViewCell, FormFieldCell, NibLoadableView {
         labelLabel.text = field?.label
         valueTextField.text = field?.text
         valueTextField.placeholder = field?.placeholder
+        valueTextField.setTraits(field?.inputTraits)
     }
     
     @objc private func valueChanged() {
