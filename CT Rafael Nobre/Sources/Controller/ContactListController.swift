@@ -29,6 +29,7 @@ class ContactListController: UITableViewController {
         
         setupTableView()
         setupSearch()
+        setupEditing()
         
         fetch()
     }
@@ -69,6 +70,24 @@ class ContactListController: UITableViewController {
         performSegue(withIdentifier: R.segue.contactListController.editContact, sender: contact)
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard let contacts = contacts else { fatalError() }
+        let contact = contacts[indexPath.row]
+        
+        if editingStyle == .delete {
+            do {
+                let realm = try Realm()
+                try realm.write {
+                    realm.delete(contact)
+                }
+                fetch()
+            }
+            catch {
+                showError(error)
+            }
+        }
+    }
+    
     // MARK: - Private Methods
     
     private func setupTableView() {
@@ -79,6 +98,10 @@ class ContactListController: UITableViewController {
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = false
+    }
+    
+    private func setupEditing() {
+        navigationItem.leftBarButtonItem = editButtonItem
     }
     
     private func fetch(query: String? = nil) {

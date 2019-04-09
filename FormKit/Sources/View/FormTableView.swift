@@ -42,9 +42,10 @@ public class FormTableView: TPKeyboardAvoidingTableView {
     }
     
     private func setupHeights() {
-        estimatedRowHeight = 50
+        rowHeight = UITableView.automaticDimension
         sectionHeaderHeight = UITableView.automaticDimension
         sectionFooterHeight = CGFloat.leastNonzeroMagnitude
+        estimatedRowHeight = 40
         estimatedSectionHeaderHeight = 40
     }
     
@@ -104,13 +105,14 @@ extension FormTableView: UITableViewDataSource {
         
         if let formCell = cell as? FormFieldCell {
             formCell.setup(with: field)
+            formCell.updateUI()
         }
         
         return cell
     }
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if sections[indexPath.section].isHidden { return CGFloat.leastNonzeroMagnitude }
+        if sections[indexPath.section].isHidden { return 0 }
         return UITableView.automaticDimension
     }
     
