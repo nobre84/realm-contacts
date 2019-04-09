@@ -131,6 +131,7 @@ class ContactForm {
         field.tappedHandler = { [weak self, weak field] in
             self?.showAddressForm(with: field?.value as? Address) { [weak field] newValue in
                 field?.value = newValue
+                field?.label = newValue.label
             }
         }
         return field

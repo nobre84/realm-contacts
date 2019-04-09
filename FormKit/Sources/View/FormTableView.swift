@@ -85,8 +85,8 @@ extension FormTableView: UITableViewDataSource {
         }
         formSection.reloadHandler = {
             tableView.reloadSections(IndexSet(arrayLiteral: section), with: .automatic)
-//            tableView.beginUpdates()
-//            tableView.endUpdates()
+            tableView.beginUpdates()
+            tableView.endUpdates()
         }
         return formSection.count
     }

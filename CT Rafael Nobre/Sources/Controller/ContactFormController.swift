@@ -21,7 +21,12 @@ class ContactFormController: UIViewController {
         super.viewDidLoad()
 
         registerCustomCells()
+        setupUI()
         setupForm()
+    }
+    
+    private func setupUI() {
+        title = contact == nil ? "New contact" : "Edit contact"
     }
     
     private func setupForm() {
