@@ -60,11 +60,8 @@ class FormDateFieldCell: UITableViewCell, FormFieldCell, NibLoadableView {
         
         window?.endEditing(true)
         
-        let isHidden = !field.isEditingDate
-        field.isEditingDate = isHidden
-        datePicker.isHidden = isHidden
-        
         valueChanged()
+        field.isEditingDate = !field.isEditingDate
         field.heightUpdateHandler?()
     }
     
