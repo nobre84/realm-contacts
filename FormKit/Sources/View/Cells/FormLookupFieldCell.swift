@@ -24,11 +24,14 @@ class FormLookupFieldCell: UITableViewCell, FormFieldCell, NibLoadableView {
     
     func setup(with field: FormField?) {
         self.field = field as? FormLookupField
+        self.field?.fieldUpdatedHandler = { [weak self] in
+            self?.updateUI()
+        }
     }
     
     func updateUI() {
-        labelLabel.text = field?.label
-        valueLabel.text = field?.value?.text
+        labelLabel.text = field?.label ?? ""
+        valueLabel.text = field?.value?.text ?? ""
     }
     
     @objc private func cellTapped() {

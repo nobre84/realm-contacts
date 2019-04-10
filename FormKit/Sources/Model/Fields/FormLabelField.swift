@@ -10,11 +10,22 @@ import UIKit
 
 public class FormLabelField: FormField {
 
-    public var label: String?
-    public var value: String?
-    public var heightUpdateHandler: (() -> Void)?
+    public var label: String? {
+        didSet {
+            fieldUpdatedHandler?()
+        }
+    }
+    
+    public var value: String? {
+        didSet {
+            fieldUpdatedHandler?()
+        }
+    }
     
     public static var cellType: FormFieldCell.Type = FormLabelFieldCell.self
+    public var heightUpdateHandler: (() -> Void)?
+    
+    var fieldUpdatedHandler: (() -> Void)?
     
     public init(label: String? = nil, value: String? = nil) {
         self.label = label

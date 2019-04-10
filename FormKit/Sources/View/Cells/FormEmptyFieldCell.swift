@@ -16,10 +16,13 @@ class FormEmptyFieldCell: UITableViewCell, FormFieldCell, NibLoadableView {
     
     func setup(with field: FormField?) {
         self.field = field as? FormEmptyField
+        self.field?.fieldUpdatedHandler = { [weak self] in
+            self?.updateUI()
+        }
     }
     
     func updateUI() {
-        emptyLabel.text = field?.text
+        emptyLabel.text = field?.text ?? ""
     }
     
 }

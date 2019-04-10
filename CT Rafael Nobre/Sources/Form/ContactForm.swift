@@ -13,8 +13,7 @@ import RealmSwift
 class ContactForm {
     
     var contact: Contact
-    
-    
+
     var isModified: Bool {
         return contact.toDictionary() as NSDictionary != originalContact.toDictionary() as NSDictionary
     }
@@ -88,7 +87,7 @@ class ContactForm {
     
     private(set) lazy var firstNameField: FormTextField = {
         let firstNameField = FormTextField(label: "First name", text: contact.firstName, placeholder: "insert text")
-        firstNameField.valueChangedHandler = { [weak self] newValue in
+        firstNameField.textChangedHandler = { [weak self] newValue in
             self?.contact.firstName = newValue
         }
         firstNameField.inputTraits = FormInputTraits(autocapitalizationType: .words)
@@ -97,7 +96,7 @@ class ContactForm {
     
     private(set) lazy var lastNameField: FormTextField = {
         let lastNameField = FormTextField(label: "Last name", text: contact.lastName, placeholder: "insert text")
-        lastNameField.valueChangedHandler = { [weak self] newValue in
+        lastNameField.textChangedHandler = { [weak self] newValue in
             self?.contact.lastName = newValue
         }
         lastNameField.inputTraits = FormInputTraits(autocapitalizationType: .words)

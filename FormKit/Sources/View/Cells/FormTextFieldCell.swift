@@ -23,18 +23,20 @@ class FormTextFieldCell: UITableViewCell, FormFieldCell, NibLoadableView {
     
     func setup(with field: FormField?) {
         self.field = field as? FormTextField
+        self.field?.fieldUpdatedHandler = { [weak self] in
+            self?.updateUI()
+        }
     }
     
     func updateUI() {
-        labelLabel.text = field?.label
-        valueTextField.text = field?.text
-        valueTextField.placeholder = field?.placeholder
+        labelLabel.text = field?.label ?? ""
+        valueTextField.text = field?.text ?? ""
+        valueTextField.placeholder = field?.placeholder ?? ""
         valueTextField.setTraits(field?.inputTraits)
     }
     
     @objc private func valueChanged() {
         field?.text = valueTextField.text
-        field?.valueChanged()
     }
     
 }

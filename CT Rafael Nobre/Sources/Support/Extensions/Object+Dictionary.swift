@@ -10,14 +10,20 @@ import UIKit
 import RealmSwift
 
 extension Object {
-    func toDictionary() -> [String:Any?] {
+    func toDictionary(ignoreNilKeys: Bool = true) -> [String:Any?] {
         let properties = self.objectSchema.properties.map { $0.name }
         var dicProps = [String:Any]()
         for (key, value) in self.dictionaryWithValues(forKeys: properties) {
             if let value = value as? ListBase {
-                dicProps[key] = value.toArray()
+                let array = value.toArray()
+                if !array.isEmpty || !ignoreNilKeys {
+                    dicProps[key] = array
+                }
             } else if let value = value as? Object {
-                dicProps[key] = value.toDictionary()
+                let dict = value.toDictionary()
+                if !dict.isEmpty || !ignoreNilKeys {
+                    dicProps[key] = dict
+                }
             } else {
                 dicProps[key] = value
             }

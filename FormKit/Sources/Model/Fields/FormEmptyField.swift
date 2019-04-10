@@ -10,10 +10,17 @@ import UIKit
 
 public class FormEmptyField: FormField {
 
-    public var text: String?
+    public var text: String? {
+        didSet {
+            fieldUpdatedHandler?()
+        }
+    }
+    
     public var heightUpdateHandler: (() -> Void)?
     
     public static var cellType: FormFieldCell.Type = FormEmptyFieldCell.self
+    
+    var fieldUpdatedHandler: (() -> Void)?
     
     public init(text: String? = nil) {
         self.text = text

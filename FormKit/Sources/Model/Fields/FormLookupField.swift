@@ -14,13 +14,26 @@ public protocol FormLookupFieldValue {
 
 public class FormLookupField: FormField {
     
-    public var label: String?
-    public var value: FormLookupFieldValue?
+    public var label: String? {
+        didSet {
+            fieldUpdatedHandler?()
+        }
+    }
+    
+    public var value: FormLookupFieldValue? {
+        didSet {
+            fieldUpdatedHandler?()
+            valueChangedHandler?(value)
+        }
+    }
+    
     public var heightUpdateHandler: (() -> Void)?
     public var tappedHandler: (() -> Void)?
     public var valueChangedHandler: ((FormLookupFieldValue?) -> Void)?
     
     public static var cellType: FormFieldCell.Type = FormLookupFieldCell.self
+    
+    var fieldUpdatedHandler: (() -> Void)?
     
     public init(label: String? = nil, value: FormLookupFieldValue? = nil) {
         self.label = label

@@ -34,7 +34,7 @@ class AddressForm {
     
     private(set) lazy var labelField: FormTextField = {
         let labelField = FormTextField(label: "Label", text: address.label, placeholder: "insert text")
-        labelField.valueChangedHandler = { [weak self] newValue in
+        labelField.textChangedHandler = { [weak self] newValue in
             self?.address.label = newValue
         }
         return labelField
@@ -42,7 +42,7 @@ class AddressForm {
     
     private(set) lazy var streetField: FormTextField = {
         let streetField = FormTextField(label: "Street", text: address.street, placeholder: "insert text")
-        streetField.valueChangedHandler = { [weak self] newValue in
+        streetField.textChangedHandler = { [weak self] newValue in
             self?.address.street = newValue
         }
         streetField.inputTraits = FormInputTraits(autocapitalizationType: .words)
@@ -51,7 +51,7 @@ class AddressForm {
     
     private(set) lazy var numberField: FormTextField = {
         let numberField = FormTextField(label: "Number", text: address.number, placeholder: "insert text")
-        numberField.valueChangedHandler = { [weak self] newValue in
+        numberField.textChangedHandler = { [weak self] newValue in
             self?.address.number = newValue
         }
         numberField.inputTraits = FormInputTraits(keyboardType: .numbersAndPunctuation)
@@ -60,7 +60,7 @@ class AddressForm {
     
     private(set) lazy var cityField: FormTextField = {
         let cityField = FormTextField(label: "City", text: address.city, placeholder: "insert text")
-        cityField.valueChangedHandler = { [weak self] newValue in
+        cityField.textChangedHandler = { [weak self] newValue in
             self?.address.city = newValue
         }
         cityField.inputTraits = FormInputTraits(autocapitalizationType: .words)
@@ -69,7 +69,7 @@ class AddressForm {
     
     private(set) lazy var stateField: FormTextField = {
         let stateField = FormTextField(label: "State", text: address.state, placeholder: "insert text")
-        stateField.valueChangedHandler = { [weak self] newValue in
+        stateField.textChangedHandler = { [weak self] newValue in
             self?.address.state = newValue
         }
         stateField.inputTraits = FormInputTraits(autocapitalizationType: .words)
@@ -78,7 +78,7 @@ class AddressForm {
     
     private(set) lazy var countryField: FormTextField = {
         let countryField = FormTextField(label: "Country", text: address.country, placeholder: "insert text")
-        countryField.valueChangedHandler = { [weak self] newValue in
+        countryField.textChangedHandler = { [weak self] newValue in
             self?.address.country = newValue
         }
         countryField.inputTraits = FormInputTraits(autocapitalizationType: .words)
@@ -87,7 +87,7 @@ class AddressForm {
     
     private(set) lazy var zipField: FormTextField = {
         let zipField = FormTextField(label: "Zip Code", text: address.zipCode, placeholder: "insert text")
-        zipField.valueChangedHandler = { [weak self] newValue in
+        zipField.textChangedHandler = { [weak self] newValue in
             self?.address.zipCode = newValue
         }
         zipField.inputTraits = FormInputTraits(keyboardType: .numberPad)

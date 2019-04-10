@@ -36,22 +36,23 @@ class FormDateFieldCell: UITableViewCell, FormFieldCell, NibLoadableView {
     
     func setup(with field: FormField?) {
         self.field = field as? FormDateField
+        self.field?.fieldUpdatedHandler = { [weak self] in
+            self?.updateUI()
+        }
     }
     
     func updateUI() {
         guard let field = field else { return }
         
-        labelLabel.text = field.label
-        valueTextField.text = format(date: field.date)
-        valueTextField.placeholder = field.placeholder
+        labelLabel.text = field.label ?? ""
+        valueTextField.text = format(date: field.date) ?? ""
+        valueTextField.placeholder = field.placeholder ?? ""
         datePicker.date = field.date ?? Date()
         datePicker.isHidden = !field.isEditingDate
     }
     
     @objc private func valueChanged() {
         field?.date = datePicker.date
-        valueTextField.text = format(date: field?.date)
-        field?.valueChanged()
     }
     
     @objc private func cellTapped() {

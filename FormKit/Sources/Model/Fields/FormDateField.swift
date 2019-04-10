@@ -12,11 +12,29 @@ public class FormDateField: FormField {
     
     public static var cellType: FormFieldCell.Type = FormDateFieldCell.self
     
-    public var label: String?
-    public var placeholder: String?
-    public var date: Date?
+    public var label: String? {
+        didSet {
+            fieldUpdatedHandler?()
+        }
+    }
+    
+    public var placeholder: String? {
+        didSet {
+            fieldUpdatedHandler?()
+        }
+    }
+    
+    public var date: Date? {
+        didSet {
+            fieldUpdatedHandler?()
+            valueChangedHandler?(date)
+        }
+    }
+    
     public var valueChangedHandler: ((Date?) -> Void)?
     public var heightUpdateHandler: (() -> Void)?
+    
+    var fieldUpdatedHandler: (() -> Void)?
     
     var isEditingDate = false
     
@@ -24,14 +42,6 @@ public class FormDateField: FormField {
         self.label = label
         self.date = date
         self.placeholder = placeholder
-    }
-    
-}
-
-extension FormDateField {
-    
-    func valueChanged() {
-        valueChangedHandler?(date)
     }
     
 }

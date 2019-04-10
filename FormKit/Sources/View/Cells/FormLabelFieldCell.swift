@@ -17,11 +17,14 @@ class FormLabelFieldCell: UITableViewCell, FormFieldCell, NibLoadableView {
     
     func setup(with field: FormField?) {
         self.field = field as? FormLabelField
+        self.field?.fieldUpdatedHandler = { [weak self] in
+            self?.updateUI()
+        }
     }
     
     func updateUI() {
-        labelLabel.text = field?.label
-        valueLabel.text = field?.value
+        labelLabel.text = field?.label ?? ""
+        valueLabel.text = field?.value ?? ""
     }
     
 }
