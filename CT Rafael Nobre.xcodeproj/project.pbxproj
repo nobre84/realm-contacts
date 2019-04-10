@@ -41,7 +41,6 @@
 		001219532259FE0100DA79BE /* DualTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 001219512259FE0100DA79BE /* DualTextFieldCell.xib */; };
 		001219552259FE1500DA79BE /* DualTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001219542259FE1500DA79BE /* DualTextField.swift */; };
 		00121957225A024900DA79BE /* DualTextField+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00121956225A024900DA79BE /* DualTextField+Convenience.swift */; };
-		00121959225A02F600DA79BE /* Address+Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00121958225A02F600DA79BE /* Address+Summary.swift */; };
 		0012195C225A094A00DA79BE /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012195B225A094A00DA79BE /* R.generated.swift */; };
 		001642E1225A851800A5875C /* AddressForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001642E0225A851800A5875C /* AddressForm.swift */; };
 		001642E3225A982600A5875C /* AddressFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001642E2225A982600A5875C /* AddressFormController.swift */; };
@@ -168,7 +167,6 @@
 		001219512259FE0100DA79BE /* DualTextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DualTextFieldCell.xib; sourceTree = "<group>"; };
 		001219542259FE1500DA79BE /* DualTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualTextField.swift; sourceTree = "<group>"; };
 		00121956225A024900DA79BE /* DualTextField+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DualTextField+Convenience.swift"; sourceTree = "<group>"; };
-		00121958225A02F600DA79BE /* Address+Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Address+Summary.swift"; sourceTree = "<group>"; };
 		0012195B225A094A00DA79BE /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		001642E0225A851800A5875C /* AddressForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressForm.swift; sourceTree = "<group>"; };
 		001642E2225A982600A5875C /* AddressFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressFormController.swift; sourceTree = "<group>"; };
@@ -586,7 +584,6 @@
 				00022A4422575BB1002381CE /* Object+Dictionary.swift */,
 				00022A482257651B002381CE /* UIViewController+Alerts.swift */,
 				00121956225A024900DA79BE /* DualTextField+Convenience.swift */,
-				00121958225A02F600DA79BE /* Address+Summary.swift */,
 				00A1CB58225A141000CFF33C /* DetachableObject.swift */,
 				0010DA8A225B56B200187D59 /* Address+FormLookupFieldValue.swift */,
 				0010DA8C225B573D00187D59 /* FormLookupField+Address.swift */,
@@ -1058,7 +1055,6 @@
 				001EB975224FA1D9001792D9 /* UIView+Rounded.swift in Sources */,
 				00C7F0A9224B7D9C00C4DBEB /* ContactCell.swift in Sources */,
 				00C7F0A5224B7ADA00C4DBEB /* ContactListController.swift in Sources */,
-				00121959225A02F600DA79BE /* Address+Summary.swift in Sources */,
 				008587AE2248E1A100B338E4 /* PhoneNumber.swift in Sources */,
 				008587762248DC6B00B338E4 /* AppDelegate.swift in Sources */,
 				00022A492257651B002381CE /* UIViewController+Alerts.swift in Sources */,
