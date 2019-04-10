@@ -111,39 +111,12 @@ class ContactListController: UITableViewController {
             if let query = query, !query.isEmpty {
                 contacts = contacts?.filter(NSPredicate(format: "firstName CONTAINS[cd] %@ OR lastName CONTAINS[cd] %@", query, query))
             }
-            contacts = contacts?.sorted(byKeyPath: "firstName")
+            contacts = contacts?.sorted(by: ["firstName", "lastName"])
             tableView.reloadData()
         }
         catch {
             print("Error!! \(error.localizedDescription)")
         }
-    }
-    
-    private func collectInput(title: String, completion: @escaping (InputCollection) -> Void) {
-        let alertController = UIAlertController(title: title, message: "", preferredStyle: .alert)
-        
-        alertController.addTextField { textField in
-            textField.placeholder = "First name"
-            textField.autocapitalizationType = .words
-        }
-        
-        alertController.addTextField { textField in
-            textField.placeholder = "Last name"
-            textField.autocapitalizationType = .words
-        }
-
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
-            completion(.cancel)
-        }
-        
-        let confirmAction = UIAlertAction(title: "OK", style: .default) { _ in
-            completion(.success(firstName: alertController.textFields?[0].text ?? "", lastName: alertController.textFields?[1].text ?? ""))
-        }
-
-        alertController.addAction(cancelAction)
-        alertController.addAction(confirmAction)
-        
-        present(alertController, animated: true, completion: nil)
     }
     
     // MARK: - Actions
@@ -160,9 +133,4 @@ extension ContactListController: UISearchResultsUpdating {
         fetch(query: searchController.searchBar.text)
     }
     
-}
-
-private enum InputCollection {
-    case success(firstName: String, lastName: String)
-    case cancel
 }
