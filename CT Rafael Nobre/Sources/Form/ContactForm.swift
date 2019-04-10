@@ -116,6 +116,8 @@ class ContactForm {
     
     func save() throws {
         guard let firstName = contact.firstName, !firstName.isEmpty else { throw CTError.missingName }
+        guard contact.phoneNumbers.count > 0 else { throw CTError.missingPhoneNumber }
+        guard contact.emails.count > 0 else { throw CTError.missingEmail }
         
         let realm = try Realm()        
         try realm.write {

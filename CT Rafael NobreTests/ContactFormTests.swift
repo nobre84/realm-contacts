@@ -102,5 +102,23 @@ class ContactFormTests: XCTestCase {
         form.addEmail(email)
         expect(form.contact.emails[0]) == email
     }
+    
+    func testFormRequiresFirstName() {
+        let form = ContactForm(presenter: nil, contact: Contact(), isUpdate: false)
+        expect { try form.save() }.to(throwError(CTError.missingName))
+    }
+    
+    func testFormRequiresAtLeastOnePhoneNumber() {
+        let form = ContactForm(presenter: nil, contact: Contact(), isUpdate: false)
+        form.firstNameField.text = "Rafael"
+        expect { try form.save() }.to(throwError(CTError.missingPhoneNumber))
+    }
+    
+    func testFormRequiresAtLeastOneEmail() {
+        let form = ContactForm(presenter: nil, contact: Contact(), isUpdate: false)
+        form.firstNameField.text = "Rafael"
+        form.addPhoneNumber()
+        expect { try form.save() }.to(throwError(CTError.missingEmail))
+    }
 
 }
