@@ -60,8 +60,39 @@ class Object_DictionaryTests: XCTestCase {
                 "lastName":"Nobre",
                 "phoneNumbers": [
                     ["label":"mobile","number":"+5532988746640"]
-                ],
-                "picture": nil
+                ]
             ] as NSDictionary
     }
+    
+    func testRemovesNilKeysWhenConverting() {
+        let phone = PhoneNumber()
+        phone.label = nil
+        phone.number = "123"
+        expect(phone.toDictionary() as NSDictionary) == [ "number": "123" ] as NSDictionary
+    }
+    
+    func testPreservesNilKeysWhenRequested() {
+        let phone = PhoneNumber()
+        phone.label = nil
+        phone.number = "123"
+        expect(phone.toDictionary(ignoreNilKeys: false) as NSDictionary) == [ "number": "123", "label": nil ] as NSDictionary
+    }
+    
+    func testNestedObject() {
+        let contact = Contact()
+        contact.id = ""
+        expect(contact.toDictionary() as NSDictionary) == [ "id": "" ] as NSDictionary
+        
+        expect(contact.toDictionary(ignoreNilKeys: false) as NSDictionary) == [
+            "id": "",
+            "firstName": nil,
+            "lastName": nil,
+            "birthday": nil,
+            "picture": nil,
+            "addresses": [],
+            "phoneNumbers": [],
+            "emails": []
+        ] as NSDictionary
+    }
+    
 }

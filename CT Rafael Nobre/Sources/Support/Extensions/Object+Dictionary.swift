@@ -12,7 +12,7 @@ import RealmSwift
 extension Object {
     func toDictionary(ignoreNilKeys: Bool = true) -> [String:Any?] {
         let properties = self.objectSchema.properties.map { $0.name }
-        var dicProps = [String:Any]()
+        var dicProps = [String:Any?]()
         for (key, value) in self.dictionaryWithValues(forKeys: properties) {
             if let value = value as? ListBase {
                 let array = value.toArray()
@@ -25,7 +25,9 @@ extension Object {
                     dicProps[key] = dict
                 }
             } else {
-                dicProps[key] = value
+                if !ignoreNilKeys || !(value is NSNull) {
+                    dicProps[key] = value
+                }
             }
         }
         return dicProps

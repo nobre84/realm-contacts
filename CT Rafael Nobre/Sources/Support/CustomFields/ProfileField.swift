@@ -14,23 +14,23 @@ class ProfileField: FormField {
     static var cellType: FormFieldCell.Type = ProfileFieldCell.self
     
     weak var presenter: UIViewController?
-    var picture: UIImage?
+    
+    var picture: UIImage? {
+        didSet {
+            fieldUpdatedHandler?()
+            valueChangedHandler?(picture?.pngData())
+        }
+    }
+    
     var valueChangedHandler: ((Data?) -> Void)?
     var heightUpdateHandler: (() -> Void)?
+    var fieldUpdatedHandler: (() -> Void)?
     
     public init(_ imageData: Data? = nil, presenter: UIViewController?) {
         if let imageData = imageData {
             self.picture = UIImage(data: imageData)
         }
         self.presenter = presenter
-    }
-    
-}
-
-extension ProfileField {
-    
-    func valueChanged() {
-        valueChangedHandler?(picture?.pngData())
     }
     
 }

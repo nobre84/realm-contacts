@@ -75,21 +75,32 @@ class ContactFormTests: XCTestCase {
     }
     
     func testFieldStateChangesShouldReflectInModel() {
-        let form = AddressForm(presenter: nil, address: Address())
-        form.labelField.text = "address.label"
-        expect(form.address.label) == "address.label"
-        form.streetField.text = "address.street"
-        expect(form.address.street) == "address.street"
-        form.numberField.text = "address.number"
-        expect(form.address.number) == "address.number"
-        form.cityField.text = "address.city"
-        expect(form.address.city) == "address.city"
-        form.stateField.text = "address.state"
-        expect(form.address.state) == "address.state"
-        form.countryField.text = "address.country"
-        expect(form.address.country) == "address.country"
-        form.zipField.text = "address.zipCode"
-        expect(form.address.zipCode) == "address.zipCode"
+        let form = ContactForm(presenter: nil, contact: Contact(), isUpdate: false)
+        
+        form.firstNameField.text = "First name"
+        expect(form.contact.firstName) == "First name"
+        
+        form.lastNameField.text = "Last name"
+        expect(form.contact.lastName) == "Last name"
+        
+        form.birthdayField.date = Date(timeIntervalSince1970: 0)
+        expect(form.contact.birthday) == Date(timeIntervalSince1970: 0)
+        
+        let dummyImage = UIImage.from(components: ["a", "b"], size: CGSize(width: 100, height: 100))
+        form.profileField.picture = dummyImage
+        expect(form.contact.picture) == dummyImage?.pngData()
+        
+        let address = Address()
+        form.addAddress(address)
+        expect(form.contact.addresses[0]) == address
+        
+        let phoneNumber = PhoneNumber()
+        form.addPhoneNumber(phoneNumber)
+        expect(form.contact.phoneNumbers[0]) == phoneNumber
+        
+        let email = Email()
+        form.addEmail(email)
+        expect(form.contact.emails[0]) == email
     }
 
 }

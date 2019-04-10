@@ -27,6 +27,9 @@ class ProfileFieldCell: UITableViewCell, FormFieldCell, NibLoadableView {
     
     func setup(with field: FormField?) {
         self.field = field as? ProfileField
+        self.field?.fieldUpdatedHandler = { [weak self] in
+            self?.updateUI()
+        }
     }
     
     func updateUI() {
@@ -55,8 +58,6 @@ extension ProfileFieldCell: UIImagePickerControllerDelegate, UINavigationControl
         }
         
         field?.picture = image
-        field?.valueChanged()
-        updateUI()
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

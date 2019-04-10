@@ -24,6 +24,8 @@ class Address: Object {
     }
     
     var isEmpty: Bool {
-        return label?.isEmpty ?? true && street?.isEmpty ?? true && number?.isEmpty ?? true && city?.isEmpty ?? true && state?.isEmpty ?? true && country?.isEmpty ?? true && zipCode?.isEmpty ?? true
+        var dict = toDictionary()
+        dict["id"] = nil
+        return dict.isEmpty
     }
 }

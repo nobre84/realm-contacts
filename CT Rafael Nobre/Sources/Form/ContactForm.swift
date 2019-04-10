@@ -49,9 +49,7 @@ class ContactForm {
     
     private(set) lazy var phoneSection: FormSection = {
         let addButton = FormButton(image: #imageLiteral(resourceName: "add_button")) { [weak self] in
-            let newPhone = PhoneNumber()
-            self?.contact.phoneNumbers.append(newPhone)
-            self?.phoneSection.append(DualTextField(newPhone))
+            self?.addPhoneNumber()
         }
         let emptyField = FormEmptyField(text: "No phone numbers yet.")
         let section = FormSection(title: "Phones".uppercased(), fields: contact.phoneNumbers.map { DualTextField($0) } , button: addButton, isEditing: true, emptyField: emptyField)
@@ -63,9 +61,7 @@ class ContactForm {
     
     private(set) lazy var emailSection: FormSection = {
         let addButton = FormButton(image: #imageLiteral(resourceName: "add_button")) { [weak self] in
-            let newEmail = Email()
-            self?.contact.emails.append(newEmail)
-            self?.emailSection.append(DualTextField(newEmail))
+            self?.addEmail()
         }
         let emptyField = FormEmptyField(text: "No e-mails yet.")
         let section = FormSection(title: "E-mails".uppercased(), fields: contact.emails.map { DualTextField($0) } , button: addButton, isEditing: true, emptyField: emptyField)
@@ -127,6 +123,21 @@ class ContactForm {
         }
     }
     
+    func addAddress(_ address: Address = Address()) {
+        contact.addresses.append(address)
+        addressesSection.append(addressField(with: address))
+    }
+    
+    func addPhoneNumber(_ phoneNumber: PhoneNumber = PhoneNumber()) {
+        contact.phoneNumbers.append(phoneNumber)
+        phoneSection.append(DualTextField(phoneNumber))
+    }
+    
+    func addEmail(_ email: Email = Email()) {
+        contact.emails.append(email)
+        emailSection.append(DualTextField(email))
+    }
+    
     private func addressField(with address: Address) -> FormLookupField {
         let field = FormLookupField(address)
         field.tappedHandler = { [weak self, weak field] in
@@ -150,8 +161,7 @@ class ContactForm {
             
             completion?(address)
             if isNew {
-                self.contact.addresses.append(address)
-                self.addressesSection.append(self.addressField(with: address))
+                self.addAddress(address)
             }
             else {
                 guard let item = self.contact.addresses.first(where: { $0.id == address.id }),

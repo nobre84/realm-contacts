@@ -13,15 +13,47 @@ class DualTextField: FormField {
     
     static var cellType: FormFieldCell.Type = DualTextFieldCell.self
     
-    var leftText: String?
-    var leftPlaceholder: String?
-    var leftInputTraits: FormInputTraits?
-    var rightText: String?
-    var rightPlaceholder: String?
-    var rightInputTraits: FormInputTraits?
+    var leftText: String? {
+        didSet {
+            fieldUpdatedHandler?()
+            textChangedHandler?(leftText, rightText)
+        }
+    }
     
-    var valueChangedHandler: ((String?, String?) -> Void)?
+    var leftPlaceholder: String? {
+        didSet {
+            fieldUpdatedHandler?()
+        }
+    }
+    
+    var leftInputTraits: FormInputTraits? {
+        didSet {
+            fieldUpdatedHandler?()
+        }
+    }
+    
+    var rightText: String? {
+        didSet {
+            fieldUpdatedHandler?()
+            textChangedHandler?(leftText, rightText)
+        }
+    }
+    
+    var rightPlaceholder: String? {
+        didSet {
+            fieldUpdatedHandler?()
+        }
+    }
+    
+    var rightInputTraits: FormInputTraits? {
+        didSet {
+            fieldUpdatedHandler?()
+        }
+    }
+    
+    var textChangedHandler: ((String?, String?) -> Void)?
     var heightUpdateHandler: (() -> Void)?
+    var fieldUpdatedHandler: (() -> Void)?
     
     public init(leftText: String? = nil, leftPlaceholder: String? = nil, rightText: String? = nil, rightPlaceholder: String? = nil) {
         self.leftText = leftText
@@ -35,7 +67,7 @@ class DualTextField: FormField {
 extension DualTextField {
     
     func valueChanged() {
-        valueChangedHandler?(leftText, rightText)
+        textChangedHandler?(leftText, rightText)
     }
     
 }

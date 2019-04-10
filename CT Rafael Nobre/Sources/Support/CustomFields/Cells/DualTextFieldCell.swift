@@ -19,12 +19,15 @@ class DualTextFieldCell: UITableViewCell, FormFieldCell, NibLoadableView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        leftTextField.addTarget(self, action: #selector(valueChanged), for: .editingChanged)
-        rightTextField.addTarget(self, action: #selector(valueChanged), for: .editingChanged)
+        leftTextField.addTarget(self, action: #selector(leftValueChanged), for: .editingChanged)
+        rightTextField.addTarget(self, action: #selector(rightValueChanged), for: .editingChanged)
     }
     
     func setup(with field: FormField?) {
         self.field = field as? DualTextField
+        self.field?.fieldUpdatedHandler = { [weak self] in
+            self?.updateUI()
+        }
     }
     
     func updateUI() {
@@ -36,10 +39,12 @@ class DualTextFieldCell: UITableViewCell, FormFieldCell, NibLoadableView {
         rightTextField.setTraits(field?.rightInputTraits)
     }
     
-    @objc private func valueChanged() {
+    @objc private func leftValueChanged() {
         field?.leftText = leftTextField.text
+    }
+    
+    @objc private func rightValueChanged() {
         field?.rightText = rightTextField.text
-        field?.valueChanged()
     }
     
 }
