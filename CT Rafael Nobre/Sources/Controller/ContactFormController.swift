@@ -41,7 +41,7 @@ class ContactFormController: UIViewController {
     }
     
     private func close() {
-        performSegue(withIdentifier: "unwindToContactList", sender: nil)
+        performSegue(withIdentifier: R.segue.contactFormController.unwindToContactList, sender: nil)
     }
     
     @IBAction func cancelTapped(_ sender: Any) {
