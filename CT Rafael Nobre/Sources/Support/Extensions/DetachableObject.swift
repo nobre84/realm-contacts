@@ -8,6 +8,8 @@
 
 import RealmSwift
 
+// This is a user-contributed Deep Copy mechanism for Realm objects to detach them from the Database context. It's useful to allow for an easily discardable object hierachy (user cancelled edits), similar to NSManagedContexts in Core Data.
+
 protocol DetachableObject: AnyObject {
     func detached() -> Self
 }
