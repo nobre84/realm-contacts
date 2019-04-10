@@ -111,6 +111,7 @@ class ContactListController: UITableViewController {
             if let query = query, !query.isEmpty {
                 contacts = contacts?.filter(NSPredicate(format: "firstName CONTAINS[cd] %@ OR lastName CONTAINS[cd] %@", query, query))
             }
+            contacts = contacts?.sorted(byKeyPath: "firstName")
             tableView.reloadData()
         }
         catch {
